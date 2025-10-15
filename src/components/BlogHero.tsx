@@ -16,7 +16,7 @@ const BlogHero = ({ title, description }: BlogHeroProps) => {
   return (
     <div className="mb-24 mt-12">
       {/* Title - Full Width */}
-      <h1 className="font-display font-semibold text-foreground mb-12 text-[8rem] leading-[0.85] md:text-[16rem] lg:text-[20rem]">
+      <h1 className="font-display font-semibold text-foreground mb-12 fluid-title">
         {title}
       </h1>
 
