@@ -175,7 +175,7 @@ const Blog = () => {
 
       {/* More Articles Section */}
       <Section>
-        <div className="grid list-none gap-x-16 gap-y-24 py-8 text-left sm:grid-cols-2">
+        <div className="grid list-none gap-x-16 gap-y-24 py-8 text-left sm:grid-cols-2 w-full">
           {allArticles.map((article, index) => (
             <div
               key={index}
