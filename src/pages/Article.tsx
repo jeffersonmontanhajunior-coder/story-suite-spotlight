@@ -12,8 +12,7 @@ import {
 import ArticlePreview from "@/components/ArticlePreview";
 import { CommentSection } from "@/components/CommentSection";
 import { CommentStats } from "@/components/CommentStats";
-// Article Images from Unsplash
-const malmoHero = "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&auto=format&fit=crop&q=80";
+import desertDreams from "@/assets/desert-dreams.jpg";
 const malmo01 = "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=1200&auto=format&fit=crop&q=80";
 const malmo02 = "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=1200&auto=format&fit=crop&q=80";
 const malmo03 = "https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?w=1200&auto=format&fit=crop&q=80";
@@ -111,7 +110,7 @@ const Article = () => {
             {/* Hero Image - Full Width */}
             <div className="w-full aspect-[16/9] rounded-2xl overflow-hidden">
               <img 
-                src={malmoHero} 
+                src={desertDreams} 
                 alt="Editorial fashion photography" 
                 className="w-full h-full object-cover"
               />
