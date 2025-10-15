@@ -33,21 +33,24 @@ const Article = () => {
   const relatedArticles = [
     {
       title: "Editorial Elegance",
-      description: "Shot for Vogue Italia during Milan Fashion Week. Capturing the intersection of haute couture and architectural minimalism.",
+      description:
+        "Shot for Vogue Italia during Milan Fashion Week. Capturing the intersection of haute couture and architectural minimalism.",
       image: malmo04,
       tag: "Editorial",
       slug: "editorial-elegance",
     },
     {
       title: "Urban Runway",
-      description: "Street style meets high fashion in downtown Manhattan. Spontaneous moments of style captured in natural light.",
+      description:
+        "Street style meets high fashion in downtown Manhattan. Spontaneous moments of style captured in natural light.",
       image: malmo05,
       tag: "Portrait",
       slug: "urban-runway",
     },
     {
       title: "Beauty in Motion",
-      description: "Exploring fluidity and grace through beauty editorial work. Shot on medium format film for timeless quality.",
+      description:
+        "Exploring fluidity and grace through beauty editorial work. Shot on medium format film for timeless quality.",
       image: malmo12,
       tag: "Beauty",
       slug: "beauty-in-motion",
@@ -74,9 +77,7 @@ const Article = () => {
 
           {/* Date - Top Right */}
           <div className="absolute top-8 right-4 md:right-[calc(18vw-10rem)] z-20">
-            <time className="block text-muted-foreground text-[1.4rem] font-sans tracking-wide">
-              March 15, 2024
-            </time>
+            <time className="block text-muted-foreground text-[1.4rem] font-sans tracking-wide">March 15, 2024</time>
           </div>
 
           {/* Main Content Container */}
@@ -95,11 +96,7 @@ const Article = () => {
             {/* Author Info */}
             <div className="flex items-center gap-4 mb-12">
               <div className="w-[5rem] h-[5rem] rounded-full overflow-hidden">
-                <img 
-                  src={authorMarcus} 
-                  alt="Sofia Andersson" 
-                  className="w-full h-full object-cover"
-                />
+                <img src={authorMarcus} alt="Sofia Andersson" className="w-full h-full object-cover" />
               </div>
               <div className="font-sans">
                 <p className="text-[1.6rem] font-semibold text-foreground">Sofia Andersson</p>
@@ -109,11 +106,7 @@ const Article = () => {
 
             {/* Hero Image - Full Width */}
             <div className="w-full aspect-[16/9] rounded-2xl overflow-hidden">
-              <img 
-                src={desertDreams} 
-                alt="Editorial fashion photography" 
-                className="w-full h-full object-cover"
-              />
+              <img src={desertDreams} alt="Editorial fashion photography" className="w-full h-full object-cover" />
             </div>
           </div>
         </section>
@@ -147,10 +140,9 @@ const Article = () => {
             <h2>The Language of Light and Form</h2>
 
             <p>
-              Fashion photography lives and dies by light. In this shoot, I chose to work exclusively with natural
-              light filtering through floor-to-ceiling windows. The soft, diffused quality created a luminous
-              atmosphere that felt both ethereal and grounded—perfect for highlighting the architectural quality of the
-              garments.
+              Fashion photography lives and dies by light. In this shoot, I chose to work exclusively with natural light
+              filtering through floor-to-ceiling windows. The soft, diffused quality created a luminous atmosphere that
+              felt both ethereal and grounded—perfect for highlighting the architectural quality of the garments.
             </p>
 
             <figure className="my-12">
@@ -164,15 +156,15 @@ const Article = () => {
 
             <p>
               The garments themselves were masterclasses in construction—clean lines, precise tailoring, fabrics that
-              moved with deliberate grace. My job was to capture not just how they looked, but how they felt. The
-              weight of silk, the structure of wool, the fluidity of movement.
+              moved with deliberate grace. My job was to capture not just how they looked, but how they felt. The weight
+              of silk, the structure of wool, the fluidity of movement.
             </p>
 
             <h2>Composition as Storytelling</h2>
 
             <p>
-              Every photograph tells a story, even when that story is whispered rather than shouted. In editorial
-              work, composition becomes the narrative structure. Where the model stands, how they hold themselves, the
+              Every photograph tells a story, even when that story is whispered rather than shouted. In editorial work,
+              composition becomes the narrative structure. Where the model stands, how they hold themselves, the
               relationship between figure and space—all of these choices communicate meaning.
             </p>
 
@@ -248,8 +240,8 @@ const Article = () => {
             </figure>
 
             <p>
-              Without the anchoring effect of color, the eye travels differently across an image. It notices the fall
-              of fabric, the architecture of a silhouette, the quality of light on skin. Monochrome photography strips
+              Without the anchoring effect of color, the eye travels differently across an image. It notices the fall of
+              fabric, the architecture of a silhouette, the quality of light on skin. Monochrome photography strips
               fashion to its essence—line, proportion, and presence.
             </p>
 
@@ -289,9 +281,9 @@ const Article = () => {
             </figure>
 
             <p>
-              But technique is only a tool. The real art is knowing when to break the rules, when to embrace imperfection,
-              when to let instinct override calculation. Fashion photography taught me that perfection is often less
-              interesting than the beautiful accident, the unexpected moment that could never be planned.
+              But technique is only a tool. The real art is knowing when to break the rules, when to embrace
+              imperfection, when to let instinct override calculation. Fashion photography taught me that perfection is
+              often less interesting than the beautiful accident, the unexpected moment that could never be planned.
             </p>
 
             <p>
@@ -301,9 +293,9 @@ const Article = () => {
             </p>
 
             <p>
-              The camera is my tool, but fashion is my language. Through it, I explore beauty, identity, and the
-              endless possibilities of visual storytelling. Each shoot is a new chapter, a fresh exploration of what it
-              means to capture not just clothing, but the essence of style itself.
+              The camera is my tool, but fashion is my language. Through it, I explore beauty, identity, and the endless
+              possibilities of visual storytelling. Each shoot is a new chapter, a fresh exploration of what it means to
+              capture not just clothing, but the essence of style itself.
             </p>
           </ArticleContent>
         </ArticleContainer>
@@ -311,12 +303,7 @@ const Article = () => {
         {/* Comment Section */}
         <section className="border-t border-border mt-24 pt-16">
           <ArticleContainer>
-            <CommentStats 
-              readTime="8 min"
-              commentCount={34}
-              viewCount="2.4k"
-              shareCount={89}
-            />
+            <CommentStats readTime="8 min" commentCount={34} viewCount="2.4k" shareCount={89} />
             <CommentSection articleId="editorial-elegance" />
           </ArticleContainer>
         </section>
@@ -325,7 +312,7 @@ const Article = () => {
       {/* Related Articles */}
       <section className="box-content max-w-[138rem] px-[1.5rem] md:px-[calc(18vw-10rem)] mx-auto mt-[3rem] md:mt-[6rem] lg:mt-[9rem] mb-[3rem] md:mb-[6rem] lg:mb-[9rem]">
         <h2 className="text-[3.6rem] md:text-[4.8rem] font-display font-bold mb-12">Related Articles</h2>
-        <div className="grid list-none gap-x-16 gap-y-24 text-left sm:grid-cols-2 lg:grid-cols-3 w-full">
+        <div className="grid list-none gap-x-16 gap-y-24 text-left sm:grid-cols-2 w-full">
           {relatedArticles.map((article) => (
             <ArticlePreview
               key={article.slug}
