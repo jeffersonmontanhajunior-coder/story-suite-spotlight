@@ -183,4 +183,23 @@ All colors MUST be HSL.
       animation-delay: 300ms;
     }
   }
+
+  /* Fluid typography for article titles */
+  .fluid-title {
+    font-size: clamp(4rem, 8vw + 1rem, 20rem);
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+  }
+
+  @media (min-width: 768px) {
+    .fluid-title {
+      font-size: clamp(8rem, 10vw + 2rem, 24rem);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .fluid-title {
+      font-size: clamp(10rem, 12vw + 3rem, 30rem);
+    }
+  }
 }

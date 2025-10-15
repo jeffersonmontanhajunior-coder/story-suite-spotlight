@@ -83,7 +83,7 @@ const Article = () => {
           {/* Main Content Container */}
           <div className="relative w-full max-w-[140rem] mx-auto mt-20">
             {/* Massive Title */}
-            <h1 className="font-display font-bold text-[8rem] md:text-[12rem] lg:text-[18rem] xl:text-[24rem] leading-[0.9] tracking-[-0.03em] mb-12">
+            <h1 className="font-display font-bold fluid-title mb-12">
               <span className="block">EDITORIAL</span>
               <span className="block">ELEGANCE</span>
             </h1>
