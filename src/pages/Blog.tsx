@@ -168,7 +168,7 @@ const Blog = () => {
 
       <Section>
         <BlogHero
-          title="BLOG"
+          title="Voyager"
           description="Voyager Press is a modern travel and lifestyle newsroom that showcases inspiring stories, destination features, and travel industry updates."
         />
       </Section>
