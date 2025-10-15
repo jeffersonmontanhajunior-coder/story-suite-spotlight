@@ -21,33 +21,35 @@ const Header = () => {
       }`}
       style={{ height: "72px" }}
     >
-      <div className="mx-auto h-full" style={{ padding: "0 calc(18vw - 10rem)" }}>
-        <div className="flex items-center justify-between h-full">
-          <Link to="/" className="font-sans text-2xl font-bold text-foreground">
-            Voyager
-          </Link>
-          <nav className="flex items-center gap-8">
-            <Link
-              to="/blog"
-              className="text-[1.8rem] font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Blog
+      <div className="px-6 md:px-[calc(18vw-10rem)] h-full">
+        <div className="max-w-[138rem] mx-auto h-full">
+          <div className="flex items-center justify-between h-full">
+            <Link to="/" className="font-sans text-2xl font-bold text-foreground">
+              Voyager
             </Link>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[1.8rem] font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2"
-            >
-              Twitter
-            </a>
-            <a
-              href="#"
-              className="text-[1.8rem] font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Remix
-            </a>
-          </nav>
+            <nav className="flex items-center gap-8">
+              <Link
+                to="/blog"
+                className="text-[1.8rem] font-medium text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Blog
+              </Link>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[1.8rem] font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2"
+              >
+                Twitter
+              </a>
+              <a
+                href="#"
+                className="text-[1.8rem] font-medium text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Remix
+              </a>
+            </nav>
+          </div>
         </div>
       </div>
     </header>
