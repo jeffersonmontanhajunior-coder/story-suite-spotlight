@@ -9,7 +9,7 @@ import {
   ArticleContent,
   TopShares,
 } from "@/components/ArticleComponents";
-import { ArticleRelatedItems } from "@/components/ArticleRelatedItems";
+import ArticlePreview from "@/components/ArticlePreview";
 import { CommentSection } from "@/components/CommentSection";
 import { CommentStats } from "@/components/CommentStats";
 // Article Images from Unsplash
@@ -324,8 +324,21 @@ const Article = () => {
       </ArticleWrapper>
 
       {/* Related Articles */}
-      <section>
-        <ArticleRelatedItems items={relatedArticles} />
+      <section className="box-content max-w-[138rem] px-[1.5rem] md:px-[calc(18vw-10rem)] mx-auto mt-[3rem] md:mt-[6rem] lg:mt-[9rem] mb-[3rem] md:mb-[6rem] lg:mb-[9rem]">
+        <h2 className="text-[3.6rem] md:text-[4.8rem] font-display font-bold mb-12">Related Articles</h2>
+        <div className="grid list-none gap-x-16 gap-y-24 text-left sm:grid-cols-2 lg:grid-cols-3 w-full">
+          {relatedArticles.map((article) => (
+            <ArticlePreview
+              key={article.slug}
+              title={article.title}
+              slug={article.slug}
+              image={article.image}
+              imageAlt={article.title}
+              publishDate="Recent"
+              category={article.tag}
+            />
+          ))}
+        </div>
       </section>
 
       {/* Footer */}
