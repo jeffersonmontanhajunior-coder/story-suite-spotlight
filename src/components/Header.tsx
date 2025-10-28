@@ -13,8 +13,8 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-background">
-      <div className="article-grid-container" style={{ minHeight: "72px" }}>
-        <div className="grid-wrapper FULL">
+      <div className="article-header-grid" style={{ minHeight: "72px" }}>
+        <div className="article-wrapper-constrained">
           <div className="flex items-center justify-between h-full py-4">
             <Link
               to="/"

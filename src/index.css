@@ -239,6 +239,14 @@ All colors MUST be HSL.
       @apply md:grid-cols-22;
       @apply lgPlus:grid-cols-30 lgPlus:mb-[3.75rem];
     }
+
+    /* Article Header Grid - Grid for navigation without vertical margins */
+    .article-header-grid {
+      @apply grid w-full max-w-[1920px] mx-auto gap-0;
+      @apply grid-cols-18;
+      @apply md:grid-cols-22;
+      @apply lgPlus:grid-cols-30;
+    }
   }
 
     /* Article Body - Narrow reading width with responsive typography */
