@@ -1,14 +1,17 @@
-import desertDreams from "@/assets/desert-dreams.jpg";
-import vintageHighway from "@/assets/vintage-highway.jpg";
-import lavenderFields from "@/assets/lavender-fields.jpg";
-import coastalClassic from "@/assets/coastal-classic.jpg";
-import storiesUnbound from "@/assets/stories-unbound.jpg";
-import circularHorizons from "@/assets/circular-horizons.jpg";
-import retroRevival from "@/assets/retro-revival.jpg";
-import goldenSpheres from "@/assets/golden-spheres.jpg";
-import azureAwakening from "@/assets/azure-awakening.jpg";
-import minimalistVoyage from "@/assets/minimalist-voyage.jpg";
-import authorMarcus from "@/assets/author-marcus.jpg";
+// Local images from public/images directory
+const authorAvatar = "/images/pexels-kadeem-stewart-170429769-15786936.jpg";
+const aboutSofiaHero = "/images/pexels-kadeem-stewart-170429769-15786936.jpg";
+const editorialEleganceHero = "/images/amina-atar-tPM3nd4J8xs-unsplash.jpg";
+const desertDreamsHero = "/images/igor-rand-dlR-BNDWz3g-unsplash.jpg";
+const vintageHighwayHero = "/images/dwayne-joe-9wubaeSG13U-unsplash (1).jpg";
+const lavenderFieldsHero = "/images/ozge-karzan-fdZjAjPUQbk-unsplash.jpg";
+const coastalClassicHero = "/images/pexels-adrienne-andersen-1174503-2661255.jpg";
+const storiesUnboundHero = "/images/pexels-ayomide-isaac-66354580-16273825.jpg";
+const circularHorizonsHero = "/images/pexels-brianasarejr-12417686.jpg";
+const retroRevivalHero = "/images/pexels-brianasarejr-17553641.jpg";
+const goldenSpheresHero = "/images/pexels-jameshausley-3328337.jpg";
+const azureAwakeningHero = "/images/amina-atar-tPM3nd4J8xs-unsplash.jpg";
+const minimalistVoyageHero = "/images/igor-rand-dlR-BNDWz3g-unsplash.jpg";
 
 export interface ArticleData {
   slug: string;
@@ -42,22 +45,6 @@ export interface ArticleData {
   }[];
 }
 
-const malmo01 = "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=1200&auto=format&fit=crop&q=80";
-const malmo02 = "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=1200&auto=format&fit=crop&q=80";
-const malmo03 = "https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?w=1200&auto=format&fit=crop&q=80";
-const malmo11 = "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1200&auto=format&fit=crop&q=80";
-const malmo13 = "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=1200&auto=format&fit=crop&q=80";
-const malmo16 = "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=1200&auto=format&fit=crop&q=80";
-const malmo17 = "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1200&auto=format&fit=crop&q=80";
-const malmo04 = "https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=1200&auto=format&fit=crop&q=80";
-const malmo05 = "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=1200&auto=format&fit=crop&q=80";
-const malmo12 = "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1200&auto=format&fit=crop&q=80";
-
-// About Sofia images
-const sofiaPortrait = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1200&auto=format&fit=crop&q=80";
-const studioWorkspace = "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=1200&auto=format&fit=crop&q=80";
-const cameraGear = "https://images.unsplash.com/photo-1606244864456-8bee63fce472?w=1200&auto=format&fit=crop&q=80";
-
 export const articlesData: Record<string, ArticleData> = {
   "about-sofia": {
     slug: "about-sofia",
@@ -67,9 +54,9 @@ export const articlesData: Record<string, ArticleData> = {
     author: {
       name: "Sofia Andersson",
       title: "Fashion Photographer",
-      avatar: authorMarcus,
+      avatar: authorAvatar,
     },
-    heroImage: sofiaPortrait,
+    heroImage: aboutSofiaHero,
     readTime: "8 min",
     viewCount: "4.8k",
     shareCount: 142,
@@ -89,12 +76,6 @@ export const articlesData: Record<string, ArticleData> = {
       {
         type: "paragraph",
         content: "I'm Sofia Andersson, a 28-year-old fashion photographer based in Copenhagen. I specialize in editorial work—the kind of photography that tells stories, not just sells clothes. I shoot for Scandinavian brands, international magazines, and the occasional beauty campaign. I also run this blog, Voyager, where I document the chaos and beauty of working in fashion.",
-      },
-      {
-        type: "image",
-        src: studioWorkspace,
-        alt: "Sofia's studio workspace",
-        caption: "My studio in Vesterbro",
       },
       {
         type: "paragraph",
@@ -134,21 +115,21 @@ export const articlesData: Record<string, ArticleData> = {
       {
         title: "Editorial Elegance",
         description: "Shot for Vogue Italia during Milan Fashion Week. Capturing the intersection of haute couture and architectural minimalism.",
-        image: malmo04,
+        image: editorialEleganceHero,
         tag: "Editorial",
         slug: "editorial-elegance",
       },
       {
         title: "Stories Unbound",
         description: "Narrative fashion photography that tells compelling visual stories.",
-        image: storiesUnbound,
+        image: storiesUnboundHero,
         tag: "Editorial",
         slug: "stories-unbound",
       },
       {
         title: "Desert Dreams",
         description: "A journey through minimalist landscapes where fashion meets nature in perfect harmony.",
-        image: desertDreams,
+        image: desertDreamsHero,
         tag: "Travel",
         slug: "desert-dreams",
       },
@@ -162,9 +143,9 @@ export const articlesData: Record<string, ArticleData> = {
     author: {
       name: "Sofia Andersson",
       title: "Fashion Photographer",
-      avatar: authorMarcus,
+      avatar: authorAvatar,
     },
-    heroImage: desertDreams,
+    heroImage: editorialEleganceHero,
     readTime: "8 min",
     viewCount: "2.4k",
     shareCount: 89,
@@ -186,24 +167,12 @@ export const articlesData: Record<string, ArticleData> = {
         content: "We worked in a studio with floor-to-ceiling windows, using only the soft northern light filtering through. No strobes, no reflectors, no safety nets. The model and I communicated mostly through glances and subtle adjustments. When you remove all the technical complexity, what's left is pure instinct.",
       },
       {
-        type: "image",
-        src: malmo01,
-        alt: "Minimalist fashion editorial",
-        caption: "Natural light, nothing else",
-      },
-      {
         type: "paragraph",
         content: "The garments were architectural—precise tailoring, deliberate draping, fabrics that moved like sculpture. My job wasn't to dress them up with clever lighting or dramatic angles. It was to get out of the way and let them speak.",
       },
       {
         type: "paragraph",
         content: "We shot entirely in black, white, and gray. Without color to anchor the eye, you notice different things. The fall of a hem. The angle of a shoulder. The negative space between figure and frame.",
-      },
-      {
-        type: "image",
-        src: malmo02,
-        alt: "Portrait with geometric background",
-        caption: "Less is more—actually",
       },
       {
         type: "paragraph",
@@ -227,21 +196,21 @@ export const articlesData: Record<string, ArticleData> = {
       {
         title: "Urban Runway",
         description: "Street style meets high fashion in downtown Manhattan. Spontaneous moments of style captured in natural light.",
-        image: malmo05,
+        image: storiesUnboundHero,
         tag: "Portrait",
         slug: "urban-runway",
       },
       {
         title: "Beauty in Motion",
         description: "Exploring fluidity and grace through beauty editorial work. Shot on medium format film for timeless quality.",
-        image: malmo12,
+        image: goldenSpheresHero,
         tag: "Beauty",
         slug: "beauty-in-motion",
       },
       {
         title: "Desert Dreams",
         description: "A journey through minimalist landscapes where fashion meets nature in perfect harmony.",
-        image: desertDreams,
+        image: desertDreamsHero,
         tag: "Travel",
         slug: "desert-dreams",
       },
@@ -255,9 +224,9 @@ export const articlesData: Record<string, ArticleData> = {
     author: {
       name: "Sofia Andersson",
       title: "Fashion Photographer",
-      avatar: authorMarcus,
+      avatar: authorAvatar,
     },
-    heroImage: desertDreams,
+    heroImage: desertDreamsHero,
     readTime: "6 min",
     viewCount: "1.8k",
     shareCount: 64,
@@ -311,21 +280,21 @@ export const articlesData: Record<string, ArticleData> = {
       {
         title: "Editorial Elegance",
         description: "Shot for Vogue Italia during Milan Fashion Week. Capturing the intersection of haute couture and architectural minimalism.",
-        image: malmo04,
+        image: editorialEleganceHero,
         tag: "Editorial",
         slug: "editorial-elegance",
       },
       {
         title: "Vintage Highway",
         description: "A nostalgic journey through classic American style and the open road.",
-        image: vintageHighway,
+        image: vintageHighwayHero,
         tag: "Travel",
         slug: "vintage-highway",
       },
       {
         title: "Lavender Fields",
         description: "Romance and elegance captured in the purple hues of Provence.",
-        image: lavenderFields,
+        image: lavenderFieldsHero,
         tag: "Editorial",
         slug: "lavender-fields",
       },
@@ -339,9 +308,9 @@ export const articlesData: Record<string, ArticleData> = {
     author: {
       name: "Sofia Andersson",
       title: "Fashion Photographer",
-      avatar: authorMarcus,
+      avatar: authorAvatar,
     },
-    heroImage: vintageHighway,
+    heroImage: vintageHighwayHero,
     readTime: "7 min",
     viewCount: "3.1k",
     shareCount: 95,
@@ -395,21 +364,21 @@ export const articlesData: Record<string, ArticleData> = {
       {
         title: "Desert Dreams",
         description: "A journey through minimalist landscapes where fashion meets nature in perfect harmony.",
-        image: desertDreams,
+        image: desertDreamsHero,
         tag: "Travel",
         slug: "desert-dreams",
       },
       {
         title: "Coastal Classic",
         description: "Seaside elegance meets timeless style.",
-        image: coastalClassic,
+        image: coastalClassicHero,
         tag: "Editorial",
         slug: "coastal-classic",
       },
       {
         title: "Retro Revival",
         description: "Celebrating the bold patterns and colors of vintage fashion.",
-        image: retroRevival,
+        image: retroRevivalHero,
         tag: "Vintage",
         slug: "retro-revival",
       },
@@ -423,9 +392,9 @@ export const articlesData: Record<string, ArticleData> = {
     author: {
       name: "Sofia Andersson",
       title: "Fashion Photographer",
-      avatar: authorMarcus,
+      avatar: authorAvatar,
     },
-    heroImage: lavenderFields,
+    heroImage: lavenderFieldsHero,
     readTime: "5 min",
     viewCount: "2.2k",
     shareCount: 71,
@@ -475,21 +444,21 @@ export const articlesData: Record<string, ArticleData> = {
       {
         title: "Coastal Classic",
         description: "Seaside elegance meets timeless style.",
-        image: coastalClassic,
+        image: coastalClassicHero,
         tag: "Editorial",
         slug: "coastal-classic",
       },
       {
         title: "Desert Dreams",
         description: "A journey through minimalist landscapes where fashion meets nature in perfect harmony.",
-        image: desertDreams,
+        image: desertDreamsHero,
         tag: "Travel",
         slug: "desert-dreams",
       },
       {
         title: "Azure Awakening",
         description: "Blue hues and coastal inspiration.",
-        image: azureAwakening,
+        image: azureAwakeningHero,
         tag: "Editorial",
         slug: "azure-awakening",
       },
@@ -503,9 +472,9 @@ export const articlesData: Record<string, ArticleData> = {
     author: {
       name: "Sofia Andersson",
       title: "Fashion Photographer",
-      avatar: authorMarcus,
+      avatar: authorAvatar,
     },
-    heroImage: coastalClassic,
+    heroImage: coastalClassicHero,
     readTime: "6 min",
     viewCount: "1.9k",
     shareCount: 58,
@@ -555,21 +524,21 @@ export const articlesData: Record<string, ArticleData> = {
       {
         title: "Lavender Fields",
         description: "Romance and elegance captured in the purple hues of Provence.",
-        image: lavenderFields,
+        image: lavenderFieldsHero,
         tag: "Editorial",
         slug: "lavender-fields",
       },
       {
         title: "Azure Awakening",
         description: "Blue hues and coastal inspiration.",
-        image: azureAwakening,
+        image: azureAwakeningHero,
         tag: "Editorial",
         slug: "azure-awakening",
       },
       {
         title: "Minimalist Voyage",
         description: "Clean lines and contemporary travel style.",
-        image: minimalistVoyage,
+        image: minimalistVoyageHero,
         tag: "Travel",
         slug: "minimalist-voyage",
       },
@@ -583,9 +552,9 @@ export const articlesData: Record<string, ArticleData> = {
     author: {
       name: "Sofia Andersson",
       title: "Fashion Photographer",
-      avatar: authorMarcus,
+      avatar: authorAvatar,
     },
-    heroImage: storiesUnbound,
+    heroImage: storiesUnboundHero,
     readTime: "9 min",
     viewCount: "3.5k",
     shareCount: 102,
@@ -635,21 +604,21 @@ export const articlesData: Record<string, ArticleData> = {
       {
         title: "Editorial Elegance",
         description: "Shot for Vogue Italia during Milan Fashion Week. Capturing the intersection of haute couture and architectural minimalism.",
-        image: malmo04,
+        image: editorialEleganceHero,
         tag: "Editorial",
         slug: "editorial-elegance",
       },
       {
         title: "Urban Runway",
         description: "Street style meets high fashion in downtown Manhattan.",
-        image: malmo05,
+        image: storiesUnboundHero,
         tag: "Portrait",
         slug: "urban-runway",
       },
       {
         title: "Circular Horizons",
         description: "Geometric patterns and modern design.",
-        image: circularHorizons,
+        image: circularHorizonsHero,
         tag: "Editorial",
         slug: "circular-horizons",
       },
@@ -663,9 +632,9 @@ export const articlesData: Record<string, ArticleData> = {
     author: {
       name: "Sofia Andersson",
       title: "Fashion Photographer",
-      avatar: authorMarcus,
+      avatar: authorAvatar,
     },
-    heroImage: circularHorizons,
+    heroImage: circularHorizonsHero,
     readTime: "7 min",
     viewCount: "2.7k",
     shareCount: 83,
@@ -715,21 +684,21 @@ export const articlesData: Record<string, ArticleData> = {
       {
         title: "Editorial Elegance",
         description: "Shot for Vogue Italia during Milan Fashion Week. Capturing the intersection of haute couture and architectural minimalism.",
-        image: malmo04,
+        image: editorialEleganceHero,
         tag: "Editorial",
         slug: "editorial-elegance",
       },
       {
         title: "Golden Spheres",
         description: "Luxury and geometry in perfect balance.",
-        image: goldenSpheres,
+        image: goldenSpheresHero,
         tag: "Editorial",
         slug: "golden-spheres",
       },
       {
         title: "Minimalist Voyage",
         description: "Clean lines and contemporary travel style.",
-        image: minimalistVoyage,
+        image: minimalistVoyageHero,
         tag: "Travel",
         slug: "minimalist-voyage",
       },
@@ -743,9 +712,9 @@ export const articlesData: Record<string, ArticleData> = {
     author: {
       name: "Sofia Andersson",
       title: "Fashion Photographer",
-      avatar: authorMarcus,
+      avatar: authorAvatar,
     },
-    heroImage: retroRevival,
+    heroImage: retroRevivalHero,
     readTime: "8 min",
     viewCount: "4.1k",
     shareCount: 118,
@@ -791,21 +760,21 @@ export const articlesData: Record<string, ArticleData> = {
       {
         title: "Vintage Highway",
         description: "A nostalgic journey through classic American style and the open road.",
-        image: vintageHighway,
+        image: vintageHighwayHero,
         tag: "Travel",
         slug: "vintage-highway",
       },
       {
         title: "Golden Spheres",
         description: "Luxury and geometry in perfect balance.",
-        image: goldenSpheres,
+        image: goldenSpheresHero,
         tag: "Editorial",
         slug: "golden-spheres",
       },
       {
         title: "Stories Unbound",
         description: "Narrative fashion photography that tells compelling visual stories.",
-        image: storiesUnbound,
+        image: storiesUnboundHero,
         tag: "Editorial",
         slug: "stories-unbound",
       },
@@ -819,9 +788,9 @@ export const articlesData: Record<string, ArticleData> = {
     author: {
       name: "Sofia Andersson",
       title: "Fashion Photographer",
-      avatar: authorMarcus,
+      avatar: authorAvatar,
     },
-    heroImage: goldenSpheres,
+    heroImage: goldenSpheresHero,
     readTime: "6 min",
     viewCount: "2.9k",
     shareCount: 91,
@@ -871,21 +840,21 @@ export const articlesData: Record<string, ArticleData> = {
       {
         title: "Circular Horizons",
         description: "Geometric patterns and modern design.",
-        image: circularHorizons,
+        image: circularHorizonsHero,
         tag: "Editorial",
         slug: "circular-horizons",
       },
       {
         title: "Editorial Elegance",
         description: "Shot for Vogue Italia during Milan Fashion Week. Capturing the intersection of haute couture and architectural minimalism.",
-        image: malmo04,
+        image: editorialEleganceHero,
         tag: "Editorial",
         slug: "editorial-elegance",
       },
       {
         title: "Retro Revival",
         description: "Celebrating the bold patterns and colors of vintage fashion.",
-        image: retroRevival,
+        image: retroRevivalHero,
         tag: "Vintage",
         slug: "retro-revival",
       },
@@ -899,9 +868,9 @@ export const articlesData: Record<string, ArticleData> = {
     author: {
       name: "Sofia Andersson",
       title: "Fashion Photographer",
-      avatar: authorMarcus,
+      avatar: authorAvatar,
     },
-    heroImage: azureAwakening,
+    heroImage: azureAwakeningHero,
     readTime: "5 min",
     viewCount: "2.1k",
     shareCount: 67,
@@ -947,21 +916,21 @@ export const articlesData: Record<string, ArticleData> = {
       {
         title: "Coastal Classic",
         description: "Seaside elegance meets timeless style.",
-        image: coastalClassic,
+        image: coastalClassicHero,
         tag: "Editorial",
         slug: "coastal-classic",
       },
       {
         title: "Lavender Fields",
         description: "Romance and elegance captured in the purple hues of Provence.",
-        image: lavenderFields,
+        image: lavenderFieldsHero,
         tag: "Editorial",
         slug: "lavender-fields",
       },
       {
         title: "Minimalist Voyage",
         description: "Clean lines and contemporary travel style.",
-        image: minimalistVoyage,
+        image: minimalistVoyageHero,
         tag: "Travel",
         slug: "minimalist-voyage",
       },
@@ -975,9 +944,9 @@ export const articlesData: Record<string, ArticleData> = {
     author: {
       name: "Sofia Andersson",
       title: "Fashion Photographer",
-      avatar: authorMarcus,
+      avatar: authorAvatar,
     },
-    heroImage: minimalistVoyage,
+    heroImage: minimalistVoyageHero,
     readTime: "7 min",
     viewCount: "2.5k",
     shareCount: 76,
@@ -1027,21 +996,21 @@ export const articlesData: Record<string, ArticleData> = {
       {
         title: "Desert Dreams",
         description: "A journey through minimalist landscapes where fashion meets nature in perfect harmony.",
-        image: desertDreams,
+        image: desertDreamsHero,
         tag: "Travel",
         slug: "desert-dreams",
       },
       {
         title: "Coastal Classic",
         description: "Seaside elegance meets timeless style.",
-        image: coastalClassic,
+        image: coastalClassicHero,
         tag: "Editorial",
         slug: "coastal-classic",
       },
       {
         title: "Editorial Elegance",
         description: "Shot for Vogue Italia during Milan Fashion Week. Capturing the intersection of haute couture and architectural minimalism.",
-        image: malmo04,
+        image: editorialEleganceHero,
         tag: "Editorial",
         slug: "editorial-elegance",
       },
