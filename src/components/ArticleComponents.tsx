@@ -16,7 +16,7 @@ interface ArticleContainerProps {
 
 export function ArticleContainer({ children, className = "" }: ArticleContainerProps) {
   return (
-    <div className={`article-grid-container relative ${className}`}>
+    <div className={`article-grid relative ${className}`}>
       {children}
     </div>
   );
@@ -110,7 +110,7 @@ export function ArticleContent({ children, className = "" }: ArticleContentProps
   return (
     <div
       className={`
-      article-content article-content-inset article-text
+      article-body
       [&_p]:font-normal
       [&_h2]:mt-[1.666em] [&_h2]:mb-[0.666em] [&_h2]:text-[1.125rem] [&_h2]:md:text-[1.3125rem] [&_h2]:lg:text-[1.6875rem] [&_h2]:font-display [&_h2]:font-semibold [&_h2]:tracking-[-0.02em] [&_h2]:leading-[1.6] [&_h2]:lg:leading-[1.4]
       [&_h2:first-child]:mt-0

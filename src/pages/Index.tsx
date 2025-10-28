@@ -64,8 +64,8 @@ const Index = () => {
       <Section>
         <GridWrapper>
           <GridContent>
-            <div className="accordion">
-              <ul className="accordion-grid">
+            <div className="article-full-width">
+              <ul className="article-two-columns">
                 {allArticles.map((article, index) => (
                   <li
                     key={index}
@@ -92,8 +92,8 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="border-t border-border mt-24">
-        <div className="article-grid-container py-12">
-          <div className="article-content-inset text-center text-sm text-muted-foreground">
+        <div className="article-grid py-12">
+          <div className="article-hero text-center text-sm text-muted-foreground">
             <p>© 2024 Voyager Press. All rights reserved.</p>
           </div>
         </div>

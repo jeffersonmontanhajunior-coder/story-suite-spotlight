@@ -230,262 +230,110 @@ All colors MUST be HSL.
     }
   }
 
-  /* Grid System - Article Layout */
-  .article-grid-container {
-    display: grid;
-    grid-template-columns: repeat(18, 1fr);
-    grid-column-gap: 0;
-    width: 100%;
-    max-width: 1920px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2.734375rem;
-  }
-
-  @media (min-width: 768px) {
-    .article-grid-container {
-      grid-template-columns: repeat(22, 1fr);
+  /* Grid System - Article Layout (Tailwind @layer components) */
+  @layer components {
+    /* Main Article Grid Container */
+    .article-grid {
+      @apply grid w-full max-w-[1920px] mx-auto gap-0;
+      @apply grid-cols-18 mb-[2.734375rem];
+      @apply md:grid-cols-22;
+      @apply lgPlus:grid-cols-30 lgPlus:mb-[3.75rem];
     }
   }
 
-  @media (min-width: 1180px) {
-    .article-grid-container {
-      grid-template-columns: repeat(30, 1fr);
-      margin-bottom: 3.75rem;
-    }
-  }
-
-  /* Content Width - Standard Article Content */
-  .article-content-width {
-    grid-column: 2 / span 16;
-  }
-
-  @media (min-width: 768px) {
-    .article-content-width {
-      grid-column: 3 / span 18;
-    }
-  }
-
-  @media (min-width: 1180px) {
-    .article-content-width {
-      grid-column: 3 / span 19;
-    }
-  }
-
-  /* Content Width - Inset (Narrow) Variant */
-  .article-content-inset {
-    grid-column: 2 / span 16;
-  }
-
-  @media (min-width: 768px) {
-    .article-content-inset {
-      grid-column: 3 / span 18;
-    }
-  }
-
-  @media (min-width: 1180px) {
-    .article-content-inset {
-      grid-column: 8 / span 16;
-    }
-  }
-
-  /* Two-Column Layout - For Blog/Homepage Article Grids */
-  .grid-item-left {
-    grid-column: 1 / 9;
-  }
-
-  .grid-item-right {
-    grid-column: 10 / -1;
-  }
-
-  @media (min-width: 768px) {
-    .grid-item-left {
-      grid-column: 1 / 11;
+    /* Article Body - Narrow reading width with responsive typography */
+    .article-body {
+      @apply col-start-2 col-span-16;
+      @apply md:col-start-3 md:col-span-18;
+      @apply lgPlus:col-start-8 lgPlus:col-span-16;
+      @apply text-[1.125rem] leading-[1.45] tracking-[-0.01em];
+      @apply md:text-[1.5rem];
+      @apply lgPlus:text-[1.625rem];
+      @apply 3xl:text-[2.25rem];
     }
 
-    .grid-item-right {
-      grid-column: 12 / -1;
-    }
-  }
-
-  @media (min-width: 1180px) {
-    .grid-item-left {
-      grid-column: 1 / 15;
+    /* Article Standard Content - Standard width, no typography */
+    .article-content-standard {
+      @apply col-start-2 col-span-16;
+      @apply md:col-start-3 md:col-span-18;
+      @apply lgPlus:col-start-3 lgPlus:col-span-19;
     }
 
-    .grid-item-right {
-      grid-column: 16 / -1;
+    /* Article Hero - Narrow width for hero content */
+    .article-hero {
+      @apply col-start-2 col-span-16;
+      @apply md:col-start-3 md:col-span-18;
+      @apply lgPlus:col-start-8 lgPlus:col-span-16;
+    }
+
+    /* Article Wide Content - For wider layouts */
+    .article-wide-content {
+      @apply self-center;
+      @apply col-start-2 col-span-16;
+      @apply md:col-start-3 md:col-span-18;
+      @apply lgPlus:col-start-3 lgPlus:col-span-19;
+    }
+
+    /* Article Centered Content - Extra narrow, centered */
+    .article-centered-content {
+      @apply self-center;
+      @apply col-start-2 col-span-16;
+      @apply md:col-start-3 md:col-span-18;
+      @apply lgPlus:col-start-9 lgPlus:col-span-14;
+    }
+
+    /* Article Full Width - Spans entire grid */
+    .article-full-width {
+      @apply col-span-full self-center;
+    }
+
+    /* Article Two Column Grid - For related articles, blog listings */
+    .article-two-columns {
+      @apply list-none m-0 p-0 grid gap-12;
+      @apply md:grid-cols-2 md:gap-[70px];
+      @apply lgPlus:gap-24;
+      @apply 3xl:gap-32;
+    }
+
+    /* Article Column Left - Left side of two-column layout */
+    .article-column-left {
+      @apply col-start-1 col-end-9;
+      @apply md:col-start-1 md:col-end-11;
+      @apply lgPlus:col-start-1 lgPlus:col-end-15;
+    }
+
+    /* Article Column Right - Right side of two-column layout */
+    .article-column-right {
+      @apply col-start-10 col-end-[-1];
+      @apply md:col-start-12 md:col-end-[-1];
+      @apply lgPlus:col-start-16 lgPlus:col-end-[-1];
+    }
+    /* Article Section Grid - For section-based layouts */
+    .article-section-grid {
+      @apply grid w-full max-w-[1920px] gap-0;
+      @apply grid-cols-18 my-5;
+      @apply md:grid-cols-22 md:my-[2.734375rem];
+      @apply lgPlus:grid-cols-30 lgPlus:my-[3.75rem];
+      @apply 3xl:my-20;
+    }
+
+    /* Article Section Content - Inner grid for sections */
+    .article-section-content {
+      @apply grid w-full max-w-[1920px] gap-0;
+      @apply grid-cols-16 my-8 mb-12;
+      @apply md:grid-cols-18;
+      @apply lgPlus:grid-cols-26;
+    }
+
+    /* Article Wrapper Full - Full width wrapper */
+    .article-wrapper-full {
+      @apply col-span-full;
+    }
+
+    /* Article Wrapper Constrained - Constrained width wrapper */
+    .article-wrapper-constrained {
+      @apply col-start-2 col-span-16;
+      @apply md:col-start-3 md:col-span-18;
+      @apply lgPlus:col-start-3 lgPlus:col-span-26;
     }
   }
-
-  /* Accordion Variant - Wider content area with internal grid */
-  .article-content-accordion {
-    align-self: center;
-    grid-column: 2 / span 16;
-  }
-
-  @media (min-width: 768px) {
-    .article-content-accordion {
-      grid-column: 3 / span 18;
-    }
-  }
-
-  @media (min-width: 1180px) {
-    .article-content-accordion {
-      grid-column: 3 / span 19;
-    }
-  }
-
-  /* Content Width - Centered Narrow Variant */
-  .article-content-centered {
-    align-self: center;
-    grid-column: 2 / span 16;
-  }
-
-  @media (min-width: 768px) {
-    .article-content-centered {
-      grid-column: 3 / span 18;
-    }
-  }
-
-  @media (min-width: 1180px) {
-    .article-content-centered {
-      grid-column: 9 / span 14;
-    }
-  }
-
-  /* Article Text - Responsive Typography Scaling */
-  .article-text {
-    font-size: 1.125rem;
-    line-height: 1.45;
-    letter-spacing: -0.01em;
-  }
-
-  @media (min-width: 768px) {
-    .article-text {
-      font-size: 1.5rem;
-    }
-  }
-
-  @media (min-width: 1180px) {
-    .article-text {
-      font-size: 1.625rem;
-    }
-  }
-
-  @media (min-width: 1920px) {
-    .article-text {
-      font-size: 2.25rem;
-    }
-  }
-
-  /* ACCORDION modifier overrides all breakpoints to force full-width */
-  .accordion {
-    grid-column: 1 / -1;
-    align-self: center;
-  }
-
-  /* Accordion Grid - Two-column max grid for items inside accordion */
-  .accordion-grid {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 48px;
-    grid-template-columns: repeat(1, minmax(0px, 1fr));
-  }
-
-  @media (min-width: 768px) {
-    .accordion-grid {
-      gap: 70px;
-      grid-template-columns: repeat(2, minmax(0px, 1fr));
-    }
-  }
-
-  @media (min-width: 1180px) {
-    .accordion-grid {
-      gap: 96px;
-    }
-  }
-
-  @media (min-width: 1920px) {
-    .accordion-grid {
-      gap: 128px;
-    }
-  }
-
-  /* Grid Container with Responsive Margins */
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(18, 1fr);
-    column-gap: 0px;
-    width: 100%;
-    max-width: 1920px;
-    margin: 1.25rem auto;
-  }
-
-  @media (min-width: 768px) {
-    .grid-container {
-      grid-template-columns: repeat(22, 1fr);
-      margin-top: 2.734375rem;
-      margin-bottom: 2.734375rem;
-    }
-  }
-
-  @media (min-width: 1180px) {
-    .grid-container {
-      grid-template-columns: repeat(30, 1fr);
-      margin-top: 3.75rem;
-      margin-bottom: 3.75rem;
-    }
-  }
-
-  @media (min-width: 1920px) {
-    .grid-container {
-      margin-top: 5rem;
-      margin-bottom: 5rem;
-    }
-  }
-
-  /* Grid Wrapper with FULL modifier */
-  .grid-wrapper {
-    grid-column: 1 / -1;
-  }
-
-  .grid-wrapper.FULL {
-    grid-column: 2 / span 16;
-  }
-
-  @media (min-width: 768px) {
-    .grid-wrapper.FULL {
-      grid-column: 3 / span 18;
-    }
-  }
-
-  @media (min-width: 1180px) {
-    .grid-wrapper.FULL {
-      grid-column: 3 / span 26;
-    }
-  }
-}
-
-.grid-content {
-  display: grid;
-  column-gap: 0px;
-  width: 100%;
-  max-width: 1920px;
-  margin: 32px auto 48px;
-  grid-template-columns: repeat(16, 1fr);
-}
-
-@media only screen and (min-width: 1180px) {
-  .grid-content {
-    grid-template-columns: repeat(26, 1fr);
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .grid-content {
-    grid-template-columns: repeat(18, 1fr);
-  }
-}

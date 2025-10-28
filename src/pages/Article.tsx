@@ -32,9 +32,9 @@ const Article = () => {
 
       <ArticleWrapper>
         {/* Title-Dominant Hero Section */}
-        <section className="article-grid-container relative py-20">
+        <section className="article-grid relative py-20">
           {/* Main Content Container */}
-          <div className="article-content-inset relative text-center flex flex-col items-center">
+          <div className="article-hero relative text-center flex flex-col items-center">
             {/* Back Button - Top Left */}
             <div className="w-full mb-4">
               <Link
@@ -131,7 +131,7 @@ const Article = () => {
           </ArticleContent>
 
           {/* Social Share Section */}
-          <div className="article-content-inset mt-16 mb-8">
+          <div className="article-hero mt-16 mb-8">
             <h3 className="font-display font-semibold text-[1.25rem] text-center mb-6 text-muted-foreground">
               Share This Article
             </h3>
@@ -150,7 +150,7 @@ const Article = () => {
       <Section>
         <GridWrapper>
           <GridContent>
-            <div className="accordion">
+            <div className="article-full-width">
               <h2 className="text-[2.25rem] md:text-[3rem] font-display font-bold mb-12 text-center">
                 Related Article
               </h2>
@@ -174,8 +174,8 @@ const Article = () => {
 
       {/* Footer */}
       <footer className="border-t border-border mt-12">
-        <div className="article-grid-container py-12">
-          <div className="article-content-inset text-center text-sm text-muted-foreground">
+        <div className="article-grid py-12">
+          <div className="article-hero text-center text-sm text-muted-foreground">
             <p>© 2024 Voyager Press. All rights reserved.</p>
           </div>
         </div>

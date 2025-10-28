@@ -22,6 +22,29 @@ export default {
         'serif': ['Playfair Display', 'Georgia', 'serif'],
         'display': ['Clash Display', 'system-ui', 'sans-serif'],
       },
+      gridTemplateColumns: {
+        '16': 'repeat(16, minmax(0, 1fr))',
+        '18': 'repeat(18, minmax(0, 1fr))',
+        '22': 'repeat(22, minmax(0, 1fr))',
+        '26': 'repeat(26, minmax(0, 1fr))',
+        '30': 'repeat(30, minmax(0, 1fr))',
+      },
+      gridColumn: {
+        'span-14': 'span 14 / span 14',
+        'span-16': 'span 16 / span 16',
+        'span-18': 'span 18 / span 18',
+        'span-19': 'span 19 / span 19',
+        'span-26': 'span 26 / span 26',
+      },
+      gridColumnStart: {
+        '8': '8',
+        '9': '9',
+        '15': '15',
+        '16': '16',
+      },
+      gap: {
+        '70': '70px',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
