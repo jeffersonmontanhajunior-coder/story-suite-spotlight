@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      screens: {
+        'lgPlus': '1180px',
+        '3xl': '1920px',
+      },
       fontFamily: {
         'sans': ['Archivo', 'system-ui', 'sans-serif'],
         'serif': ['Playfair Display', 'Georgia', 'serif'],

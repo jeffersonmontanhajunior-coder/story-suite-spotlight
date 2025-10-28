@@ -20,7 +20,7 @@ All colors MUST be HSL.
     /* Lifestyle gradient theme - Blue to Pink to Orange */
     --primary: 217 100% 65%; /* #4E93FF */
     --primary-foreground: 0 0% 100%;
-    
+
     --primary-light: 215 86% 70%; /* #639CF2 */
     --primary-glow: 195 100% 94%; /* #E4F9FF */
 
@@ -29,9 +29,9 @@ All colors MUST be HSL.
 
     --accent: 27 100% 55%; /* #F38300 */
     --accent-foreground: 0 0% 100%;
-    
+
     --accent-red: 356 100% 56%; /* #F3DDID approximation */
-    
+
     --muted: 220 20% 12%;
     --muted-foreground: 0 0% 60%; /* #999 */
 
@@ -50,11 +50,26 @@ All colors MUST be HSL.
     --editorial-tag: 217 100% 70%;
     --editorial-tag-bg: 220 20% 12%;
     --editorial-hover: 220 20% 8%;
-    
+
     /* Gradient definitions - Orange to Blue inspired */
-    --gradient-primary: linear-gradient(135deg, hsl(27 100% 55%), hsl(217 100% 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(27 100% 55%) 0%, hsl(14 100% 57%) 30%, hsl(290 90% 60%) 60%, hsl(217 100% 65%) 100%);
-    --gradient-accent: linear-gradient(90deg, hsl(27 100% 55%), hsl(14 100% 57%), hsl(217 100% 65%));
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(27 100% 55%),
+      hsl(217 100% 65%)
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(27 100% 55%) 0%,
+      hsl(14 100% 57%) 30%,
+      hsl(290 90% 60%) 60%,
+      hsl(217 100% 65%) 100%
+    );
+    --gradient-accent: linear-gradient(
+      90deg,
+      hsl(27 100% 55%),
+      hsl(14 100% 57%),
+      hsl(217 100% 65%)
+    );
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -78,7 +93,7 @@ All colors MUST be HSL.
 
     --primary: 217 100% 70%;
     --primary-foreground: 0 0% 100%;
-    
+
     --primary-light: 215 86% 75%;
     --primary-glow: 195 100% 30%;
 
@@ -87,9 +102,9 @@ All colors MUST be HSL.
 
     --accent: 27 100% 60%;
     --accent-foreground: 0 0% 100%;
-    
+
     --accent-red: 356 100% 60%;
-    
+
     --muted: 220 20% 15%;
     --muted-foreground: 0 0% 60%; /* #999 */
 
@@ -105,11 +120,26 @@ All colors MUST be HSL.
     --editorial-tag: 217 100% 70%;
     --editorial-tag-bg: 217 40% 20%;
     --editorial-hover: 220 20% 12%;
-    
-    --gradient-primary: linear-gradient(135deg, hsl(27 100% 60%), hsl(217 100% 70%));
-    --gradient-hero: linear-gradient(135deg, hsl(27 100% 60%) 0%, hsl(14 100% 62%) 30%, hsl(290 90% 65%) 60%, hsl(217 100% 70%) 100%);
-    --gradient-accent: linear-gradient(90deg, hsl(27 100% 60%), hsl(14 100% 62%), hsl(217 100% 70%));
-    
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(27 100% 60%),
+      hsl(217 100% 70%)
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(27 100% 60%) 0%,
+      hsl(14 100% 62%) 30%,
+      hsl(290 90% 65%) 60%,
+      hsl(217 100% 70%) 100%
+    );
+    --gradient-accent: linear-gradient(
+      90deg,
+      hsl(27 100% 60%),
+      hsl(14 100% 62%),
+      hsl(217 100% 70%)
+    );
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 217 100% 70%;
@@ -128,20 +158,17 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-size: 1.6rem;
+    font-size: 1rem;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 2;
   }
-  html {
-    font-size: 62.5%;
-  }
 
   @media (min-width: 40em) {
     body {
-      font-size: 1.8rem;
+      font-size: 1.125rem;
     }
   }
 }
@@ -186,20 +213,254 @@ All colors MUST be HSL.
 
   /* Fluid typography for article titles */
   .fluid-title {
-    font-size: clamp(4rem, 8vw + 1rem, 20rem);
+    font-size: clamp(2.5rem, 8vw + 0.625rem, 12.5rem);
     line-height: 0.9;
     letter-spacing: -0.03em;
   }
 
   @media (min-width: 768px) {
     .fluid-title {
-      font-size: clamp(8rem, 10vw + 2rem, 24rem);
+      font-size: clamp(5rem, 10vw + 1.25rem, 15rem);
     }
   }
 
   @media (min-width: 1024px) {
     .fluid-title {
-      font-size: clamp(10rem, 12vw + 3rem, 30rem);
+      font-size: clamp(6.25rem, 12vw + 1.875rem, 18.75rem);
     }
+  }
+
+  /* Grid System - Article Layout */
+  .article-grid-container {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-column-gap: 0;
+    width: 100%;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.734375rem;
+  }
+
+  @media (min-width: 768px) {
+    .article-grid-container {
+      grid-template-columns: repeat(22, 1fr);
+    }
+  }
+
+  @media (min-width: 1180px) {
+    .article-grid-container {
+      grid-template-columns: repeat(30, 1fr);
+      margin-bottom: 3.75rem;
+    }
+  }
+
+  /* Content Width - Standard Article Content */
+  .article-content-width {
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: 768px) {
+    .article-content-width {
+      grid-column: 3 / span 18;
+    }
+  }
+
+  @media (min-width: 1180px) {
+    .article-content-width {
+      grid-column: 3 / span 19;
+    }
+  }
+
+  /* Content Width - Inset (Narrow) Variant */
+  .article-content-inset {
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: 768px) {
+    .article-content-inset {
+      grid-column: 3 / span 18;
+    }
+  }
+
+  @media (min-width: 1180px) {
+    .article-content-inset {
+      grid-column: 8 / span 16;
+    }
+  }
+
+  /* Two-Column Layout - For Blog/Homepage Article Grids */
+  .grid-item-left {
+    grid-column: 1 / 9;
+  }
+
+  .grid-item-right {
+    grid-column: 10 / -1;
+  }
+
+  @media (min-width: 768px) {
+    .grid-item-left {
+      grid-column: 1 / 11;
+    }
+
+    .grid-item-right {
+      grid-column: 12 / -1;
+    }
+  }
+
+  @media (min-width: 1180px) {
+    .grid-item-left {
+      grid-column: 1 / 15;
+    }
+
+    .grid-item-right {
+      grid-column: 16 / -1;
+    }
+  }
+
+  /* Accordion Variant - Wider content area with internal grid */
+  .article-content-accordion {
+    align-self: center;
+    grid-column: 2 / span 16;
+  }
+
+  @media (min-width: 768px) {
+    .article-content-accordion {
+      grid-column: 3 / span 18;
+    }
+  }
+
+  @media (min-width: 1180px) {
+    .article-content-accordion {
+      grid-column: 3 / span 19;
+    }
+  }
+
+  /* Content Width - Centered Narrow Variant */
+  .article-content-centered {
+    align-self: center;
+    grid-column: 2 / span 16;
+  }
+
+  @media (min-width: 768px) {
+    .article-content-centered {
+      grid-column: 3 / span 18;
+    }
+  }
+
+  @media (min-width: 1180px) {
+    .article-content-centered {
+      grid-column: 9 / span 14;
+    }
+  }
+
+  /* ACCORDION modifier overrides all breakpoints to force full-width */
+  .accordion {
+    grid-column: 1 / -1;
+    align-self: center;
+  }
+
+  /* Accordion Grid - Two-column max grid for items inside accordion */
+  .accordion-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 48px;
+    grid-template-columns: repeat(1, minmax(0px, 1fr));
+  }
+
+  @media (min-width: 768px) {
+    .accordion-grid {
+      gap: 70px;
+      grid-template-columns: repeat(2, minmax(0px, 1fr));
+    }
+  }
+
+  @media (min-width: 1180px) {
+    .accordion-grid {
+      gap: 96px;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .accordion-grid {
+      gap: 128px;
+    }
+  }
+
+  /* Grid Container with Responsive Margins */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    column-gap: 0px;
+    width: 100%;
+    max-width: 1920px;
+    margin: 1.25rem auto;
+  }
+
+  @media (min-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(22, 1fr);
+      margin-top: 2.734375rem;
+      margin-bottom: 2.734375rem;
+    }
+  }
+
+  @media (min-width: 1180px) {
+    .grid-container {
+      grid-template-columns: repeat(30, 1fr);
+      margin-top: 3.75rem;
+      margin-bottom: 3.75rem;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .grid-container {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+    }
+  }
+
+  /* Grid Wrapper with FULL modifier */
+  .grid-wrapper {
+    grid-column: 1 / -1;
+  }
+
+  .grid-wrapper.FULL {
+    grid-column: 2 / span 16;
+  }
+
+  @media (min-width: 768px) {
+    .grid-wrapper.FULL {
+      grid-column: 3 / span 18;
+    }
+  }
+
+  @media (min-width: 1180px) {
+    .grid-wrapper.FULL {
+      grid-column: 3 / span 26;
+    }
+  }
+}
+
+.grid-content {
+  display: grid;
+  column-gap: 0px;
+  width: 100%;
+  max-width: 1920px;
+  margin: 32px auto 48px;
+  grid-template-columns: repeat(16, 1fr);
+}
+
+@media only screen and (min-width: 1180px) {
+  .grid-content {
+    grid-template-columns: repeat(26, 1fr);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .grid-content {
+    grid-template-columns: repeat(18, 1fr);
   }
 }
