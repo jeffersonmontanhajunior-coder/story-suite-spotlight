@@ -146,28 +146,27 @@ const Article = () => {
         </ArticleContainer>
       </ArticleWrapper>
 
-      {/* Related Articles */}
+      {/* Related Article */}
       <Section>
         <GridWrapper>
           <GridContent>
             <div className="accordion">
               <h2 className="text-[2.25rem] md:text-[3rem] font-display font-bold mb-12 text-center">
-                Related Articles
+                Related Article
               </h2>
 
-              <ul className="accordion-grid">
-                {articleData.relatedArticles.map((article) => (
-                  <li key={article.slug}>
-                    <ArticlePreview
-                      title={article.title}
-                      slug={article.slug}
-                      image={article.image}
-                      imageAlt={article.title}
-                      publishDate="Recent"
-                    />
-                  </li>
+              <div className="max-w-[600px] mx-auto">
+                {articleData.relatedArticles.slice(0, 1).map((article) => (
+                  <ArticlePreview
+                    key={article.slug}
+                    title={article.title}
+                    slug={article.slug}
+                    image={article.image}
+                    imageAlt={article.title}
+                    publishDate="Recent"
+                  />
                 ))}
-              </ul>
+              </div>
             </div>
           </GridContent>
         </GridWrapper>

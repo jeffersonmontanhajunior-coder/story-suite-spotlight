@@ -110,9 +110,8 @@ export function ArticleContent({ children, className = "" }: ArticleContentProps
   return (
     <div
       className={`
-      article-content article-content-inset
-      [&_p]:text-[1.125rem] [&_p]:md:text-[1.5rem] [&_p]:lg:text-[1.625rem] [&_p]:2xl:text-[2.25rem]
-      [&_p]:font-normal [&_p]:tracking-[-0.01em] [&_p]:leading-[1.6]
+      article-content article-content-inset article-text
+      [&_p]:font-normal
       [&_h2]:mt-[1.666em] [&_h2]:mb-[0.666em] [&_h2]:text-[1.125rem] [&_h2]:md:text-[1.3125rem] [&_h2]:lg:text-[1.6875rem] [&_h2]:font-display [&_h2]:font-semibold [&_h2]:tracking-[-0.02em] [&_h2]:leading-[1.6] [&_h2]:lg:leading-[1.4]
       [&_h2:first-child]:mt-0
       [&_h3]:mt-[1.875em] [&_h3]:mb-[0.75em] [&_h3]:font-display [&_h3]:font-bold

@@ -257,7 +257,7 @@ All colors MUST be HSL.
 
   /* Content Width - Standard Article Content */
   .article-content-width {
-    grid-column: 1 / -1;
+    grid-column: 2 / span 16;
   }
 
   @media (min-width: 768px) {
@@ -274,7 +274,7 @@ All colors MUST be HSL.
 
   /* Content Width - Inset (Narrow) Variant */
   .article-content-inset {
-    grid-column: 1 / -1;
+    grid-column: 2 / span 16;
   }
 
   @media (min-width: 768px) {
@@ -351,6 +351,31 @@ All colors MUST be HSL.
   @media (min-width: 1180px) {
     .article-content-centered {
       grid-column: 9 / span 14;
+    }
+  }
+
+  /* Article Text - Responsive Typography Scaling */
+  .article-text {
+    font-size: 1.125rem;
+    line-height: 1.45;
+    letter-spacing: -0.01em;
+  }
+
+  @media (min-width: 768px) {
+    .article-text {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1180px) {
+    .article-text {
+      font-size: 1.625rem;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .article-text {
+      font-size: 2.25rem;
     }
   }
 

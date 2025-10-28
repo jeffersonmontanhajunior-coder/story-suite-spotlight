@@ -10,8 +10,6 @@ const storiesUnboundHero = "/images/pexels-ayomide-isaac-66354580-16273825.jpg";
 const circularHorizonsHero = "/images/pexels-brianasarejr-12417686.jpg";
 const retroRevivalHero = "/images/pexels-brianasarejr-17553641.jpg";
 const goldenSpheresHero = "/images/pexels-jameshausley-3328337.jpg";
-const azureAwakeningHero = "/images/amina-atar-tPM3nd4J8xs-unsplash.jpg";
-const minimalistVoyageHero = "/images/igor-rand-dlR-BNDWz3g-unsplash.jpg";
 
 export interface ArticleData {
   slug: string;
@@ -46,13 +44,13 @@ export interface ArticleData {
 }
 
 export const articlesData: Record<string, ArticleData> = {
-  "about-sofia": {
-    slug: "about-sofia",
-    title: "Who's Sofia?",
+  "about-james": {
+    slug: "about-james",
+    title: "Who's James?",
     subtitle: "A Personal Introduction",
     publishDate: "March 20, 2024",
     author: {
-      name: "Sofia Andersson",
+      name: "James Carter",
       title: "Fashion Photographer",
       avatar: authorAvatar,
     },
@@ -63,52 +61,43 @@ export const articlesData: Record<string, ArticleData> = {
     content: [
       {
         type: "paragraph",
-        content: "I resisted writing an About page for years.",
+        content: "I grew up in Brooklyn, not far from where I work now.",
       },
       {
         type: "paragraph",
-        content: "But after being interviewed for Vogue, invited to speak at photography conferences, and asked repeatedly about my work, it seemed strange not to have something here. A place to point to when people ask: Who is this person behind the camera?",
+        content: "Fashion photography wasn't the plan. I studied photojournalism at NYU, spent a year shooting street life and community stories across the five boroughs. But I kept noticing how people dressed—not just what they wore, but how clothing became a language, a statement, a way of claiming space in the world.",
       },
       {
         type: "paragraph",
-        content: "So here it is.",
+        content: "So I pivoted.",
       },
       {
         type: "paragraph",
-        content: "I'm Sofia Andersson, a 28-year-old fashion photographer based in Copenhagen. I specialize in editorial work—the kind of photography that tells stories, not just sells clothes. I shoot for Scandinavian brands, international magazines, and the occasional beauty campaign. I also run this blog, Voyager, where I document the chaos and beauty of working in fashion.",
+        content: "Started assisting fashion photographers around the city. Learned lighting, composition, how to work with models and art directors. Spent long days in studios and on location shoots, carrying equipment and absorbing everything I could about how fashion images get made. It was unglamorous work, but it taught me the craft.",
       },
       {
         type: "paragraph",
-        content: "My path here wasn't traditional. I studied photojournalism, not fashion photography. That background taught me to see stories in moments and work fast with natural light. After graduation, I spent a year assisting established photographers in Copenhagen and London—carrying equipment, adjusting reflectors, making endless coffee.",
+        content: "Five years ago, I started shooting my own editorials. Built a portfolio that mixed street culture with high fashion—the aesthetic I'd grown up around in Brooklyn. Reached out to magazines and brands. The work came slowly, then all at once. These days I shoot for streetwear labels, beauty campaigns, and publications that care about storytelling as much as style.",
       },
       {
         type: "paragraph",
-        content: "It was unglamorous but invaluable.",
+        content: "My studio in Williamsburg is small but filled with good light. I shoot on a Canon EOS R5 mostly, though I love my Hasselblad for special projects. Film has a quality digital can't quite replicate—something about the grain, the patience it requires, the way it forces you to slow down and get the shot right.",
       },
       {
         type: "paragraph",
-        content: "Five years ago, I took the leap and started shooting my own editorials. Built a portfolio. Reached out to magazines and brands. The work came slowly at first, then suddenly all at once.",
+        content: "This blog, Voyager, started as a portfolio site in 2021. It became something more—a place to document the process, share what I've learned, connect with other photographers and creatives who care about craft. I write about technique, inspiration, the business side of photography, and occasionally just share work I'm proud of.",
       },
       {
         type: "paragraph",
-        content: "These days I shoot mostly on a Canon EOS R5, though I still love my Hasselblad 503CW for special projects. There's something about medium format film that digital can't replicate. My studio in Vesterbro is filled with natural light, vintage furniture, and an embarrassing number of half-empty coffee cups.",
-      },
-      {
-        type: "blockquote-big",
-        content: "The best camera is the one you have with you. The best photograph is the one you're about to take.",
-        author: "Sofia Andersson",
+        content: "New York taught me that fashion is more than clothes. It's identity, culture, aspiration. Every shoot is a chance to capture not just how something looks, but what it means. That's the work that interests me—images that tell stories about who we are and who we want to be.",
       },
       {
         type: "paragraph",
-        content: "I started Voyager in 2021 as a portfolio site. It evolved into something more—a space to share the creative process, break down shoots, and connect with other photographers who care about craft. I write about technique, inspiration, and the business of photography.",
+        content: "If you want to collaborate, reach out. Tell me about your project. I'm usually booked a few months out, but I make room for work that excites me.",
       },
       {
         type: "paragraph",
-        content: "If you want to work together, reach out. Tell me about your project, your timeline, your vision. I'm usually booked a few months out, but I always make room for work that excites me.",
-      },
-      {
-        type: "paragraph",
-        content: "Until then, I'll be here—shooting, writing, and trying to capture that perfect moment of light.",
+        content: "Until then, I'll be here in Brooklyn—shooting, learning, and trying to capture something true.",
       },
     ],
     relatedArticles: [
@@ -119,29 +108,15 @@ export const articlesData: Record<string, ArticleData> = {
         tag: "Editorial",
         slug: "editorial-elegance",
       },
-      {
-        title: "Stories Unbound",
-        description: "Narrative fashion photography that tells compelling visual stories.",
-        image: storiesUnboundHero,
-        tag: "Editorial",
-        slug: "stories-unbound",
-      },
-      {
-        title: "Desert Dreams",
-        description: "A journey through minimalist landscapes where fashion meets nature in perfect harmony.",
-        image: desertDreamsHero,
-        tag: "Travel",
-        slug: "desert-dreams",
-      },
     ],
   },
   "editorial-elegance": {
     slug: "editorial-elegance",
-    title: "Editorial Elegance",
-    subtitle: "A Study in Minimalist Fashion",
+    title: "Statement Jewelry",
+    subtitle: "The Power of Accessories",
     publishDate: "March 15, 2024",
     author: {
-      name: "Sofia Andersson",
+      name: "James Carter",
       title: "Fashion Photographer",
       avatar: authorAvatar,
     },
@@ -152,77 +127,62 @@ export const articlesData: Record<string, ArticleData> = {
     content: [
       {
         type: "paragraph",
-        content: "Simplicity in fashion photography is never simple.",
+        content: "Jewelry is where fashion gets personal.",
       },
       {
         type: "paragraph",
-        content: "During Milan Fashion Week, I shot an editorial exploring minimalism—monochromatic clothes against geometric backdrops. The brief was straightforward: strip everything down to the essentials. Clean lines. Natural light. No distractions.",
+        content: "You can wear the same jeans and white tee every day, but swap the earrings and suddenly the whole look shifts. Statement jewelry does that—it's the punctuation mark that changes the sentence. A pair of bold earrings can make casual feel intentional, simple feel sophisticated, understated feel powerful.",
       },
       {
         type: "paragraph",
-        content: "Easier said than done.",
+        content: "This shoot was for a Brooklyn-based jewelry designer who works with recycled gold and vintage findings. Safety pins reimagined as earrings. Paperclips transformed into necklaces. Everyday objects elevated into wearable art. The kind of pieces that make people ask: \"Where did you get those?\"",
       },
       {
         type: "paragraph",
-        content: "We worked in a studio with floor-to-ceiling windows, using only the soft northern light filtering through. No strobes, no reflectors, no safety nets. The model and I communicated mostly through glances and subtle adjustments. When you remove all the technical complexity, what's left is pure instinct.",
+        content: "Photographing jewelry is its own skill.",
       },
       {
         type: "paragraph",
-        content: "The garments were architectural—precise tailoring, deliberate draping, fabrics that moved like sculpture. My job wasn't to dress them up with clever lighting or dramatic angles. It was to get out of the way and let them speak.",
+        content: "You're working at a tiny scale—millimeters matter. The angle of light determines whether gold looks warm or cold, whether crystals sparkle or disappear. I shot these pieces macro-style, tight compositions that let you see every detail. The texture of the metal, the facets of the stones, the precise engineering of the clasps.",
       },
       {
         type: "paragraph",
-        content: "We shot entirely in black, white, and gray. Without color to anchor the eye, you notice different things. The fall of a hem. The angle of a shoulder. The negative space between figure and frame.",
+        content: "We styled them on colored backgrounds—coral pink, dusty blue, soft sage. The colors had to complement the gold without competing. Each setup took twenty minutes to perfect. Move the earring two millimeters left. Adjust the light angle. Check the reflection. Shoot. Repeat.",
       },
       {
         type: "paragraph",
-        content: "The best frame came near the end of the day. The model shifted her weight slightly, the light caught the fabric at just the right angle, and for maybe three seconds everything aligned. I fired twice. That's the shot you see above.",
-      },
-      {
-        type: "blockquote-big",
-        content: "Fashion photography is the art of making people stop and look at what they might otherwise walk past.",
-        author: "Irving Penn",
+        content: "The best images are the simplest ones. A pair of earrings on a pink surface. Clean, direct, no tricks. When the product is beautiful, your job is to not mess it up. Get the lighting right, nail the focus, step back.",
       },
       {
         type: "paragraph",
-        content: "Minimalism forces you to be honest. There's nowhere to hide behind technique or post-production tricks. Either the image works or it doesn't. Either you captured something essential or you just photographed clothes.",
+        content: "Fashion is often about the big statement—the dress, the coat, the shoes. But accessories are where personal style lives. They're the details people remember, the pieces you keep for years, the items that survive trend cycles because they were never trendy to begin with.",
       },
       {
         type: "paragraph",
-        content: "I'm still learning which is which.",
+        content: "The designer told me she makes each piece by hand in her studio in Greenpoint. Small batches, careful work, nothing mass-produced. That care shows in the final product. And hopefully, in the photographs too.",
+      },
+      {
+        type: "paragraph",
+        content: "Good jewelry doesn't need much. Just light, attention, and respect for the craft that made it.",
       },
     ],
     relatedArticles: [
       {
-        title: "Urban Runway",
-        description: "Street style meets high fashion in downtown Manhattan. Spontaneous moments of style captured in natural light.",
+        title: "Stories Unbound",
+        description: "Narrative fashion photography that tells compelling visual stories.",
         image: storiesUnboundHero,
-        tag: "Portrait",
-        slug: "urban-runway",
-      },
-      {
-        title: "Beauty in Motion",
-        description: "Exploring fluidity and grace through beauty editorial work. Shot on medium format film for timeless quality.",
-        image: goldenSpheresHero,
-        tag: "Beauty",
-        slug: "beauty-in-motion",
-      },
-      {
-        title: "Desert Dreams",
-        description: "A journey through minimalist landscapes where fashion meets nature in perfect harmony.",
-        image: desertDreamsHero,
-        tag: "Travel",
-        slug: "desert-dreams",
+        tag: "Editorial",
+        slug: "stories-unbound",
       },
     ],
   },
   "desert-dreams": {
     slug: "desert-dreams",
-    title: "Desert Dreams",
-    subtitle: "Where Fashion Meets Nature",
+    title: "Bold Lip",
+    subtitle: "The Power of Color",
     publishDate: "March 15, 2024",
     author: {
-      name: "Sofia Andersson",
+      name: "James Carter",
       title: "Fashion Photographer",
       avatar: authorAvatar,
     },
@@ -233,47 +193,43 @@ export const articlesData: Record<string, ArticleData> = {
     content: [
       {
         type: "paragraph",
-        content: "The desert doesn't forgive mistakes.",
+        content: "A bold lip changes everything.",
       },
       {
         type: "paragraph",
-        content: "We drove three hours into the Mojave to shoot an editorial for a Copenhagen designer's new collection. Five people, one van, and enough camera equipment to fill a small studio. The call time was 5 AM to catch the light.",
+        content: "I shot this campaign for an indie beauty brand launching their spring collection—twelve new lip colors ranging from subtle nudes to statement brights. The creative director wanted something different from the usual beauty photography. No lips on models, no before-and-after comparisons, no aspirational lifestyle shots.",
       },
       {
         type: "paragraph",
-        content: "Worth it.",
+        content: "Just the product as art.",
       },
       {
         type: "paragraph",
-        content: "Desert light is different from anything you get in a city or studio. It's harsh and unforgiving at midday, but for about two hours after sunrise, it's magic. The sun sits low, casting long shadows across sand and rock. Everything glows.",
+        content: "We shot each lipstick as a pure color study. Apply the product to white paper, photograph the swatches macro-style, let the pigment speak for itself. Orange-red became the hero shade—vibrant, confident, impossible to ignore. The kind of color that demands attention.",
       },
       {
         type: "paragraph",
-        content: "The clothes were all flowing fabrics—silk, linen, gauze. They moved beautifully in the wind, which was both a blessing and a curse. Every time we set up a shot, a gust would come through and rearrange everything. The model's hair, the dress, the carefully positioned fabric we'd laid on the ground as a prop.",
+        content: "Photographing makeup is technical work. The lighting has to be perfect or the color shifts. Too warm and orange looks red. Too cool and it looks brown. I used daylight-balanced strobes and shot tethered, checking each frame on a calibrated monitor to ensure color accuracy.",
       },
       {
         type: "paragraph",
-        content: "You learn to work fast.",
+        content: "The texture matters too.",
       },
       {
         type: "paragraph",
-        content: "By 10 AM, the temperature was already climbing toward 95 degrees. We shot quickly, moved locations, shot again. The stylist kept the model cool between takes with a portable fan and cold water. I worked mostly handheld, following the movement of fabric and light.",
+        content: "Some lipsticks are creamy, some matte, some have shimmer. You can see all of that in macro photography—the way pigment sits on paper, how light interacts with different finishes, whether the coverage is opaque or buildable. These details matter to people who care about makeup. They wanted to see exactly what they're buying.",
       },
       {
         type: "paragraph",
-        content: "The best image came from pure accident. A sudden wind caught the model's dress just as she turned. The fabric billowed out horizontally, perfectly parallel to the horizon line. I shot three frames before it fell. Only one was sharp.",
+        content: "We shot all twelve shades in one day. Each color got the same treatment—clean white background, direct overhead lighting, tight composition. The repetition created a visual system, a language. When the brand posted the images on Instagram, people started guessing shades based on the swatches alone.",
       },
       {
         type: "paragraph",
-        content: "That's the one everyone remembers.",
+        content: "That orange-red became their bestseller. Not because of clever marketing or influencer partnerships, but because the photograph showed exactly what it was—bold, beautiful, unapologetic color in a tube. Sometimes the best campaign is just honest product photography.",
       },
       {
         type: "paragraph",
-        content: "The desert strips away anything unnecessary. No props, no artificial backgrounds, no clever lighting setups. Just fabric, skin, sand, and sky. Either your composition works or it doesn't. Either the clothes look extraordinary or they disappear.",
-      },
-      {
-        type: "paragraph",
-        content: "We were back in the van by noon, exhausted and sunburned. But we got the shots. And for a few hours that morning, fashion and nature existed in perfect, temporary harmony.",
+        content: "Beauty doesn't need to be complicated. Sometimes it's just showing people exactly what they're getting.",
       },
     ],
     relatedArticles: [
@@ -284,29 +240,15 @@ export const articlesData: Record<string, ArticleData> = {
         tag: "Editorial",
         slug: "editorial-elegance",
       },
-      {
-        title: "Vintage Highway",
-        description: "A nostalgic journey through classic American style and the open road.",
-        image: vintageHighwayHero,
-        tag: "Travel",
-        slug: "vintage-highway",
-      },
-      {
-        title: "Lavender Fields",
-        description: "Romance and elegance captured in the purple hues of Provence.",
-        image: lavenderFieldsHero,
-        tag: "Editorial",
-        slug: "lavender-fields",
-      },
     ],
   },
   "vintage-highway": {
     slug: "vintage-highway",
-    title: "Vintage Highway",
-    subtitle: "The Open Road Aesthetic",
+    title: "Luxury Streetwear",
+    subtitle: "From Streets to Status",
     publishDate: "March 12, 2024",
     author: {
-      name: "Sofia Andersson",
+      name: "James Carter",
       title: "Fashion Photographer",
       avatar: authorAvatar,
     },
@@ -317,47 +259,43 @@ export const articlesData: Record<string, ArticleData> = {
     content: [
       {
         type: "paragraph",
-        content: "We found the car on Craigslist—a 1967 Mustang in faded turquoise.",
+        content: "Streetwear became luxury, and nobody noticed the shift happening.",
       },
       {
         type: "paragraph",
-        content: "The owner lived an hour outside Palm Springs and was surprisingly okay with us shooting fashion on it for a day. He even offered to drive it to location. \"Just don't scratch the paint,\" he said, patting the hood like it was a family member.",
+        content: "One day Supreme was a small skate shop on Lafayette Street. The next, it was selling teddy fleece jackets for $500 and people were lining up around the block every Thursday morning. Not because the quality suddenly changed, but because the story did. Streetwear stopped being about utility and started being about status.",
       },
       {
         type: "paragraph",
-        content: "We didn't scratch the paint.",
+        content: "I shot this editorial exploring that transformation.",
       },
       {
         type: "paragraph",
-        content: "The concept was simple: vintage Americana meets contemporary fashion. Think Thelma & Louise but make it 2024. We shot along Route 62, stopping at abandoned gas stations, retro diners, and stretches of empty highway that looked like they hadn't changed since 1975.",
+        content: "The brief from the magazine was simple: document luxury streetwear as if it were haute couture. Photograph Supreme and Palace and Stüssy the way you'd shoot Dior or Prada. Treat hoodies and box logos with the same reverence traditionally reserved for evening gowns.",
       },
       {
         type: "paragraph",
-        content: "The model wore pieces from a Danish designer's collection—clean lines, modern cuts, nothing explicitly vintage. But against the backdrop of old America, the clothes took on a different quality. They became part of the story rather than the whole story.",
+        content: "We worked with natural light against solid color backgrounds—warm golds, deep blacks, vibrant primaries. No elaborate sets, no urban backdrops, no obvious street style signifiers. Just the pieces themselves, isolated and elevated. A black fleece jacket becomes sculptural when you light it right.",
       },
       {
         type: "paragraph",
-        content: "That's the trick with location shooting. The place has to be more than a backdrop.",
+        content: "The model wore Supreme, Carhartt WIP, vintage Nike. Classic pieces from the streetwear canon. But we shot them with fashion photography techniques—dramatic lighting, carefully considered composition, attention to fabric texture and garment construction. The baseball cap got the same photographic treatment as a Philip Treacy fascinator.",
       },
       {
         type: "paragraph",
-        content: "We shot through golden hour, chasing the light as it moved across desert landscape. The car's turquoise paint caught the sun perfectly. The model leaned against the hood, sat in the driver's seat with the door open, walked along the white line down the center of an empty road.",
+        content: "Some people thought we were mocking streetwear. We weren't.",
       },
       {
         type: "paragraph",
-        content: "Every frame felt like a movie still. That's what we wanted.",
+        content: "The point was showing that these clothes deserve serious photographic attention. Streetwear has its own design language, its own cultural significance, its own relationship to identity and community. It's not fashion's scrappy younger sibling anymore. It's fashion, period.",
       },
       {
         type: "paragraph",
-        content: "Fashion photography borrows constantly from cinema—from framing to lighting to narrative structure. This shoot was an explicit homage to road movies and the mythology of the open highway. Freedom, possibility, escape. All the things fashion promises even when we know better.",
+        content: "When the editorial ran, the responses split exactly as expected. Traditional fashion people appreciated the aesthetic approach. Streetwear heads felt we'd sanitized something that should stay raw. Both reactions made sense. The tension between those worlds is the whole story.",
       },
       {
         type: "paragraph",
-        content: "By sunset, we'd shot maybe 200 frames. The car owner was happy, the model was exhausted, and I was already editing in my head. We returned the Mustang without a scratch and drove back to LA as the sky turned purple.",
-      },
-      {
-        type: "paragraph",
-        content: "Sometimes the best shoots are the ones that feel like little adventures.",
+        content: "Luxury streetwear exists in that uncomfortable space between two cultures. Maybe that's what makes it interesting to photograph.",
       },
     ],
     relatedArticles: [
@@ -368,29 +306,15 @@ export const articlesData: Record<string, ArticleData> = {
         tag: "Travel",
         slug: "desert-dreams",
       },
-      {
-        title: "Coastal Classic",
-        description: "Seaside elegance meets timeless style.",
-        image: coastalClassicHero,
-        tag: "Editorial",
-        slug: "coastal-classic",
-      },
-      {
-        title: "Retro Revival",
-        description: "Celebrating the bold patterns and colors of vintage fashion.",
-        image: retroRevivalHero,
-        tag: "Vintage",
-        slug: "retro-revival",
-      },
     ],
   },
   "lavender-fields": {
     slug: "lavender-fields",
-    title: "Lavender Fields",
-    subtitle: "Romance in Provence",
+    title: "The Hat Edit",
+    subtitle: "Elevated Menswear Accessories",
     publishDate: "March 8, 2024",
     author: {
-      name: "Sofia Andersson",
+      name: "James Carter",
       title: "Fashion Photographer",
       avatar: authorAvatar,
     },
@@ -401,43 +325,43 @@ export const articlesData: Record<string, ArticleData> = {
     content: [
       {
         type: "paragraph",
-        content: "Provence in July is tourist season.",
+        content: "Most men don't wear hats anymore.",
       },
       {
         type: "paragraph",
-        content: "We knew this going in, but I'd underestimated just how many people would be visiting the lavender fields during peak bloom. Families with cameras, couples on romantic getaways, Instagram influencers setting up elaborate poses. All perfectly reasonable. All making it nearly impossible to get a clean shot.",
+        content: "Somewhere between the 1960s and now, hats went from essential menswear to occasional accessory. You see them at the beach, on the golf course, maybe during winter. But that everyday hat—the one men used to wear to work, to dinner, to everywhere—disappeared from American life.",
       },
       {
         type: "paragraph",
-        content: "We adjusted.",
+        content: "This shoot was about bringing it back.",
       },
       {
         type: "paragraph",
-        content: "The shoot was for a French label's summer collection—light fabrics, soft colors, romantic silhouettes. The kind of clothes that look natural in fields of flowers. We arrived at 6 AM, an hour before the tourists, and had maybe 90 minutes of relative solitude.",
+        content: "We photographed a collection from a NYC hatmaker who crafts wide-brim felt hats by hand. Classic silhouettes, modern proportions. The kind of pieces that work with contemporary clothes but carry echoes of when everyone wore hats. Our model paired them with turtlenecks, blazers, casual knitwear—showing how a good hat elevates whatever you're already wearing.",
       },
       {
         type: "paragraph",
-        content: "The light at dawn was perfect. Soft, diffused, with a slight morning haze that made everything look painterly. The model moved through the rows of lavender while I shot handheld, following her movement. The flowers came up to her waist, creating natural framing for every composition.",
+        content: "I shot against warm, simple backgrounds—golden yellows, burnt orange, amber tones that complemented the brown felt without competing. We kept everything clean. Profile shots that showed the hat's shape. Upward angles that created drama. Close-ups that revealed the texture of the felt and the precision of the stitching.",
       },
       {
         type: "paragraph",
-        content: "Purple is a tricky color to photograph. Too saturated and it looks artificial. Too desaturated and you lose what makes lavender fields special. I exposed for the highlights and let the shadows fall where they wanted.",
+        content: "The lighting was critical. Too harsh and the hat's brim creates ugly shadows across the face. Too soft and you lose the material's texture. We used golden hour light filtered through diffusion, creating warmth without harshness. The model's profile caught the light perfectly—strong jawline, contemplative upward gaze, hat brim creating clean geometry.",
       },
       {
         type: "paragraph",
-        content: "By 7:30, cars were pulling into the parking area. We wrapped quickly, thanked the farmer who owned the land, and left before the crowds arrived. The whole shoot lasted less than two hours, but we got everything we needed.",
+        content: "That upward-looking shot became the campaign's hero image.",
       },
       {
         type: "paragraph",
-        content: "Sometimes the best work happens in the small window between too early and too late.",
+        content: "There's something aspirational about a well-made hat. It suggests intention, care about presentation, respect for the ritual of getting dressed. In an era of athleisure and casual everything, a hat is a statement that says you're making an effort. Not for others necessarily, but for yourself.",
       },
       {
         type: "paragraph",
-        content: "Back at the hotel, I reviewed the images. They had that quality I'd hoped for—romantic without being sentimental, beautiful without being precious. The clothes and the landscape complemented each other perfectly. When fashion and environment align like that, it almost doesn't feel like work.",
+        content: "The hatmaker told me each piece takes two days to complete. Steaming, shaping, finishing. All done by hand in a small workshop in the Garment District. When you photograph something made with that much care, you owe it similar attention.",
       },
       {
         type: "paragraph",
-        content: "Almost.",
+        content: "Maybe men will wear hats again. Maybe they won't. Either way, documenting well-made things feels like worthwhile work.",
       },
     ],
     relatedArticles: [
@@ -448,29 +372,15 @@ export const articlesData: Record<string, ArticleData> = {
         tag: "Editorial",
         slug: "coastal-classic",
       },
-      {
-        title: "Desert Dreams",
-        description: "A journey through minimalist landscapes where fashion meets nature in perfect harmony.",
-        image: desertDreamsHero,
-        tag: "Travel",
-        slug: "desert-dreams",
-      },
-      {
-        title: "Azure Awakening",
-        description: "Blue hues and coastal inspiration.",
-        image: azureAwakeningHero,
-        tag: "Editorial",
-        slug: "azure-awakening",
-      },
     ],
   },
   "coastal-classic": {
     slug: "coastal-classic",
-    title: "Coastal Classic",
-    subtitle: "Seaside Elegance",
+    title: "Natural Glow",
+    subtitle: "Beauty Without Filters",
     publishDate: "March 5, 2024",
     author: {
-      name: "Sofia Andersson",
+      name: "James Carter",
       title: "Fashion Photographer",
       avatar: authorAvatar,
     },
@@ -481,43 +391,43 @@ export const articlesData: Record<string, ArticleData> = {
     content: [
       {
         type: "paragraph",
-        content: "Shooting at the beach means accepting that nothing will go as planned.",
+        content: "Beauty photography lies more than any other kind.",
       },
       {
         type: "paragraph",
-        content: "Sand gets everywhere. Wind ruins hair and makeup within minutes. The tide comes in faster than you expect. Reflective light from water bounces unpredictably. Every piece of equipment needs protecting from salt spray and grit.",
+        content: "The retouching, the filters, the lighting tricks that erase texture and pores and anything that makes a face look human. I've done it all. Smoothed skin until it looks like plastic, brightened eyes until they glow unnaturally, perfected features until the person disappears. It pays well. It also feels increasingly wrong.",
       },
       {
         type: "paragraph",
-        content: "And yet, when it works, nothing looks better.",
+        content: "This campaign was different.",
       },
       {
         type: "paragraph",
-        content: "This shoot was for a Danish resort wear brand—linen, cotton, easy silhouettes in white and cream. We scouted a quiet beach north of Copenhagen, far enough from the city to avoid crowds. The weather forecast promised sun. We got clouds instead, which turned out to be a gift.",
+        content: "A skincare brand approached me wanting something honest—beauty photography that showed real skin, natural light, minimal retouching. Just clean beauty photography that celebrated how people actually look, not some impossible airbrushed fantasy. It sounded simple. It wasn't.",
       },
       {
         type: "paragraph",
-        content: "Overcast beach light is soft and even, perfect for fashion. No harsh shadows, no squinting into bright sun, just clean, diffused illumination. The model wore flowing pieces that caught the wind beautifully. We shot near the water's edge, timing frames between waves.",
+        content: "When you strip away all the usual tricks, you're left with pure technique. The lighting has to be perfect—soft enough to be flattering but true enough to show texture. I used large diffused natural light from a north-facing window. No fill, no reflectors, just beautiful soft directional light that wrapped around the model's face.",
       },
       {
         type: "paragraph",
-        content: "Working with water requires rhythm. Watch the waves, count the intervals, shoot during the lulls. Get the shot before the next surge. One frame we nailed perfectly—the model mid-stride, fabric billowing, water just catching her feet. Three seconds later, a wave soaked her up to the knees.",
+        content: "We shot tight close-ups. Direct eye contact with camera. Minimal makeup—just skincare and a touch of neutral tone. The model's skin looked like skin. Pores visible, natural texture preserved, real human beauty instead of digital perfection.",
       },
       {
         type: "paragraph",
-        content: "We brought towels.",
+        content: "In post-production, I did almost nothing. Color correction, minor blemish cleanup, that's it. No liquifying, no frequency separation, no skin smoothing. The brief was clear: show what good skincare looks like on real skin. That means keeping the reality.",
       },
       {
         type: "paragraph",
-        content: "The challenge with coastal shoots is making them feel fresh when everyone's seen a thousand beach photos. We focused on clean compositions—simple lines, minimal styling, letting the environment speak for itself. Sometimes restraint is the most radical choice.",
+        content: "When the campaign launched, the response surprised everyone. People were starved for honest beauty imagery. They'd been fed so much artifice for so long that seeing actual human skin felt revolutionary. The brand's Instagram comments were full of people saying: \"Finally, beauty that looks achievable.\"",
       },
       {
         type: "paragraph",
-        content: "By afternoon, the wind had picked up too much to continue. We packed up, shook sand out of camera bags, and headed back to the studio. But we'd gotten what we needed—images that felt breezy and effortless, even though nothing about the shoot was effortless at all.",
+        content: "That's the power of showing truth. In a world of filters and Face Tune, natural beauty becomes radical.",
       },
       {
         type: "paragraph",
-        content: "That's fashion photography in a nutshell.",
+        content: "I've shot beauty campaigns both ways now. The heavily retouched fantasy and the honest reality. Only one feels like it might age well.",
       },
     ],
     relatedArticles: [
@@ -528,29 +438,15 @@ export const articlesData: Record<string, ArticleData> = {
         tag: "Editorial",
         slug: "lavender-fields",
       },
-      {
-        title: "Azure Awakening",
-        description: "Blue hues and coastal inspiration.",
-        image: azureAwakeningHero,
-        tag: "Editorial",
-        slug: "azure-awakening",
-      },
-      {
-        title: "Minimalist Voyage",
-        description: "Clean lines and contemporary travel style.",
-        image: minimalistVoyageHero,
-        tag: "Travel",
-        slug: "minimalist-voyage",
-      },
     ],
   },
   "stories-unbound": {
     slug: "stories-unbound",
-    title: "Stories Unbound",
-    subtitle: "Narrative Fashion Photography",
+    title: "Effortless Style",
+    subtitle: "The Art of Looking Casual",
     publishDate: "March 1, 2024",
     author: {
-      name: "Sofia Andersson",
+      name: "James Carter",
       title: "Fashion Photographer",
       avatar: authorAvatar,
     },
@@ -561,43 +457,43 @@ export const articlesData: Record<string, ArticleData> = {
     content: [
       {
         type: "paragraph",
-        content: "Fashion editorials usually follow a formula—model, clothes, location, repeat.",
+        content: "The best style looks like no effort at all.",
       },
       {
         type: "paragraph",
-        content: "This one didn't. The brief from the magazine was simple: tell a story. Not just show clothes, not just create pretty images, but build a narrative that unfolds across eight pages. The clothes were the vocabulary, but we needed to write a sentence.",
+        content: "An oversized tee, good sneakers, well-fitted pants. Nothing complicated, nothing trying too hard, just clean simple pieces worn with confidence. That's the foundation of street style—fashion that doesn't announce itself but still says something about who you are.",
       },
       {
         type: "paragraph",
-        content: "We started with character.",
+        content: "I shot this series around Bushwick on a Saturday afternoon.",
       },
       {
         type: "paragraph",
-        content: "Who is this person? Where is she going? What happened before this moment, and what happens after? We settled on a loose concept: a woman leaving the city, maybe for good, maybe just for the weekend. The ambiguity was intentional. Good stories leave room for the viewer to fill in gaps.",
+        content: "No studio, no elaborate lighting setups, just natural daylight and interesting walls. The model wore basics—oversized sage green tee, black pants, white sneakers. The kind of outfit you'd see on any Brooklyn street corner. But paired with good proportions and shot well, basics become something more.",
       },
       {
         type: "paragraph",
-        content: "We shot across three locations in one long day. Morning in an apartment with half-packed suitcases. Afternoon at a train station platform. Evening on a coastal road as the sun set. The model wore different pieces from the same collection, creating visual continuity while suggesting the passage of time.",
+        content: "We walked maybe ten blocks, shooting against weathered walls, aged paint, urban texture. The locations weren't Instagram-perfect. They were real—peeling paint, faded colors, the authentic decay of a city constantly remaking itself. That realness matters. Street style photography shouldn't look too polished.",
       },
       {
         type: "paragraph",
-        content: "Narrative photography requires thinking beyond individual frames. Each image needs to work alone but also connect to what comes before and after. It's sequential storytelling, closer to cinema than traditional fashion photography.",
+        content: "The key to photographing casual clothes is respecting the casualness.",
       },
       {
         type: "paragraph",
-        content: "The hardest part was the ending.",
+        content: "Don't over-style, don't over-light, don't force drama where none exists. The model walked, I followed, we stopped when something felt right. Sometimes the best street style shots come from just paying attention to how people naturally move through space.",
       },
       {
         type: "paragraph",
-        content: "We needed a final image that felt conclusive without being too neat. The model standing at a window, looking out at the ocean. Is she arriving somewhere new or still in transit? The viewer decides. That ambiguity is the point.",
+        content: "White sneakers are having their tenth comeback in as many years. They never really leave—they just cycle between mainstream and cool and back again. Right now they're everywhere, which somehow makes them more invisible, which somehow makes them more essential. The uniform of people who know style isn't about standing out.",
       },
       {
         type: "paragraph",
-        content: "When the magazine published the story, they ran it without any text—just images and credits. The fashion spoke for itself. Or rather, the narrative we built around the fashion spoke. The clothes were beautiful, but what people remembered was the feeling. The sense of departure, possibility, transformation.",
+        content: "We wrapped after two hours and maybe 150 frames. No costume changes, no hair and makeup team, no assistants hauling equipment. Just a camera, good light, and someone who knew how to wear simple clothes well.",
       },
       {
         type: "paragraph",
-        content: "That's when fashion photography becomes something more than just documentation. It becomes storytelling.",
+        content: "That's the whole game. Make the everyday look intentional. Make the simple look considered. Make the effortless reveal the effort it actually took.",
       },
     ],
     relatedArticles: [
@@ -608,29 +504,15 @@ export const articlesData: Record<string, ArticleData> = {
         tag: "Editorial",
         slug: "editorial-elegance",
       },
-      {
-        title: "Urban Runway",
-        description: "Street style meets high fashion in downtown Manhattan.",
-        image: storiesUnboundHero,
-        tag: "Portrait",
-        slug: "urban-runway",
-      },
-      {
-        title: "Circular Horizons",
-        description: "Geometric patterns and modern design.",
-        image: circularHorizonsHero,
-        tag: "Editorial",
-        slug: "circular-horizons",
-      },
     ],
   },
   "circular-horizons": {
     slug: "circular-horizons",
-    title: "Circular Horizons",
-    subtitle: "Geometric Fashion Design",
+    title: "Fashion as Art",
+    subtitle: "When Style Becomes Expression",
     publishDate: "February 28, 2024",
     author: {
-      name: "Sofia Andersson",
+      name: "James Carter",
       title: "Fashion Photographer",
       avatar: authorAvatar,
     },
@@ -641,43 +523,43 @@ export const articlesData: Record<string, ArticleData> = {
     content: [
       {
         type: "paragraph",
-        content: "Architecture and fashion have always been in conversation.",
+        content: "Fashion stops being fashion when it becomes art.",
       },
       {
         type: "paragraph",
-        content: "This shoot made that conversation explicit. We worked with a Barcelona-based designer whose collection explored geometric forms—circular cutouts, angular seams, architectural draping. The clothes demanded a location that matched their precision.",
+        content: "Or maybe it becomes more fashion. The line between the two has always been blurry—designers calling their work wearable sculpture, photographers shooting clothes like they're documenting performance art, models moving like dancers instead of mannequins. Fashion wants to be art. Art wants to be seen.",
       },
       {
         type: "paragraph",
-        content: "We found it in a brutalist building scheduled for demolition.",
+        content: "This editorial explored that intersection.",
       },
       {
         type: "paragraph",
-        content: "Concrete circles, circular windows, curved staircases—the space was full of geometric repetition. Perfect. We had one day to shoot before the building closed for good. No pressure.",
+        content: "The brief was deliberately vague: create images where you can't tell if you're looking at fashion photography or fine art. We shot in black and white to strip away commercial associations. No color, no obvious styling, just form, shadow, movement. The model wore minimal pieces—enough to suggest fashion without making it the subject.",
       },
       {
         type: "paragraph",
-        content: "The challenge was making the clothes stand out rather than disappear into all that pattern. Too much geometry becomes visual noise. We kept compositions simple—one model, one shape, clean framing. Let the circles echo each other without competing.",
+        content: "We worked in a dance studio in SoHo. White walls, hardwood floors, huge windows flooding the space with natural light. The model had a dance background, which meant she understood how to use her body expressively. Arms raised, back arched, movements that felt improvised but looked intentional.",
       },
       {
         type: "paragraph",
-        content: "Natural light came through those circular windows in beautiful, shifting patterns. We followed it around the building, shooting quickly as shadows moved across walls and floors. The model wore structured pieces that held their shape—no flowing fabrics here, just sharp lines and deliberate forms.",
+        content: "I shot without direction, just followed the movement.",
       },
       {
         type: "paragraph",
-        content: "My favorite frame: the model centered in a circular window, arms raised, creating another circle with her body. Three circles nested within each other—window, body, shadow on the wall behind. It sounds overly clever describing it, but in the moment it just felt right.",
+        content: "Sometimes she'd hold a pose for three seconds and I'd fire a burst. Sometimes I'd catch her mid-motion, arms reaching upward, body creating shapes I couldn't have choreographed if I tried. The best images came from those unplanned moments—the spaces between poses where intention met instinct.",
       },
       {
         type: "paragraph",
-        content: "Sometimes fashion photography is about harmony between environment and subject. Sometimes it's about tension. This shoot was pure harmony. The clothes belonged in that space. They were made for each other.",
+        content: "Black and white changes how people see fashion. Without color to distract, you notice composition, form, the quality of light on skin. The images felt sculptural, almost like documentation of a performance piece. Which was exactly the point.",
       },
       {
         type: "paragraph",
-        content: "When we wrapped, I walked through the empty building one more time. Within a month, it would be rubble. But we'd captured something before it disappeared—a moment when architecture and fashion aligned perfectly. That temporary intersection is what editorial photography is all about.",
+        content: "When we showed the images to the magazine, the photo editor asked: \"Is this fashion or fine art?\" I didn't have an answer. Maybe that's okay. Maybe the best work exists in that uncertain space where categories break down and all that remains is an image that makes you stop and look.",
       },
       {
         type: "paragraph",
-        content: "Creating something beautiful, then letting it go.",
+        content: "Fashion as art. Art as fashion. At a certain point, the distinction stops mattering.",
       },
     ],
     relatedArticles: [
@@ -688,29 +570,15 @@ export const articlesData: Record<string, ArticleData> = {
         tag: "Editorial",
         slug: "editorial-elegance",
       },
-      {
-        title: "Golden Spheres",
-        description: "Luxury and geometry in perfect balance.",
-        image: goldenSpheresHero,
-        tag: "Editorial",
-        slug: "golden-spheres",
-      },
-      {
-        title: "Minimalist Voyage",
-        description: "Clean lines and contemporary travel style.",
-        image: minimalistVoyageHero,
-        tag: "Travel",
-        slug: "minimalist-voyage",
-      },
     ],
   },
   "retro-revival": {
     slug: "retro-revival",
-    title: "Retro Revival",
-    subtitle: "Vintage Vibes, Modern Vision",
+    title: "The Leather Jacket",
+    subtitle: "Timeless Rebellion",
     publishDate: "February 24, 2024",
     author: {
-      name: "Sofia Andersson",
+      name: "James Carter",
       title: "Fashion Photographer",
       avatar: authorAvatar,
     },
@@ -721,39 +589,43 @@ export const articlesData: Record<string, ArticleData> = {
     content: [
       {
         type: "paragraph",
-        content: "The thrift store smelled like mothballs and old fabric softener.",
+        content: "Every wardrobe needs one perfect leather jacket.",
       },
       {
         type: "paragraph",
-        content: "We spent three hours there pulling vintage pieces for a shoot celebrating 1970s fashion—wide collars, bold prints, flared trousers, platform shoes. The styling brief was simple: make retro feel fresh. Easier said than done when everyone's seen a thousand \"70s-inspired\" editorials.",
+        content: "Not the trendy one, not the cheap one from a fast fashion chain, but the real thing—quality leather that gets better with age, classic moto styling that works with everything, the kind of jacket you'll still be wearing in twenty years. It's an investment piece, sure, but also a statement about how you want to move through the world. A little bit tough, a little bit refined, entirely timeless.",
       },
       {
         type: "paragraph",
-        content: "The trick was commitment.",
+        content: "I shot this editorial for a heritage leather goods brand out of New Jersey. They've been making motorcycle jackets since the 1950s—the same factory, the same patterns, the same commitment to doing one thing exceptionally well. The pieces look identical to what they made seventy years ago because they haven't needed to change the design.",
       },
       {
         type: "paragraph",
-        content: "Half-vintage doesn't work. You can't put someone in a polyester shirt and jeans and call it retro. We went full immersion—authentic pieces, period-appropriate hair and makeup, even sourced vintage sunglasses and jewelry. The model looked like she'd stepped out of a 1974 Vogue editorial.",
+        content: "We photographed two people in matching black leather jackets.",
       },
       {
         type: "paragraph",
-        content: "But we didn't want it to feel like a costume or a parody. That's the balance with retro work. Honor the aesthetic but keep it current. We shot on digital, used modern framing and composition, kept the colors saturated but not artificially boosted. The fashion was vintage; the photography was contemporary.",
+        content: "The concept was simple: show how the same piece looks on different people. One model with loc'd hair pulled up, hoop earrings catching the light. The other with a voluminous natural afro, wrists stacked with bracelets and a vintage watch. Both in identical jackets, both making them entirely their own.",
       },
       {
         type: "paragraph",
-        content: "Location was key. We found a preserved mid-century apartment complex with orange carpet and wood paneling. It hadn't been renovated since 1978. Perfect. The model moved through these spaces like she belonged there—lounging on a velvet couch, standing by a rotary phone, looking out curtained windows.",
+        content: "We shot against a weathered wall in Williamsburg—terracotta red paint fading to cream. No elaborate styling, no busy locations, just two people and two jackets. The intimacy between the subjects created the story. They stood close, facing each other, the jackets almost touching. Fashion photography, but also a portrait of connection.",
       },
       {
         type: "paragraph",
-        content: "What makes vintage fashion compelling isn't nostalgia for its own sake. It's recognizing that good design transcends time. Those 70s silhouettes—the wide pants, the structured jackets, the bold patterns—they still work. Not because they're trendy again, but because they were well-designed in the first place.",
+        content: "Leather photographs beautifully in natural light. The material has texture, weight, character. It catches light differently than fabric—harder edges, sharper shadows, a kind of sculptural quality. I shot close, focusing on details. The stitching along shoulders. The hardware. The way leather wrinkles and creases from being worn.",
       },
       {
         type: "paragraph",
-        content: "We wrapped the shoot and returned the borrowed clothes to the thrift store. (The owner let us borrow them for the day in exchange for credit in the magazine.) Back in the studio, editing the images, I was struck by how timeless they felt. Strip away the specific references, and what remains is just good fashion photography.",
+        content: "The brand wanted to show that their jackets work for everyone. Not in a vague inclusive marketing way, but literally—the same design, worn by different people, creating different stories. Same jacket, different style, both completely valid. That's what good design does. It adapts to whoever's wearing it.",
       },
       {
         type: "paragraph",
-        content: "Maybe that's the point. Maybe vintage isn't about looking backward at all.",
+        content: "When people ask me about essential wardrobe pieces, leather jacket is always in my top three. Not because it's trendy—it cycles in and out of fashion constantly—but because a good one transcends trends entirely. It's the rare piece that makes everything else you own look better.",
+      },
+      {
+        type: "paragraph",
+        content: "Timeless, versatile, cool without trying. That's the leather jacket promise. And after shooting maybe a hundred of them over the years, I still believe it.",
       },
     ],
     relatedArticles: [
@@ -764,29 +636,15 @@ export const articlesData: Record<string, ArticleData> = {
         tag: "Travel",
         slug: "vintage-highway",
       },
-      {
-        title: "Golden Spheres",
-        description: "Luxury and geometry in perfect balance.",
-        image: goldenSpheresHero,
-        tag: "Editorial",
-        slug: "golden-spheres",
-      },
-      {
-        title: "Stories Unbound",
-        description: "Narrative fashion photography that tells compelling visual stories.",
-        image: storiesUnboundHero,
-        tag: "Editorial",
-        slug: "stories-unbound",
-      },
     ],
   },
   "golden-spheres": {
     slug: "golden-spheres",
-    title: "Golden Spheres",
-    subtitle: "Luxury and Light",
+    title: "Neon Dreams",
+    subtitle: "Fashion in Digital Spaces",
     publishDate: "February 20, 2024",
     author: {
-      name: "Sofia Andersson",
+      name: "James Carter",
       title: "Fashion Photographer",
       avatar: authorAvatar,
     },
@@ -797,43 +655,43 @@ export const articlesData: Record<string, ArticleData> = {
     content: [
       {
         type: "paragraph",
-        content: "Working with gold is like working with a mirror that lies.",
+        content: "Fashion is increasingly digital, and physical space is becoming optional.",
       },
       {
         type: "paragraph",
-        content: "It reflects everything—light, shadow, the photographer, the entire set. But it also transforms what it reflects, adding warmth and weight to every image. For this shoot, we embraced that reflective quality rather than fighting it. The collection featured metallic fabrics and gold accessories, so we built the whole concept around light and reflection.",
+        content: "Virtual runways, AI-generated models, NFT clothing that exists only on screens. The industry is experimenting with what fashion means when it's untethered from fabric and bodies. I'm interested in the opposite question: what happens when you bring digital aesthetics into physical space? When neon and pixels and screen-glow become tangible environments you can shoot in?",
       },
       {
         type: "paragraph",
-        content: "The location was an empty gallery space with white walls and polished concrete floors. We brought in spherical mirrors and gold-colored props—balloons, geometric sculptures, metallic fabric. Everything round, everything reflective. The idea was to create a space where reality became slightly distorted, like looking through a golden lens.",
+        content: "We found an immersive art installation in Chelsea—vertical bars of neon light in pink, coral, red gradients. The kind of installation people visit to take selfies. I wanted to shoot fashion there before it closed, to capture that intersection of digital aesthetic and human presence.",
       },
       {
         type: "paragraph",
-        content: "Lighting was crucial and complicated.",
+        content: "The lighting was already perfect.",
       },
       {
         type: "paragraph",
-        content: "Too bright and the gold became washed out. Too dim and it looked brown instead of metallic. We used a combination of warm continuous lights and carefully positioned reflectors, adjusting constantly as the model moved. Every angle created different reflections, different plays of light across the metallic surfaces.",
+        content: "Vibrant pink neon backlighting the model, creating pure silhouette. No additional lights needed, no strobes, no reflectors. Just the installation itself providing all the atmosphere. The model stood centered in the neon field, sometimes still, sometimes moving slowly. Each frame felt futuristic, almost sci-fi.",
       },
       {
         type: "paragraph",
-        content: "The model wore structured pieces in gold lamé, bronze silk, and copper-toned leather. Against all those spherical mirrors and reflective surfaces, the effect was almost sci-fi—like fashion photography from some alternate, more glamorous dimension.",
+        content: "Silhouette photography is deceptive. You're hiding details, reducing the subject to pure shape. But that reduction can be powerful. Without facial features or clothing details to distract, you see posture, gesture, the outline of a human form against pure color. It becomes about presence rather than specifics.",
       },
       {
         type: "paragraph",
-        content: "One happy accident: a gold balloon drifted into frame just as I was shooting. I almost asked someone to move it, then realized it was perfect. Sometimes the best elements are unplanned. I shot three frames before the balloon floated out of reach.",
+        content: "We shot for maybe an hour, working quickly before the installation closed for the evening. The model wore simple black clothes—not because they mattered visually (they'd photograph as silhouette anyway) but because black absorbs light best. Against all that neon pink, the silhouette stayed crisp and defined.",
       },
       {
         type: "paragraph",
-        content: "Gold in fashion photography is tricky because it can easily become tacky. The line between luxurious and gaudy is thin. We stayed on the right side by keeping everything else minimal—simple compositions, clean backgrounds, restrained styling. Let the gold be the statement rather than compete with it.",
+        content: "When I showed the images to the magazine, they weren't sure how to categorize them. Fashion? Art photography? Documentation of an installation? Maybe all three. Maybe none. The digital generation doesn't care much about those old boundaries anyway.",
       },
       {
         type: "paragraph",
-        content: "When we wrapped, the gallery looked like the inside of a jewelry box. All that gold, all those reflections. We left the installation up for a week, and the gallery owner sent me photos of visitors wandering through the space, taking pictures with their phones.",
+        content: "Fashion photography is evolving. The tools change, the aesthetics shift, the venues expand beyond studios and streets. But the core remains—documenting how people present themselves, how they use clothing and environment and light to create meaning. Whether that happens in physical space or digital doesn't change the fundamental work.",
       },
       {
         type: "paragraph",
-        content: "Fashion photography creating accidental art installations. I'll take it.",
+        content: "Neon, pixels, screens, glow. This is what fashion spaces look like now. I'm just trying to document it honestly.",
       },
     ],
     relatedArticles: [
@@ -843,176 +701,6 @@ export const articlesData: Record<string, ArticleData> = {
         image: circularHorizonsHero,
         tag: "Editorial",
         slug: "circular-horizons",
-      },
-      {
-        title: "Editorial Elegance",
-        description: "Shot for Vogue Italia during Milan Fashion Week. Capturing the intersection of haute couture and architectural minimalism.",
-        image: editorialEleganceHero,
-        tag: "Editorial",
-        slug: "editorial-elegance",
-      },
-      {
-        title: "Retro Revival",
-        description: "Celebrating the bold patterns and colors of vintage fashion.",
-        image: retroRevivalHero,
-        tag: "Vintage",
-        slug: "retro-revival",
-      },
-    ],
-  },
-  "azure-awakening": {
-    slug: "azure-awakening",
-    title: "Azure Awakening",
-    subtitle: "Blue Horizons",
-    publishDate: "February 16, 2024",
-    author: {
-      name: "Sofia Andersson",
-      title: "Fashion Photographer",
-      avatar: authorAvatar,
-    },
-    heroImage: azureAwakeningHero,
-    readTime: "5 min",
-    viewCount: "2.1k",
-    shareCount: 67,
-    content: [
-      {
-        type: "paragraph",
-        content: "Blue is the hardest color to photograph well.",
-      },
-      {
-        type: "paragraph",
-        content: "It shifts depending on light, time of day, even the weather. What looks like perfect azure in person can turn gray or purple on camera. For this editorial—an entire collection in various shades of blue—I knew we'd need to be meticulous about color accuracy.",
-      },
-      {
-        type: "paragraph",
-        content: "We shot outdoors at dawn, when the sky itself was blue.",
-      },
-      {
-        type: "paragraph",
-        content: "The collection ranged from deep navy to pale ice blue, with everything in between—cobalt, azure, cerulean, indigo. The designer had carefully calibrated each shade to work together. My job was to make sure the camera captured those distinctions. Shooting all blues meant any color cast would be immediately obvious.",
-      },
-      {
-        type: "paragraph",
-        content: "We worked fast, chasing that early morning light before the sun climbed too high. The model wore different pieces from the collection, moving through a series of minimalist compositions against white walls and open sky. No distracting backgrounds, just clean frames that let the blue tones speak.",
-      },
-      {
-        type: "paragraph",
-        content: "The challenge was making each image distinct when everything was the same color. We varied texture—smooth silk against rough linen, structured wool against flowing chiffon. We played with depth of field, sometimes focusing on fabric details, sometimes pulling back to show full silhouettes.",
-      },
-      {
-        type: "paragraph",
-        content: "Blue has this quality that other colors don't. It can feel cold or warm, energizing or calming, sophisticated or casual. All depending on shade and context. This collection explored that range, and the photographs needed to capture those subtle emotional shifts.",
-      },
-      {
-        type: "paragraph",
-        content: "By 8 AM, the light had changed too much to continue. We'd shot for maybe 90 minutes total, but it was enough. Back in the studio, reviewing the images, I was relieved to see the blues had held their integrity. Each shade distinct, each piece clearly different from the others.",
-      },
-      {
-        type: "paragraph",
-        content: "Color-accurate fashion photography is harder than it looks. Especially with blue. But when you get it right, there's something deeply satisfying about seeing exactly what you intended to capture.",
-      },
-    ],
-    relatedArticles: [
-      {
-        title: "Coastal Classic",
-        description: "Seaside elegance meets timeless style.",
-        image: coastalClassicHero,
-        tag: "Editorial",
-        slug: "coastal-classic",
-      },
-      {
-        title: "Lavender Fields",
-        description: "Romance and elegance captured in the purple hues of Provence.",
-        image: lavenderFieldsHero,
-        tag: "Editorial",
-        slug: "lavender-fields",
-      },
-      {
-        title: "Minimalist Voyage",
-        description: "Clean lines and contemporary travel style.",
-        image: minimalistVoyageHero,
-        tag: "Travel",
-        slug: "minimalist-voyage",
-      },
-    ],
-  },
-  "minimalist-voyage": {
-    slug: "minimalist-voyage",
-    title: "Minimalist Voyage",
-    subtitle: "Essential Travel Style",
-    publishDate: "February 12, 2024",
-    author: {
-      name: "Sofia Andersson",
-      title: "Fashion Photographer",
-      avatar: authorAvatar,
-    },
-    heroImage: minimalistVoyageHero,
-    readTime: "7 min",
-    viewCount: "2.5k",
-    shareCount: 76,
-    content: [
-      {
-        type: "paragraph",
-        content: "I shot this editorial from a single carry-on suitcase.",
-      },
-      {
-        type: "paragraph",
-        content: "The concept was simple: travel fashion for people who actually travel. Not the fantasy version with steamer trunks and outfit changes, but the reality of limited luggage space and wrinkle-prone fabrics. A Swedish brand sent me their minimalist travel collection—eight pieces, all designed to mix and match, all chosen for packability.",
-      },
-      {
-        type: "paragraph",
-        content: "We shot across three cities in one week.",
-      },
-      {
-        type: "paragraph",
-        content: "Stockholm, Copenhagen, Berlin. Airports, train stations, hotel rooms, city streets. The model wore the same eight pieces in different combinations, creating distinct looks from minimal components. That's the promise of travel fashion—versatility without bulk.",
-      },
-      {
-        type: "paragraph",
-        content: "The challenge was making it look aspirational rather than purely practical. Travel clothing often photographs boring—neutral colors, simple cuts, nothing particularly exciting. We countered this with dynamic locations and strong compositions. The clothes were minimal, so we made the photography energetic.",
-      },
-      {
-        type: "paragraph",
-        content: "One morning in Berlin, we shot at Tegel Airport before dawn. Empty terminals, harsh fluorescent lighting, the model walking through deserted gates with her carry-on. Not traditionally beautiful, but honest. This is what travel actually looks like most of the time—waiting, moving, existing in transient spaces.",
-      },
-      {
-        type: "paragraph",
-        content: "The brand loved it. They'd been marketing travel wear with vacation imagery—beaches, cafés, scenic overlooks. But their actual customers were business travelers and digital nomads. People living out of suitcases, working remotely, always between places. Our photos reflected that reality.",
-      },
-      {
-        type: "paragraph",
-        content: "By the end of the week, those eight pieces had been photographed in maybe thirty different ways. The model was exhausted, I was running on coffee and adrenaline, but we'd proven the central point: you don't need a lot to look good. You just need the right things and the willingness to remix them endlessly.",
-      },
-      {
-        type: "paragraph",
-        content: "Fashion photography often celebrates excess—more clothes, more looks, more everything. This shoot celebrated restraint. Less, but better. Minimal, but intentional.",
-      },
-      {
-        type: "paragraph",
-        content: "The art of traveling light, documented honestly.",
-      },
-    ],
-    relatedArticles: [
-      {
-        title: "Desert Dreams",
-        description: "A journey through minimalist landscapes where fashion meets nature in perfect harmony.",
-        image: desertDreamsHero,
-        tag: "Travel",
-        slug: "desert-dreams",
-      },
-      {
-        title: "Coastal Classic",
-        description: "Seaside elegance meets timeless style.",
-        image: coastalClassicHero,
-        tag: "Editorial",
-        slug: "coastal-classic",
-      },
-      {
-        title: "Editorial Elegance",
-        description: "Shot for Vogue Italia during Milan Fashion Week. Capturing the intersection of haute couture and architectural minimalism.",
-        image: editorialEleganceHero,
-        tag: "Editorial",
-        slug: "editorial-elegance",
       },
     ],
   },

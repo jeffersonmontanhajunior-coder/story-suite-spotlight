@@ -42,14 +42,14 @@ const NewsletterSheet = ({ children }: NewsletterSheetProps) => {
               </p>
 
               {/* Form */}
-              <form onSubmit={handleSubmit} className="space-y-8">
-                <div>
-                  <label
-                    htmlFor="newsletter-email"
-                    className="block text-[1.4rem] font-medium text-foreground mb-3"
-                  >
-                    Email
-                  </label>
+              <form onSubmit={handleSubmit}>
+                <label
+                  htmlFor="newsletter-email"
+                  className="block text-[1.4rem] font-medium text-foreground mb-3"
+                >
+                  Email
+                </label>
+                <div className="flex flex-col md:flex-row gap-4">
                   <input
                     type="email"
                     id="newsletter-email"
@@ -57,17 +57,17 @@ const NewsletterSheet = ({ children }: NewsletterSheetProps) => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="w-full px-6 py-4 text-[1.6rem] border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                    className="flex-1 px-6 py-4 text-[1.6rem] border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                   />
-                </div>
 
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  className="w-full px-12 py-4 text-[1.6rem] font-medium bg-foreground text-background hover:bg-primary hover:text-background transition-all duration-300 rounded-lg"
-                >
-                  Submit
-                </button>
+                  {/* Submit Button */}
+                  <button
+                    type="submit"
+                    className="px-12 py-4 text-[1.6rem] font-medium bg-foreground text-background hover:bg-primary hover:text-background transition-all duration-300 rounded-lg md:w-auto whitespace-nowrap"
+                  >
+                    Submit
+                  </button>
+                </div>
               </form>
 
               {/* Footer note */}
