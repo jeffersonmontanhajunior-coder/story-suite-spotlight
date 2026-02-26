@@ -19,6 +19,15 @@ import {
   Store,
   ArrowRight,
   ChevronDown,
+  Share2,
+  Target,
+  Users,
+  Shield,
+  Video,
+  BarChart3,
+  Globe,
+  Megaphone,
+  CheckCircle2,
 } from "lucide-react";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
 
@@ -52,6 +61,18 @@ const differentials = [
   "Desenvolvimento ágil",
   "Suporte durante todo o processo",
   "Sites modernos e personalizados",
+];
+
+const marketingItems = [
+  { icon: Share2, label: "Integração do site com WhatsApp e redes sociais" },
+  { icon: Target, label: "Otimização do site para gerar mais conversões e contatos" },
+  { icon: Users, label: "Estrutura estratégica para transformar visitantes em clientes" },
+  { icon: Globe, label: "Auxílio com posicionamento digital da marca" },
+  { icon: Megaphone, label: "Estratégias básicas de engajamento para redes sociais" },
+  { icon: Video, label: "Orientações sobre conteúdos: vídeos curtos, reels, stories e publicações" },
+  { icon: BarChart3, label: "Organização de informações para facilitar o contato do cliente" },
+  { icon: Shield, label: "Melhoria da autoridade e profissionalismo digital" },
+  { icon: CheckCircle2, label: "Presença online mais ativa e confiável" },
 ];
 
 const Index = () => {
@@ -227,9 +248,56 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 6 — Impact CTA */}
+      {/* 6 — Marketing e Engajamento */}
+      <section ref={setRef(5)} className="section-fade py-24 md:py-32 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-8">
+            <span className="text-primary text-sm font-medium tracking-widest uppercase mb-4 block">
+              Marketing e Engajamento
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
+              Muito além de um <span className="text-primary">site bonito</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Ter um site profissional é essencial — mas não basta se ele não
+              gera resultados. Na Mountain Dev, unimos design de alto nível com
+              estratégias digitais que ajudam sua empresa a crescer, atrair mais
+              clientes e se destacar na internet.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-14">
+            {marketingItems.map((item, i) => (
+              <div
+                key={i}
+                className="group flex items-start gap-4 p-6 rounded-xl bg-card border border-border hover:border-primary/40 transition-all duration-300"
+              >
+                <div className="flex-shrink-0 w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary/20 transition-colors">
+                  <item.icon size={22} />
+                </div>
+                <span className="text-foreground font-medium text-base pt-2">
+                  {item.label}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-14">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-cta inline-flex"
+            >
+              QUERO ATRAIR MAIS CLIENTES <ArrowRight size={20} />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* 7 — Impact CTA */}
       <section
-        ref={setRef(4)}
+        ref={setRef(6)}
         className="section-fade relative py-28 md:py-36 px-6 overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-secondary/10" />
