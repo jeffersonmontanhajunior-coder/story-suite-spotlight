@@ -1,79 +1,27 @@
 import { useEffect, useRef } from "react";
 import Header from "@/components/Header";
 import {
-  Monitor,
-  Smartphone,
-  MessageCircle,
-  Instagram,
-  Zap,
-  FileText,
-  Mail,
-  MapPin,
-  Search,
-  Building2,
-  ShoppingBag,
-  Dumbbell,
-  Church,
-  Wrench,
-  User,
-  Store,
   ArrowRight,
   ChevronDown,
-  Share2,
-  Target,
+  CheckCircle2,
+  Zap,
+  Smartphone,
   Users,
+  Search,
   Shield,
-  Video,
   BarChart3,
   Globe,
-  Megaphone,
-  CheckCircle2,
+  MessageCircle,
+  TrendingUp,
+  Eye,
+  XCircle,
+  Lightbulb,
+  Target,
 } from "lucide-react";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
 
 const WHATSAPP_URL =
   "https://wa.me/5511988135910?text=Ol%C3%A1!%20Gostaria%20de%20criar%20um%20site%20profissional%20para%20meu%20neg%C3%B3cio.";
-
-const benefits = [
-  { icon: Monitor, label: "Design profissional" },
-  { icon: Smartphone, label: "Funciona perfeitamente no celular" },
-  { icon: MessageCircle, label: "Botão direto para WhatsApp" },
-  { icon: Instagram, label: "Integração com Instagram" },
-  { icon: Zap, label: "Carregamento rápido" },
-  { icon: FileText, label: "Página de serviços personalizada" },
-  { icon: Mail, label: "Formulário de contato" },
-  { icon: MapPin, label: "Mapa de localização" },
-  { icon: Search, label: "Estrutura otimizada para o Google" },
-];
-
-const audiences = [
-  { icon: Building2, label: "Empresas" },
-  { icon: ShoppingBag, label: "Lojas" },
-  { icon: Dumbbell, label: "Academias" },
-  { icon: Church, label: "Igrejas" },
-  { icon: Wrench, label: "Prestadores de serviço" },
-  { icon: User, label: "Profissionais autônomos" },
-  { icon: Store, label: "Pequenos negócios" },
-];
-
-const differentials = [
-  "Atendimento direto",
-  "Desenvolvimento ágil",
-  "Suporte durante todo o processo",
-  "Sites modernos e personalizados",
-];
-
-const marketingItems = [
-  { icon: Megaphone, label: "Criação de estratégias de conteúdo para redes sociais (Instagram, TikTok e mais)" },
-  { icon: Target, label: "Planejamento de postagens para aumento de engajamento" },
-  { icon: Video, label: "Ideias e roteiros para vídeos curtos (Reels, Shorts)" },
-  { icon: Users, label: "Otimização de perfil comercial nas redes sociais" },
-  { icon: Shield, label: "Auxílio na criação de identidade visual para redes" },
-  { icon: Globe, label: "Estratégias para crescimento orgânico" },
-  { icon: Share2, label: "Estruturação de funil de vendas" },
-  { icon: CheckCircle2, label: "Copywriting para posts e páginas" },
-  { icon: BarChart3, label: "Análise de desempenho e sugestões de melhoria" },
-];
 
 const Index = () => {
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
@@ -98,8 +46,8 @@ const Index = () => {
     sectionsRef.current[i] = el;
   };
 
-  const scrollToAbout = () => {
-    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -107,233 +55,210 @@ const Index = () => {
       <Header />
 
       {/* 1 — Hero */}
-      <section className="relative min-h-screen flex items-center justify-center px-6">
-        {/* Background decorative elements */}
+      <section className="relative min-h-screen flex items-center justify-center px-6 pt-16">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-primary/5 blur-[120px]" />
-          <div className="absolute bottom-1/4 -right-32 w-96 h-96 rounded-full bg-secondary/5 blur-[120px]" />
+          <div className="absolute bottom-1/4 -right-32 w-96 h-96 rounded-full bg-primary/10 blur-[120px]" />
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <span className="inline-block px-4 py-1.5 mb-8 text-sm font-medium tracking-widest uppercase rounded-full border border-primary/30 text-primary">
-            Mountain Dev
+            Mountain View
           </span>
+
           <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight mb-6">
-            Transforme sua presença online com um{" "}
+            Pare de perder clientes por não ter um{" "}
             <span className="neon-text text-primary">site profissional.</span>
           </h1>
+
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            A Mountain Dev desenvolve sites modernos, rápidos e estratégicos
-            para atrair clientes e fortalecer sua marca na internet.
+            Seu negócio precisa vender todos os dias — e nós criamos o site
+            certo para isso.
           </p>
+
+          <div className="flex flex-wrap justify-center gap-6 mb-10 text-sm text-muted-foreground">
+            {[
+              { icon: Zap, text: "Design moderno" },
+              { icon: Smartphone, text: "Site rápido e responsivo" },
+              { icon: Users, text: "Estruturado para gerar clientes" },
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-2">
+                <item.icon size={16} className="text-primary" />
+                <span>{item.text}</span>
+              </div>
+            ))}
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-cta">
-              SOLICITAR MEU SITE <ArrowRight size={20} />
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-cta"
+            >
+              SOLICITAR ORÇAMENTO GRATUITO <ArrowRight size={20} />
             </a>
-            <button onClick={scrollToAbout} className="btn-secondary-outline">
+            <button
+              onClick={() => scrollTo("problema")}
+              className="btn-secondary-outline"
+            >
               Saiba mais <ChevronDown size={20} />
             </button>
           </div>
         </div>
       </section>
 
-      {/* 2 — About */}
+      {/* 2 — Problema */}
       <section
-        id="about"
+        id="problema"
         ref={setRef(0)}
         className="section-fade py-24 md:py-32 px-6"
       >
-        <div className="max-w-4xl mx-auto">
-          <span className="text-primary text-sm font-medium tracking-widest uppercase mb-4 block">
-            Sobre nós
-          </span>
-          <h2 className="font-display text-3xl md:text-5xl font-bold mb-8">
-            Quem é a <span className="text-primary">MV</span>?
-          </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-            A Mountain Dev é especializada na criação de sites profissionais para
-            empresas, autônomos e negócios locais que desejam crescer e
-            conquistar mais clientes através da internet.
-          </p>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Criamos sites personalizados, modernos e pensados estrategicamente
-            para gerar autoridade e aumentar sua presença online.
-          </p>
-        </div>
-      </section>
-
-      {/* 3 — Benefits */}
-      <section id="benefits" ref={setRef(1)} className="section-fade py-24 md:py-32 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div>
             <span className="text-primary text-sm font-medium tracking-widest uppercase mb-4 block">
-              Benefícios
+              O problema
             </span>
-            <h2 className="font-display text-3xl md:text-5xl font-bold">
-              O que seu site terá
+            <h2 className="font-display text-3xl md:text-5xl font-bold mb-8 leading-tight">
+              Seu cliente está te procurando…{" "}
+              <span className="text-primary">mas não te encontra.</span>
             </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              Enquanto você depende de indicação, seus concorrentes estão sendo
+              encontrados no Google todos os dias. Empresas sem presença digital
+              perdem vendas, credibilidade e oportunidades de crescimento.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Sem um site profissional, seu negócio se torna invisível para
+              quem mais importa: o cliente que está pronto para comprar.
+            </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((b, i) => (
+
+          <div className="space-y-4">
+            {[
+              { icon: XCircle, text: "Clientes procuram e não te encontram" },
+              { icon: Eye, text: "Concorrentes aparecem no seu lugar" },
+              { icon: TrendingUp, text: "Vendas perdidas todos os dias" },
+              { icon: Shield, text: "Falta de credibilidade online" },
+            ].map((item, i) => (
               <div
                 key={i}
-                className="group flex items-start gap-4 p-6 rounded-xl bg-card border border-border hover:border-primary/40 transition-all duration-300"
+                className="flex items-center gap-4 p-5 rounded-xl bg-card border border-border"
               >
-                <div className="flex-shrink-0 w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary/20 transition-colors">
-                  <b.icon size={22} />
+                <div className="w-10 h-10 rounded-lg bg-destructive/10 flex items-center justify-center text-destructive flex-shrink-0">
+                  <item.icon size={20} />
                 </div>
-                <span className="text-foreground font-medium text-base pt-2">
-                  {b.label}
-                </span>
+                <span className="text-foreground font-medium">{item.text}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 4 — Target Audience */}
-      <section ref={setRef(2)} className="section-fade py-24 md:py-32 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="text-primary text-sm font-medium tracking-widest uppercase mb-4 block">
-              Público
-            </span>
-            <h2 className="font-display text-3xl md:text-5xl font-bold">
-              Para quem desenvolvemos sites?
-            </h2>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
-            {audiences.map((a, i) => (
+      {/* 3 — Solução */}
+      <section ref={setRef(1)} className="section-fade py-24 md:py-32 px-6">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div className="order-2 md:order-1 grid grid-cols-2 gap-4">
+            {[
+              { icon: Globe, label: "Autoridade digital" },
+              { icon: Target, label: "Conversão de clientes" },
+              { icon: BarChart3, label: "Vendas 24h por dia" },
+              { icon: Lightbulb, label: "Posicionamento estratégico" },
+            ].map((item, i) => (
               <div
                 key={i}
                 className="flex flex-col items-center gap-3 p-6 rounded-xl bg-card border border-border hover:border-primary/40 transition-all duration-300 text-center"
               >
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                  <a.icon size={24} />
+                  <item.icon size={24} />
                 </div>
-                <span className="font-medium text-foreground">{a.label}</span>
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-xl md:text-2xl font-semibold text-primary mt-14 neon-text">
-            Se você quer vender mais, precisa estar presente na internet.
-          </p>
-        </div>
-      </section>
-
-      {/* 5 — Differentials */}
-      <section ref={setRef(3)} className="section-fade py-24 md:py-32 px-6">
-        <div className="max-w-4xl mx-auto">
-          <span className="text-primary text-sm font-medium tracking-widest uppercase mb-4 block">
-            Diferencial
-          </span>
-          <h2 className="font-display text-3xl md:text-5xl font-bold mb-10">
-            Por que escolher a Mountain Dev?
-          </h2>
-          <div className="grid sm:grid-cols-2 gap-5 mb-10">
-            {differentials.map((d, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-4 p-5 rounded-xl glow-border bg-card"
-              >
-                <div className="w-3 h-3 rounded-full bg-accent flex-shrink-0" />
-                <span className="text-foreground font-medium">{d}</span>
-              </div>
-            ))}
-          </div>
-          <p className="text-lg text-muted-foreground">
-            Você informa sua necessidade, e nós transformamos em um site
-            profissional.
-          </p>
-        </div>
-      </section>
-
-      {/* 6 — Marketing e Engajamento */}
-      <section ref={setRef(5)} className="section-fade py-24 md:py-32 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-8">
-            <span className="text-primary text-sm font-medium tracking-widest uppercase mb-4 block">
-              Marketing e Engajamento
-            </span>
-            <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-              Marketing que <span className="text-primary">gera resultados</span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Não basta ter um site bonito se ele não traz clientes. Na Mountain
-              Dev, vamos além do desenvolvimento — oferecemos suporte completo em
-              marketing digital para ajudar sua empresa a atrair, engajar e
-              converter visitantes em clientes reais através de presença digital
-              estratégica e engajamento nas redes sociais.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-14">
-            {marketingItems.map((item, i) => (
-              <div
-                key={i}
-                className="group flex items-start gap-4 p-6 rounded-xl bg-card border border-border hover:border-primary/40 transition-all duration-300"
-              >
-                <div className="flex-shrink-0 w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary/20 transition-colors">
-                  <item.icon size={22} />
-                </div>
-                <span className="text-foreground font-medium text-base pt-2">
+                <span className="font-medium text-foreground text-sm">
                   {item.label}
                 </span>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-14">
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-cta inline-flex"
-            >
-              QUERO ATRAIR MAIS CLIENTES <ArrowRight size={20} />
-            </a>
+          <div className="order-1 md:order-2">
+            <span className="text-primary text-sm font-medium tracking-widest uppercase mb-4 block">
+              A solução
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl font-bold mb-8 leading-tight">
+              Criamos sites estratégicos que{" "}
+              <span className="text-primary">
+                transformam visitas em clientes.
+              </span>
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              Um site profissional da Mountain View não é apenas bonito — ele é
+              projetado para gerar autoridade, captar clientes e funcionar como
+              sua melhor ferramenta de vendas, 24 horas por dia.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Combinamos design moderno com estratégia de conversão para que
+              cada visitante se torne uma oportunidade real de negócio.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* 7 — Planos e Investimento */}
-      <section ref={setRef(6)} className="section-fade py-24 md:py-32 px-6">
+      {/* 4 — Planos */}
+      <section
+        id="planos"
+        ref={setRef(2)}
+        className="section-fade py-24 md:py-32 px-6"
+      >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-primary text-sm font-medium tracking-widest uppercase mb-4 block">
-              Planos e Investimento
+              Planos
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-              Escolha o plano <span className="text-primary">ideal para você</span>
+              Escolha o plano{" "}
+              <span className="text-primary">ideal para você</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Cada empresa tem uma necessidade diferente. Por isso, criamos planos
-              flexíveis que acompanham o momento do seu negócio — do primeiro site
-              até uma presença digital completa.
+              Cada negócio tem uma necessidade. Escolha o plano que faz sentido
+              para o momento da sua empresa e comece a atrair clientes pela
+              internet.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {/* Essencial */}
             <div className="flex flex-col p-8 rounded-xl bg-card border border-border hover:border-primary/40 transition-all duration-300">
-              <h3 className="font-display text-2xl font-bold mb-2">Essencial</h3>
-              <p className="text-sm text-muted-foreground mb-6">Ideal para quem está começando</p>
+              <h3 className="font-display text-2xl font-bold mb-2">
+                Essencial
+              </h3>
+              <p className="text-sm text-muted-foreground mb-6">
+                Ideal para quem está começando
+              </p>
               <ul className="space-y-3 mb-8 flex-1">
                 {[
-                  "Site profissional e responsivo",
-                  "Integração com WhatsApp",
-                  "Integração com redes sociais",
-                  "Layout moderno",
-                  "Botões de chamada para ação",
+                  "Até 5 páginas",
+                  "Layout profissional",
+                  "Botão WhatsApp integrado",
+                  "100% Responsivo",
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-foreground">
-                    <CheckCircle2 size={18} className="text-accent mt-0.5 flex-shrink-0" />
+                  <li
+                    key={i}
+                    className="flex items-start gap-3 text-foreground"
+                  >
+                    <CheckCircle2
+                      size={18}
+                      className="text-accent mt-0.5 flex-shrink-0"
+                    />
                     <span className="text-sm">{item}</span>
                   </li>
                 ))}
               </ul>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-secondary-outline text-base text-center">
-                Solicitar orçamento
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-cta text-base text-center"
+              >
+                Quero começar agora
               </a>
             </div>
 
@@ -342,86 +267,112 @@ const Index = () => {
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full bg-primary text-primary-foreground">
                 Mais popular
               </span>
-              <h3 className="font-display text-2xl font-bold mb-2">Profissional</h3>
-              <p className="text-sm text-muted-foreground mb-6">Para quem quer atrair mais clientes</p>
+              <h3 className="font-display text-2xl font-bold mb-2">
+                Profissional
+              </h3>
+              <p className="text-sm text-muted-foreground mb-6">
+                Para quem quer crescer de verdade
+              </p>
               <ul className="space-y-3 mb-8 flex-1">
                 {[
-                  "Tudo do plano Essencial",
-                  "Otimização para conversão",
-                  "Estrutura estratégica para atrair clientes",
-                  "Integração com Google Maps",
-                  "Seção de serviços personalizada",
-                  "Apoio com posicionamento digital",
+                  "Até 8 páginas",
+                  "Estratégia de conversão",
+                  "Integração com redes sociais",
+                  "SEO básico",
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-foreground">
-                    <CheckCircle2 size={18} className="text-accent mt-0.5 flex-shrink-0" />
+                  <li
+                    key={i}
+                    className="flex items-start gap-3 text-foreground"
+                  >
+                    <CheckCircle2
+                      size={18}
+                      className="text-accent mt-0.5 flex-shrink-0"
+                    />
                     <span className="text-sm">{item}</span>
                   </li>
                 ))}
               </ul>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-cta text-base text-center">
-                Solicitar orçamento
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-cta text-base text-center"
+              >
+                Quero crescer meu negócio
               </a>
             </div>
 
-            {/* Presença Digital */}
+            {/* Premium */}
             <div className="flex flex-col p-8 rounded-xl bg-card border border-border hover:border-primary/40 transition-all duration-300">
-              <h3 className="font-display text-2xl font-bold mb-2">Presença Digital</h3>
-              <p className="text-sm text-muted-foreground mb-6">Para quem quer dominar o digital</p>
+              <h3 className="font-display text-2xl font-bold mb-2">Premium</h3>
+              <p className="text-sm text-muted-foreground mb-6">
+                Para quem quer ser referência
+              </p>
               <ul className="space-y-3 mb-8 flex-1">
                 {[
-                  "Tudo do plano Profissional",
-                  "Estratégias básicas de engajamento",
-                  "Orientações para conteúdo em redes sociais",
-                  "Ideias para vídeos curtos (Reels)",
-                  "Organização da presença online",
-                  "Estrutura para geração de contatos",
+                  "Projeto personalizado",
+                  "Estratégia focada em vendas",
+                  "SEO avançado",
+                  "Suporte prioritário",
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-foreground">
-                    <CheckCircle2 size={18} className="text-accent mt-0.5 flex-shrink-0" />
+                  <li
+                    key={i}
+                    className="flex items-start gap-3 text-foreground"
+                  >
+                    <CheckCircle2
+                      size={18}
+                      className="text-accent mt-0.5 flex-shrink-0"
+                    />
                     <span className="text-sm">{item}</span>
                   </li>
                 ))}
               </ul>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-secondary-outline text-base text-center">
-                Solicitar orçamento
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary-outline text-base text-center"
+              >
+                Quero ser referência
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 8 — Impact CTA */}
+      {/* 5 — CTA Final */}
       <section
-        ref={setRef(7)}
+        ref={setRef(3)}
         className="section-fade relative py-28 md:py-36 px-6 overflow-hidden"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-secondary/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-transparent" />
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[150px]" />
         </div>
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <h2 className="font-display text-3xl sm:text-4xl md:text-6xl font-bold leading-tight mb-8 neon-text">
-            Seu site pode ser sua melhor ferramenta de vendas.
+            Está pronto para parar de perder clientes?
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 leading-relaxed">
-            Mais presença. Mais autoridade. Mais clientes.
+            Converse com um especialista e descubra como ter um site que vende
+            por você.
           </p>
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-cta mt-8 inline-flex"
+            className="btn-cta mt-8 inline-flex text-lg"
           >
-            CRIAR MEU SITE AGORA <ArrowRight size={20} />
+            <MessageCircle size={22} />
+            FALAR COM ESPECIALISTA AGORA
           </a>
         </div>
       </section>
 
-      {/* 7 — Footer */}
+      {/* Footer */}
       <footer className="border-t border-border py-10 px-6">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-muted-foreground">
-          <p>Mountain Dev © 2026 — Todos os direitos reservados.</p>
+          <p>Mountain View © 2026 — Todos os direitos reservados.</p>
           <div className="flex items-center gap-6">
             <a
               href={WHATSAPP_URL}
@@ -440,7 +391,7 @@ const Index = () => {
               Instagram
             </a>
             <a
-              href="mailto:contato@mountaindev.com"
+              href="mailto:contato@mountainview.com"
               className="hover:text-primary transition-colors"
             >
               Email
