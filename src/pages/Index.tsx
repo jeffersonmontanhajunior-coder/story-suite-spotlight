@@ -64,15 +64,15 @@ const differentials = [
 ];
 
 const marketingItems = [
-  { icon: Share2, label: "Integração do site com WhatsApp e redes sociais" },
-  { icon: Target, label: "Otimização do site para gerar mais conversões e contatos" },
-  { icon: Users, label: "Estrutura estratégica para transformar visitantes em clientes" },
-  { icon: Globe, label: "Auxílio com posicionamento digital da marca" },
-  { icon: Megaphone, label: "Estratégias básicas de engajamento para redes sociais" },
-  { icon: Video, label: "Orientações sobre conteúdos: vídeos curtos, reels, stories e publicações" },
-  { icon: BarChart3, label: "Organização de informações para facilitar o contato do cliente" },
-  { icon: Shield, label: "Melhoria da autoridade e profissionalismo digital" },
-  { icon: CheckCircle2, label: "Presença online mais ativa e confiável" },
+  { icon: Megaphone, label: "Criação de estratégias de conteúdo para redes sociais (Instagram, TikTok e mais)" },
+  { icon: Target, label: "Planejamento de postagens para aumento de engajamento" },
+  { icon: Video, label: "Ideias e roteiros para vídeos curtos (Reels, Shorts)" },
+  { icon: Users, label: "Otimização de perfil comercial nas redes sociais" },
+  { icon: Shield, label: "Auxílio na criação de identidade visual para redes" },
+  { icon: Globe, label: "Estratégias para crescimento orgânico" },
+  { icon: Share2, label: "Estruturação de funil de vendas" },
+  { icon: CheckCircle2, label: "Copywriting para posts e páginas" },
+  { icon: BarChart3, label: "Análise de desempenho e sugestões de melhoria" },
 ];
 
 const Index = () => {
@@ -256,13 +256,14 @@ const Index = () => {
               Marketing e Engajamento
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-              Muito além de um <span className="text-primary">site bonito</span>
+              Marketing que <span className="text-primary">gera resultados</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Ter um site profissional é essencial — mas não basta se ele não
-              gera resultados. Na Mountain Dev, unimos design de alto nível com
-              estratégias digitais que ajudam sua empresa a crescer, atrair mais
-              clientes e se destacar na internet.
+              Não basta ter um site bonito se ele não traz clientes. Na Mountain
+              Dev, vamos além do desenvolvimento — oferecemos suporte completo em
+              marketing digital para ajudar sua empresa a atrair, engajar e
+              converter visitantes em clientes reais através de presença digital
+              estratégica e engajamento nas redes sociais.
             </p>
           </div>
 
