@@ -4,6 +4,11 @@ import { Menu, X } from "lucide-react";
 const WHATSAPP_URL =
   "https://wa.me/5511988135910?text=Ol%C3%A1!%20Gostaria%20de%20criar%20um%20site%20profissional%20para%20meu%20neg%C3%B3cio.";
 
+const navLinks = [
+  { id: "problema", label: "Por quê?" },
+  { id: "planos", label: "Planos" },
+];
+
 const Header = () => {
   const [open, setOpen] = useState(false);
 
@@ -19,26 +24,37 @@ const Header = () => {
           <span className="text-primary">M</span>V
         </a>
 
-        {/* Desktop */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <button onClick={() => scrollTo("about")} className="text-muted-foreground hover:text-foreground transition-colors">Sobre</button>
-          <button onClick={() => scrollTo("benefits")} className="text-muted-foreground hover:text-foreground transition-colors">Benefícios</button>
+          {navLinks.map((link) => (
+            <button
+              key={link.id}
+              onClick={() => scrollTo(link.id)}
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {link.label}
+            </button>
+          ))}
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-cta !py-2.5 !px-6 !text-sm">
             Contato
           </a>
         </nav>
 
-        {/* Mobile toggle */}
         <button onClick={() => setOpen(!open)} className="md:hidden text-foreground" aria-label="Menu">
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <nav className="md:hidden border-t border-border bg-background px-6 py-6 flex flex-col gap-5 text-base font-medium animate-fade-in">
-          <button onClick={() => scrollTo("about")} className="text-left text-muted-foreground hover:text-foreground transition-colors">Sobre</button>
-          <button onClick={() => scrollTo("benefits")} className="text-left text-muted-foreground hover:text-foreground transition-colors">Benefícios</button>
+          {navLinks.map((link) => (
+            <button
+              key={link.id}
+              onClick={() => scrollTo(link.id)}
+              className="text-left text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {link.label}
+            </button>
+          ))}
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-cta text-center !text-base">
             Contato
           </a>
