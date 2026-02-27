@@ -296,9 +296,104 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 7 — Impact CTA */}
+      {/* 7 — Planos e Investimento */}
+      <section ref={setRef(6)} className="section-fade py-24 md:py-32 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-primary text-sm font-medium tracking-widest uppercase mb-4 block">
+              Planos e Investimento
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
+              Escolha o plano <span className="text-primary">ideal para você</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Cada empresa tem uma necessidade diferente. Por isso, criamos planos
+              flexíveis que acompanham o momento do seu negócio — do primeiro site
+              até uma presença digital completa.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Essencial */}
+            <div className="flex flex-col p-8 rounded-xl bg-card border border-border hover:border-primary/40 transition-all duration-300">
+              <h3 className="font-display text-2xl font-bold mb-2">Essencial</h3>
+              <p className="text-sm text-muted-foreground mb-6">Ideal para quem está começando</p>
+              <ul className="space-y-3 mb-8 flex-1">
+                {[
+                  "Site profissional e responsivo",
+                  "Integração com WhatsApp",
+                  "Integração com redes sociais",
+                  "Layout moderno",
+                  "Botões de chamada para ação",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-foreground">
+                    <CheckCircle2 size={18} className="text-accent mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-secondary-outline text-base text-center">
+                Solicitar orçamento
+              </a>
+            </div>
+
+            {/* Profissional */}
+            <div className="flex flex-col p-8 rounded-xl glow-border bg-card relative">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full bg-primary text-primary-foreground">
+                Mais popular
+              </span>
+              <h3 className="font-display text-2xl font-bold mb-2">Profissional</h3>
+              <p className="text-sm text-muted-foreground mb-6">Para quem quer atrair mais clientes</p>
+              <ul className="space-y-3 mb-8 flex-1">
+                {[
+                  "Tudo do plano Essencial",
+                  "Otimização para conversão",
+                  "Estrutura estratégica para atrair clientes",
+                  "Integração com Google Maps",
+                  "Seção de serviços personalizada",
+                  "Apoio com posicionamento digital",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-foreground">
+                    <CheckCircle2 size={18} className="text-accent mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-cta text-base text-center">
+                Solicitar orçamento
+              </a>
+            </div>
+
+            {/* Presença Digital */}
+            <div className="flex flex-col p-8 rounded-xl bg-card border border-border hover:border-primary/40 transition-all duration-300">
+              <h3 className="font-display text-2xl font-bold mb-2">Presença Digital</h3>
+              <p className="text-sm text-muted-foreground mb-6">Para quem quer dominar o digital</p>
+              <ul className="space-y-3 mb-8 flex-1">
+                {[
+                  "Tudo do plano Profissional",
+                  "Estratégias básicas de engajamento",
+                  "Orientações para conteúdo em redes sociais",
+                  "Ideias para vídeos curtos (Reels)",
+                  "Organização da presença online",
+                  "Estrutura para geração de contatos",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-foreground">
+                    <CheckCircle2 size={18} className="text-accent mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-secondary-outline text-base text-center">
+                Solicitar orçamento
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 8 — Impact CTA */}
       <section
-        ref={setRef(6)}
+        ref={setRef(7)}
         className="section-fade relative py-28 md:py-36 px-6 overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-secondary/10" />
