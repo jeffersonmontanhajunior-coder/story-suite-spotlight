@@ -59,7 +59,7 @@ const Index = () => {
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
               WhatsApp
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+            <a href="https://www.instagram.com/mountain_dv?igsh=ZnN4YWg2MTB1YzZv" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
               Instagram
             </a>
             <a href="mailto:contato@mountainview.com" className="hover:text-primary transition-colors">
