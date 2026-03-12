@@ -33,7 +33,7 @@ const faqs = [
 ];
 
 const FAQSection = () => (
-  <AnimatedSection className="py-24 md:py-32 px-6">
+  <AnimatedSection id="faq" className="py-24 md:py-32 px-6">
     <div className="max-w-3xl mx-auto">
       <AnimatedDiv className="text-center mb-16">
         <span className="text-primary text-sm font-medium tracking-widest uppercase mb-4 block">
