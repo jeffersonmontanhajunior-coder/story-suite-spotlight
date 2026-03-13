@@ -1,4 +1,4 @@
-import { CheckCircle2 } from "lucide-react";
+import { Check } from "lucide-react";
 import AnimatedSection, { AnimatedDiv, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 
 const WHATSAPP_URL =
@@ -11,13 +11,7 @@ const plans = [
     type: "pagamento único",
     featured: false,
     cta: "Começar agora",
-    items: [
-      "1 a 3 páginas",
-      "Design profissional",
-      "Botão WhatsApp integrado",
-      "Formulário de contato",
-      "100% responsivo",
-    ],
+    items: ["1 a 3 páginas", "Design profissional", "Botão WhatsApp integrado", "Formulário de contato", "100% responsivo"],
   },
   {
     name: "Site Avançado",
@@ -25,14 +19,7 @@ const plans = [
     type: "pagamento único",
     featured: true,
     cta: "Quero o avançado",
-    items: [
-      "5 a 8 páginas",
-      "Layout estratégico para vendas",
-      "Galeria / portfólio",
-      "Integração com redes sociais",
-      "Blog simples ou newsletter",
-      "Funcionalidades extras",
-    ],
+    items: ["5 a 8 páginas", "Layout estratégico para vendas", "Galeria / portfólio", "Integração com redes sociais", "Blog simples ou newsletter", "Funcionalidades extras"],
   },
 ];
 
@@ -40,25 +27,25 @@ const SitePlansSection = () => (
   <AnimatedSection id="planos" className="py-24 md:py-32 px-6">
     <div className="max-w-5xl mx-auto">
       <AnimatedDiv className="text-center mb-16">
-        <span className="text-primary text-sm font-medium tracking-widest uppercase mb-4 block">
-          Criação de Sites
+        <span className="text-primary text-xs font-medium tracking-[0.2em] uppercase mb-4 block">
+          Planos
         </span>
-        <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-          Investimento <span className="gold-gradient-text">acessível</span>
+        <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
+          Investimento <span className="gradient-text">acessível</span>
         </h2>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          Sites profissionais com preço justo. Escolha o que faz sentido para o momento do seu negócio.
+        <p className="text-muted-foreground max-w-xl mx-auto">
+          Sites profissionais com preço justo para cada fase do seu negócio.
         </p>
       </AnimatedDiv>
 
-      <StaggerContainer className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+      <StaggerContainer className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
         {plans.map((plan, idx) => (
           <StaggerItem key={idx}>
             <div
               className={`flex flex-col p-8 rounded-2xl bg-card transition-all duration-500 h-full ${
                 plan.featured
-                  ? "glow-border relative hover:shadow-lg hover:shadow-primary/10"
-                  : "border border-border hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
+                  ? "glow-border relative"
+                  : "border border-border hover:border-primary/30"
               } hover:-translate-y-1`}
             >
               {plan.featured && (
@@ -68,14 +55,14 @@ const SitePlansSection = () => (
               )}
               <h3 className="font-display text-2xl font-bold mb-1 text-foreground">{plan.name}</h3>
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="font-display text-4xl font-bold gold-gradient-text">{plan.price}</span>
+                <span className="font-display text-4xl font-bold gradient-text">{plan.price}</span>
               </div>
               <p className="text-sm text-muted-foreground mb-6">{plan.type}</p>
 
               <ul className="space-y-3 mb-8 flex-1">
                 {plan.items.map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-foreground">
-                    <CheckCircle2 size={18} className="text-accent mt-0.5 flex-shrink-0" />
+                    <Check size={16} className="text-primary mt-0.5 flex-shrink-0" />
                     <span className="text-sm">{item}</span>
                   </li>
                 ))}
@@ -85,7 +72,7 @@ const SitePlansSection = () => (
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`text-base text-center ${plan.featured ? "btn-cta" : "btn-secondary-outline"}`}
+                className={`text-sm text-center ${plan.featured ? "btn-cta" : "btn-outline"}`}
               >
                 {plan.cta}
               </a>

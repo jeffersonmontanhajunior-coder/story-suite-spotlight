@@ -1,4 +1,4 @@
-import { CheckCircle2, TrendingUp } from "lucide-react";
+import { Check, TrendingUp } from "lucide-react";
 import AnimatedSection, { AnimatedDiv, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 
 const WHATSAPP_URL =
@@ -27,25 +27,25 @@ const MarketingSection = () => (
   <AnimatedSection id="marketing" className="py-24 md:py-32 px-6">
     <div className="max-w-6xl mx-auto">
       <AnimatedDiv className="text-center mb-16">
-        <span className="text-primary text-sm font-medium tracking-widest uppercase mb-4 block">
+        <span className="text-primary text-xs font-medium tracking-[0.2em] uppercase mb-4 block">
           Marketing Digital
         </span>
-        <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-          Cresça mais rápido com <span className="gold-gradient-text">marketing profissional</span>
+        <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
+          Cresça com <span className="gradient-text">marketing profissional</span>
         </h2>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          Opcional para quem quer acelerar resultados e atrair mais clientes nas redes sociais.
+        <p className="text-muted-foreground max-w-xl mx-auto">
+          Atraia mais clientes nas redes sociais com estratégia e conteúdo de qualidade.
         </p>
       </AnimatedDiv>
 
-      <StaggerContainer className="grid md:grid-cols-3 gap-6">
+      <StaggerContainer className="grid md:grid-cols-3 gap-5">
         {marketingPlans.map((plan, idx) => (
           <StaggerItem key={idx}>
             <div
-              className={`flex flex-col p-8 rounded-2xl bg-card transition-all duration-500 h-full ${
+              className={`flex flex-col p-7 rounded-2xl bg-card transition-all duration-500 h-full ${
                 plan.featured
-                  ? "glow-border relative hover:shadow-lg hover:shadow-primary/10"
-                  : "border border-border hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
+                  ? "glow-border relative"
+                  : "border border-border hover:border-primary/30"
               } hover:-translate-y-1`}
             >
               {plan.featured && (
@@ -54,20 +54,20 @@ const MarketingSection = () => (
                 </span>
               )}
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-                  <TrendingUp size={20} />
+                <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                  <TrendingUp size={18} />
                 </div>
                 <h3 className="font-display text-xl font-bold text-foreground">{plan.name}</h3>
               </div>
               <div className="flex items-baseline gap-1 mb-6">
-                <span className="font-display text-3xl font-bold gold-gradient-text">{plan.price}</span>
+                <span className="font-display text-3xl font-bold gradient-text">{plan.price}</span>
                 <span className="text-muted-foreground text-sm">/mês</span>
               </div>
 
               <ul className="space-y-3 mb-8 flex-1">
                 {plan.items.map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-foreground">
-                    <CheckCircle2 size={16} className="text-accent mt-0.5 flex-shrink-0" />
+                    <Check size={14} className="text-primary mt-0.5 flex-shrink-0" />
                     <span className="text-sm">{item}</span>
                   </li>
                 ))}
@@ -77,7 +77,7 @@ const MarketingSection = () => (
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`text-base text-center ${plan.featured ? "btn-cta" : "btn-secondary-outline"}`}
+                className={`text-sm text-center ${plan.featured ? "btn-cta" : "btn-outline"}`}
               >
                 Quero este plano
               </a>

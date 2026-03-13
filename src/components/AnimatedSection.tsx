@@ -12,10 +12,10 @@ const AnimatedSection = ({ children, className = "", delay = 0, id }: AnimatedSe
   <motion.section
     id={id}
     className={className}
-    initial={{ opacity: 0, y: 50 }}
+    initial={{ opacity: 0, y: 40 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-80px" }}
-    transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
+    transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
   >
     {children}
   </motion.section>
@@ -24,10 +24,10 @@ const AnimatedSection = ({ children, className = "", delay = 0, id }: AnimatedSe
 export const AnimatedDiv = ({ children, className = "", delay = 0 }: Omit<AnimatedSectionProps, "id">) => (
   <motion.div
     className={className}
-    initial={{ opacity: 0, y: 30 }}
+    initial={{ opacity: 0, y: 24 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-50px" }}
-    transition={{ duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] }}
+    transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
   >
     {children}
   </motion.div>
@@ -52,7 +52,7 @@ export const StaggerItem = ({ children, className = "" }: { children: ReactNode;
   <motion.div
     className={className}
     variants={{
-      hidden: { opacity: 0, y: 30 },
+      hidden: { opacity: 0, y: 24 },
       visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
     }}
   >
