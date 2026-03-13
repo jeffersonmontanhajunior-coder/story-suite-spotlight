@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
 import HeroSection from "@/components/sections/HeroSection";
 import BenefitsSection from "@/components/sections/BenefitsSection";
+import ProcessSection from "@/components/sections/ProcessSection";
 import ShowcaseSection from "@/components/sections/ShowcaseSection";
 import SitePlansSection from "@/components/sections/SitePlansSection";
 import MaintenanceSection from "@/components/sections/MaintenanceSection";
@@ -25,6 +26,7 @@ const Index = () => {
       <Header />
       <HeroSection onScrollTo={scrollTo} />
       <BenefitsSection />
+      <ProcessSection />
       <ShowcaseSection />
       <SitePlansSection />
       <MaintenanceSection />
@@ -39,13 +41,13 @@ const Index = () => {
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-muted-foreground">
           <p>Mountain View © 2026 — Todos os direitos reservados.</p>
           <div className="flex items-center gap-6">
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors duration-300">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors duration-300">
               WhatsApp
             </a>
-            <a href="https://www.instagram.com/mountain_dv?igsh=ZnN4YWg2MTB1YzZv" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors duration-300">
+            <a href="https://www.instagram.com/mountain_dv?igsh=ZnN4YWg2MTB1YzZv" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors duration-300">
               Instagram
             </a>
-            <a href="mailto:contato@mountainview.com" className="hover:text-primary transition-colors duration-300">
+            <a href="mailto:contato@mountainview.com" className="hover:text-foreground transition-colors duration-300">
               Email
             </a>
           </div>

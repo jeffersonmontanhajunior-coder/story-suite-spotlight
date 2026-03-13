@@ -7,6 +7,7 @@ const WHATSAPP_URL =
 
 const navLinks = [
   { id: "beneficios", label: "Benefícios" },
+  { id: "processo", label: "Processo" },
   { id: "planos", label: "Planos" },
   { id: "marketing", label: "Marketing" },
   { id: "faq", label: "FAQ" },
@@ -21,13 +22,13 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 h-16">
-        <a href="/" className="font-display text-xl font-bold tracking-tight text-foreground">
-          <span className="gold-gradient-text">M</span>V
+        <a href="/" className="font-display text-lg font-bold tracking-tight text-foreground">
+          Mountain<span className="text-primary">View</span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
+        <nav className="hidden md:flex items-center gap-8 text-sm">
           {navLinks.map((link) => (
             <button
               key={link.id}
@@ -37,13 +38,13 @@ const Header = () => {
               {link.label}
             </button>
           ))}
-          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-cta !py-2.5 !px-6 !text-sm">
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-cta !py-2 !px-5 !text-xs">
             Contato
           </a>
         </nav>
 
         <button onClick={() => setOpen(!open)} className="md:hidden text-foreground" aria-label="Menu">
-          {open ? <X size={24} /> : <Menu size={24} />}
+          {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
@@ -53,19 +54,19 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden border-t border-border bg-background px-6 py-6 flex flex-col gap-5 text-base font-medium overflow-hidden"
+            transition={{ duration: 0.25 }}
+            className="md:hidden border-t border-border bg-background px-6 py-5 flex flex-col gap-4 overflow-hidden"
           >
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollTo(link.id)}
-                className="text-left text-muted-foreground hover:text-foreground transition-colors"
+                className="text-left text-muted-foreground hover:text-foreground transition-colors text-sm"
               >
                 {link.label}
               </button>
             ))}
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-cta text-center !text-base">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-cta text-center !text-sm">
               Contato
             </a>
           </motion.nav>

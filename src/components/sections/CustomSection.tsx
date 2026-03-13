@@ -7,20 +7,15 @@ const WHATSAPP_URL =
 const CustomSection = () => (
   <AnimatedSection className="py-20 px-6">
     <AnimatedDiv>
-      <div className="max-w-3xl mx-auto text-center p-8 md:p-12 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-500">
+      <div className="max-w-3xl mx-auto text-center p-8 md:p-12 rounded-2xl bg-card border border-border hover:border-primary/20 transition-all duration-500">
         <h2 className="font-display text-2xl md:text-3xl font-bold mb-4 text-foreground">
-          Tem uma ideia <span className="gold-gradient-text">diferente?</span>
+          Tem uma ideia <span className="gradient-text">diferente?</span>
         </h2>
-        <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-          Fale conosco e montamos um plano sob medida para o seu negócio. Cada projeto é único e merece atenção especial.
+        <p className="text-muted-foreground mb-8 leading-relaxed">
+          Fale conosco e montamos um plano sob medida para o seu negócio.
         </p>
-        <a
-          href={WHATSAPP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-secondary-outline text-base inline-flex"
-        >
-          <MessageCircle size={20} />
+        <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-outline text-sm inline-flex">
+          <MessageCircle size={18} />
           Negociação personalizada
         </a>
       </div>

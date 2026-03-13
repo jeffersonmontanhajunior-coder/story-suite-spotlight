@@ -13,26 +13,23 @@ const WhatsAppFAB = () => (
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Siga-nos no Instagram"
-      className="w-14 h-14 rounded-full flex items-center justify-center text-white shadow-lg transition-all duration-300 hover:scale-110"
-      style={{
-        background: "linear-gradient(135deg, hsl(37 97% 60%), hsl(340 82% 52%), hsl(270 70% 50%))",
-        boxShadow: "0 4px 20px hsl(340 82% 52% / 0.4)",
-      }}
+      className="w-12 h-12 rounded-full flex items-center justify-center text-foreground bg-card border border-border shadow-lg transition-all duration-300 hover:scale-110 hover:border-primary/30"
     >
-      <Instagram size={26} />
+      <Instagram size={22} />
     </a>
     <a
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Fale conosco pelo WhatsApp"
-      className="w-14 h-14 rounded-full flex items-center justify-center text-white shadow-lg transition-all duration-300 hover:scale-110"
+      className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
       style={{
         background: "hsl(145 72% 45%)",
-        boxShadow: "0 4px 20px hsl(145 72% 45% / 0.4)",
+        color: "white",
+        boxShadow: "0 4px 15px hsl(145 72% 45% / 0.3)",
       }}
     >
-      <MessageCircle size={26} />
+      <MessageCircle size={22} />
     </a>
   </div>
 );
