@@ -101,7 +101,7 @@ const MountainShape = ({ mouse }: { mouse: React.MutableRefObject<{ x: number; y
           />
         </mesh>
       </group>
-    </Float>
+    </SimpleFloat>
   );
 };
 
