@@ -1,7 +1,15 @@
 import { useRef, useMemo, useState, useEffect } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Float } from "@react-three/drei";
 import * as THREE from "three";
+
+const SimpleFloat = ({ children, speed = 1.5, floatIntensity = 0.3 }: { children: React.ReactNode; speed?: number; rotationIntensity?: number; floatIntensity?: number }) => {
+  const ref = useRef<THREE.Group>(null);
+  useFrame(({ clock }) => {
+    if (!ref.current) return;
+    ref.current.position.y = Math.sin(clock.getElapsedTime() * speed) * floatIntensity * 0.2;
+  });
+  return <group ref={ref}>{children}</group>;
+};
 
 const MountainShape = ({ mouse }: { mouse: React.MutableRefObject<{ x: number; y: number }> }) => {
   const groupRef = useRef<THREE.Group>(null);
