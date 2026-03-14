@@ -73,7 +73,7 @@ const MountainShape = ({ mouse }: { mouse: React.MutableRefObject<{ x: number; y
   });
 
   return (
-    <Float speed={1.5} rotationIntensity={0.1} floatIntensity={0.3}>
+    <SimpleFloat speed={1.5} rotationIntensity={0.1} floatIntensity={0.3}>
       <group
         ref={groupRef}
         scale={entered ? 1 : 0.8}
