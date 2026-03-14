@@ -1,8 +1,7 @@
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, lazy, Suspense } from "react";
-
-const Logo3D = lazy(() => import("@/components/Logo3D"));
+import { useRef } from "react";
+import logo from "@/assets/logo.webp";
 
 const WHATSAPP_URL =
   "https://wa.me/5511988135910?text=Ol%C3%A1!%20Gostaria%20de%20criar%20um%20site%20profissional%20para%20meu%20neg%C3%B3cio.";
