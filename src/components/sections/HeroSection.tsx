@@ -42,9 +42,9 @@ const HeroSection = ({ onScrollTo }: HeroSectionProps) => {
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="w-40 h-40 sm:w-48 sm:h-48 mx-auto mb-8"
+          className="w-40 h-40 sm:w-48 sm:h-48 mx-auto mb-8 mix-blend-lighten opacity-90"
         >
-          <img src={logo} alt="Mountain View Logo" className="w-full h-full object-contain" />
+          <img src={logo} alt="Mountain View Logo" className="w-full h-full object-contain drop-shadow-[0_0_40px_hsl(var(--primary)/0.3)]" />
         </motion.div>
 
         <motion.span
