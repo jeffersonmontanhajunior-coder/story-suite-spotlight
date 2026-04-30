@@ -9,8 +9,6 @@ const WHATSAPP_URL =
 const navLinks = [
   { id: "beneficios", label: "Benefícios" },
   { id: "processo", label: "Processo" },
-  { id: "planos", label: "Planos" },
-  { id: "marketing", label: "Marketing" },
   { id: "faq", label: "FAQ" },
 ];
 
