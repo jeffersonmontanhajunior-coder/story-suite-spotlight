@@ -4,12 +4,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import BenefitsSection from "@/components/sections/BenefitsSection";
 import ProcessSection from "@/components/sections/ProcessSection";
 import ShowcaseSection from "@/components/sections/ShowcaseSection";
-import SitePlansSection from "@/components/sections/SitePlansSection";
-import MaintenanceSection from "@/components/sections/MaintenanceSection";
-import MarketingSection from "@/components/sections/MarketingSection";
-import ComboSection from "@/components/sections/ComboSection";
 import BeforeAfterSection from "@/components/sections/BeforeAfterSection";
-import CustomSection from "@/components/sections/CustomSection";
 import FAQSection from "@/components/sections/FAQSection";
 import CTASection from "@/components/sections/CTASection";
 
@@ -28,12 +23,7 @@ const Index = () => {
       <BenefitsSection />
       <ProcessSection />
       <ShowcaseSection />
-      <SitePlansSection />
-      <MaintenanceSection />
-      <MarketingSection />
-      <ComboSection />
       <BeforeAfterSection />
-      <CustomSection />
       <FAQSection />
       <CTASection />
 
