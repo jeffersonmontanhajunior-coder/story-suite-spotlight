@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Store, Utensils, Briefcase, Scissors, Dumbbell } from "lucide-react";
+import { Store, Utensils, Briefcase, Scissors, Dumbbell, ImageIcon } from "lucide-react";
 import AnimatedSection, { AnimatedDiv } from "@/components/AnimatedSection";
 
 const businessTypes = [
@@ -11,7 +11,6 @@ const businessTypes = [
     headline: "Moda & Estilo",
     description: "Vitrine elegante com catálogo de produtos, carrinho e integração com pagamentos.",
     features: ["Catálogo de produtos", "Carrinho de compras", "Pagamento integrado"],
-    mockup: { nav: "MODA LUXO", hero: "Nova Coleção Verão 2026", cards: ["Vestidos", "Acessórios", "Calçados"] },
   },
   {
     id: "restaurante",
@@ -20,7 +19,6 @@ const businessTypes = [
     headline: "Sabor & Experiência",
     description: "Cardápio digital interativo, reservas online e fotos que abrem o apetite.",
     features: ["Cardápio digital", "Reservas online", "Galeria de pratos"],
-    mockup: { nav: "CHEF GOURMET", hero: "Uma experiência gastronômica única", cards: ["Entradas", "Pratos", "Sobremesas"] },
   },
   {
     id: "advogado",
@@ -29,7 +27,6 @@ const businessTypes = [
     headline: "Advocacia & Consultoria",
     description: "Site institucional que transmite autoridade, confiança e profissionalismo.",
     features: ["Áreas de atuação", "Equipe profissional", "Agendamento online"],
-    mockup: { nav: "SILVA & ASSOCIADOS", hero: "Excelência jurídica há mais de 20 anos", cards: ["Direito Civil", "Empresarial", "Trabalhista"] },
   },
   {
     id: "salao",
@@ -38,7 +35,6 @@ const businessTypes = [
     headline: "Beleza & Bem-estar",
     description: "Agendamento online, galeria de trabalhos e promoções em destaque.",
     features: ["Agendamento online", "Portfólio visual", "Promoções"],
-    mockup: { nav: "STUDIO BEAUTY", hero: "Realce sua beleza natural", cards: ["Cabelo", "Unhas", "Estética"] },
   },
   {
     id: "academia",
@@ -47,7 +43,6 @@ const businessTypes = [
     headline: "Força & Resultado",
     description: "Planos de treino, horários de aulas e matrícula online.",
     features: ["Planos e preços", "Horário de aulas", "Matrícula online"],
-    mockup: { nav: "POWER FIT", hero: "Transforme seu corpo, transforme sua vida", cards: ["Musculação", "CrossFit", "Funcional"] },
   },
 ];
 
@@ -96,38 +91,14 @@ const ShowcaseSection = () => {
             transition={{ duration: 0.35 }}
             className="grid lg:grid-cols-2 gap-8 items-center"
           >
-            {/* Mockup */}
-            <div className="card-modern p-2 order-2 lg:order-1">
-              <div className="rounded-xl overflow-hidden bg-background border border-border">
-                <div className="flex items-center gap-2 px-4 py-2.5 border-b border-border bg-muted/30">
-                  <div className="flex gap-1.5">
-                    <div className="w-2.5 h-2.5 rounded-full bg-muted-foreground/20" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-muted-foreground/20" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-muted-foreground/20" />
-                  </div>
-                  <div className="flex-1 text-center text-xs text-muted-foreground">
-                    www.{current.id}.com.br
-                  </div>
-                </div>
-                <div className="px-6 py-3 flex items-center justify-between border-b border-border/50">
-                  <span className="text-xs font-bold text-foreground tracking-wider">{current.mockup.nav}</span>
-                  <div className="flex gap-4 text-[10px] text-muted-foreground">
-                    <span>Sobre</span><span>Serviços</span><span>Contato</span>
-                  </div>
-                </div>
-                <div className="px-6 py-10 text-center bg-gradient-to-b from-primary/5 to-transparent">
-                  <h3 className="font-display text-lg font-bold text-foreground mb-3">{current.mockup.hero}</h3>
-                  <div className="inline-block px-4 py-1.5 rounded-lg text-xs font-semibold bg-primary text-primary-foreground">
-                    Saiba mais
-                  </div>
-                </div>
-                <div className="grid grid-cols-3 gap-2 p-4">
-                  {current.mockup.cards.map((card, i) => (
-                    <div key={i} className="p-3 rounded-lg text-center text-xs font-medium text-foreground border border-border bg-card">
-                      {card}
-                    </div>
-                  ))}
-                </div>
+            {/* Área reservada para screenshot real do projeto */}
+            <div className="order-2 lg:order-1">
+              <div
+                className="w-full rounded-2xl border border-dashed border-border bg-card/40 flex flex-col items-center justify-center text-muted-foreground text-sm gap-3 p-6 text-center"
+                style={{ aspectRatio: "4 / 3" }}
+              >
+                <ImageIcon size={28} className="opacity-40" />
+                <span>Espaço reservado para screenshot real do projeto ({current.label})</span>
               </div>
             </div>
 
@@ -150,12 +121,12 @@ const ShowcaseSection = () => {
                 ))}
               </ul>
               <a
-                href="https://wa.me/5511988135910?text=Ol%C3%A1!%20Gostaria%20de%20criar%20um%20site%20profissional%20para%20meu%20neg%C3%B3cio."
+                href={`https://wa.me/5511988135910?text=Ol%C3%A1!%20Quero%20um%20site%20como%20esse%20modelo%20de%20${encodeURIComponent(current.label)}%20aplicado%20ao%20meu%20neg%C3%B3cio.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-cta text-sm"
               >
-                Quero um site assim
+                Ver esse modelo aplicado ao meu negócio
               </a>
             </div>
           </motion.div>

@@ -44,7 +44,9 @@ const ProcessSection = () => (
         </p>
       </AnimatedDiv>
 
-      <div className="grid md:grid-cols-4 gap-6">
+      <div className="relative grid md:grid-cols-4 gap-6">
+        {/* Vertical connector line (mobile) / Horizontal (desktop) */}
+        <div className="md:hidden absolute left-8 top-8 bottom-8 w-px bg-gradient-to-b from-primary/40 via-border to-primary/10" aria-hidden />
         {steps.map((step, i) => (
           <motion.div
             key={i}
@@ -52,14 +54,14 @@ const ProcessSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.12 }}
-            className="relative group"
+            className="relative group flex md:block items-start gap-5"
           >
             {/* Connector line */}
             {i < steps.length - 1 && (
-              <div className="hidden md:block absolute top-8 left-[calc(50%+28px)] w-[calc(100%-56px)] h-px bg-border" />
+              <div className="hidden md:block absolute top-8 left-[calc(50%+28px)] w-[calc(100%-56px)] h-px bg-gradient-to-r from-primary/40 to-border" />
             )}
 
-            <div className="text-center">
+            <div className="md:text-center">
               <div className="relative inline-flex mb-5">
                 <div className="w-16 h-16 rounded-2xl bg-card border border-border flex items-center justify-center text-primary group-hover:border-primary/30 group-hover:bg-primary/5 transition-all duration-300">
                   <step.icon size={26} />

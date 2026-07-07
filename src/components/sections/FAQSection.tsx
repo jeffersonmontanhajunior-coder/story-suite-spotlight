@@ -2,13 +2,26 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import AnimatedSection, { AnimatedDiv } from "@/components/AnimatedSection";
 
 const faqs = [
-  { q: "Quanto tempo leva para criar meu site?", a: "O prazo médio é de 7 a 10 dias úteis, dependendo da complexidade do projeto." },
-  { q: "Preciso ter conhecimento técnico?", a: "Não! Cuidamos de tudo para você — do design ao código, da hospedagem ao domínio." },
-  { q: "O site funciona no celular?", a: "Sim, 100%. Todos os nossos sites são desenvolvidos com design responsivo." },
-  { q: "O que está incluso na manutenção mensal?", a: "Atualizações de conteúdo, backup regular, pequenas alterações de layout, suporte técnico dedicado e monitoramento de performance." },
-  { q: "Posso alterar o site depois de pronto?", a: "Claro! Com nosso plano de manutenção, você pode solicitar alterações sempre que precisar." },
-  { q: "Vocês cuidam da hospedagem e domínio?", a: "Sim, configuramos e gerenciamos tudo para que você não se preocupe." },
-  { q: "Como funciona o pagamento?", a: "Pagamento único para criação. Manutenção cobrada mensalmente. Aceitamos PIX, transferência e cartão." },
+  {
+    q: "Vocês trabalham com WordPress/Elementor ou só código?",
+    a: "Trabalhamos com os dois: sites institucionais e lojas geralmente em WordPress/Elementor, e projetos mais robustos ou landing pages de alta performance em código (React/Vercel).",
+  },
+  {
+    q: "Vocês também cuidam de tráfego pago (Meta Ads)?",
+    a: "Sim. Além do site, fazemos gestão completa de campanhas no Meta Ads (Instagram/Facebook), incluindo configuração de pixel, criativos e otimização de orçamento.",
+  },
+  {
+    q: "Depois que o site fica pronto, eu consigo editar sozinho?",
+    a: "Sim, se for em WordPress/Elementor você recebe acesso total e pode editar textos e imagens sem depender de programador. Explicamos o básico antes de entregar.",
+  },
+  {
+    q: "Quanto tempo leva um projeto do início ao ar?",
+    a: "Depende da complexidade, mas a maioria dos sites fica pronta entre 7 e 15 dias úteis, incluindo ajustes solicitados pelo cliente.",
+  },
+  {
+    q: "Vocês cuidam de domínio e hospedagem?",
+    a: "Sim, ajudamos a configurar tudo — domínio, hospedagem e certificado de segurança (SSL) — para o site ir ao ar sem dor de cabeça.",
+  },
 ];
 
 const FAQSection = () => (
