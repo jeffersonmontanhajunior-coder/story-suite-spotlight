@@ -7,10 +7,7 @@ const WHATSAPP_URL =
 
 const CTASection = () => (
   <AnimatedSection className="relative py-28 md:py-36 px-6 overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-primary/3 to-transparent" />
-    <div className="absolute inset-0 pointer-events-none">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full bg-primary/8 blur-[150px]" />
-    </div>
+    <div className="absolute inset-0 bg-gradient-to-b from-primary/8 to-transparent" />
     <div className="relative z-10 max-w-3xl mx-auto text-center">
       <motion.h2
         initial={{ opacity: 0, y: 24 }}
@@ -41,7 +38,7 @@ const CTASection = () => (
         className="btn-cta inline-flex"
       >
         <MessageCircle size={20} />
-        FALAR NO WHATSAPP AGORA
+        Falar sobre meu projeto
       </motion.a>
     </div>
   </AnimatedSection>

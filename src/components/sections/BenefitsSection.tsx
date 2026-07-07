@@ -19,7 +19,7 @@ const BenefitsSection = () => (
         </span>
         <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
           Por que escolher a{" "}
-          <span className="gradient-text">Mountain View</span>
+          <span className="gradient-text">Mountain Dev</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
           Tecnologia e estratégia para seu negócio crescer online.

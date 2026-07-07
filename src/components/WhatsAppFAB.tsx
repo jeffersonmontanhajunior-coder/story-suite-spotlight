@@ -7,7 +7,7 @@ const INSTAGRAM_URL =
   "https://www.instagram.com/mountain_dv?igsh=ZnN4YWg2MTB1YzZv";
 
 const WhatsAppFAB = () => (
-  <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3 items-center">
+  <div className="fixed bottom-6 right-4 md:right-6 z-40 flex flex-col gap-3 items-center">
     <a
       href={INSTAGRAM_URL}
       target="_blank"
