@@ -29,7 +29,7 @@ const Index = () => {
 
       <footer className="border-t border-border py-10 px-6">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-muted-foreground">
-          <p>Mountain View © 2026 — Todos os direitos reservados.</p>
+          <p>Mountain Dev © 2026 — Todos os direitos reservados.</p>
           <div className="flex items-center gap-6">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors duration-300">
               WhatsApp
