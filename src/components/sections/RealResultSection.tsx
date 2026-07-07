@@ -8,20 +8,23 @@ const WHATSAPP_URL =
 const RealResultSection = () => (
   <AnimatedSection className="py-24 md:py-32 px-6">
     <div className="max-w-5xl mx-auto">
-      <AnimatedDiv className="text-center mb-14">
-        <span className="text-primary text-xs font-medium tracking-[0.2em] uppercase mb-4 block">
-          Case real
-        </span>
-        <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
-          Resultado real, <span className="gradient-text">não promessa vazia</span>
-        </h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          Otimizamos o site da Salva Roupa (salvaroupa.com.br) e saímos de 47 para 100 pontos no Google
-          PageSpeed Insights — mobile e SEO no topo. Site mais rápido, mais visível no Google e pronto para converter.
-        </p>
+      <AnimatedDiv className="grid md:grid-cols-[1.1fr_1fr] gap-10 items-center mb-14">
+        <div>
+          <span className="text-primary text-xs font-medium tracking-[0.2em] uppercase mb-4 block">
+            Case real
+          </span>
+          <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
+            Resultado real, <span className="gradient-text">não promessa vazia</span>
+          </h2>
+          <p className="text-muted-foreground leading-relaxed">
+            Otimizamos o site da Salva Roupa (salvaroupa.com.br) e saímos de 47 para 100 pontos no Google
+            PageSpeed Insights — mobile e SEO no topo. Site mais rápido, mais visível no Google e pronto para converter.
+          </p>
+        </div>
+        <div className="hidden md:block h-40 rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/15 to-transparent" aria-hidden />
       </AnimatedDiv>
 
-      <div className="grid md:grid-cols-2 gap-6 mb-10">
+      <div className="grid grid-cols-2 gap-4 md:gap-6 mb-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
