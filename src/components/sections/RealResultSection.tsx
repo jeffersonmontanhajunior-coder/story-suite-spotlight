@@ -57,13 +57,11 @@ const RealResultSection = () => (
         Performance mobile · SEO · Carregamento
       </div>
 
-      {/* Espaço reservado para o print real do PageSpeed */}
-      <div
-        className="w-full rounded-2xl border border-dashed border-border bg-card/40 flex items-center justify-center text-muted-foreground text-sm mb-10"
-        style={{ aspectRatio: "16 / 9" }}
-      >
-        Espaço reservado para o print real do Google PageSpeed
-      </div>
+      <img
+        src={pagespeedAsset.url}
+        alt="Comparação PageSpeed Insights do site Salva Roupa: de 47 para 100 pontos de performance"
+        className="w-full rounded-2xl border border-border mb-10"
+      />
 
       <AnimatedDiv delay={0.2} className="text-center">
         <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-cta text-sm">
