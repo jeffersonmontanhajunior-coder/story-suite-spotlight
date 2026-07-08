@@ -47,7 +47,7 @@ const steps = [
 ];
 
 const ProcessSection = () => (
-  <AnimatedSection id="processo" className="py-24 md:py-32 px-6">
+  <AnimatedSection id="processo" className="py-16 md:py-24 px-6">
     <div className="max-w-5xl mx-auto">
       <AnimatedDiv className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
         <div className="max-w-xl">

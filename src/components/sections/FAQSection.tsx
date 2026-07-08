@@ -25,7 +25,7 @@ const faqs = [
 ];
 
 const FAQSection = () => (
-  <AnimatedSection id="faq" className="py-24 md:py-32 px-6">
+  <AnimatedSection id="faq" className="py-16 md:py-24 px-6">
     <div className="max-w-3xl mx-auto">
       <AnimatedDiv className="text-center mb-16">
         <span className="text-primary text-xs font-medium tracking-[0.2em] uppercase mb-4 block">

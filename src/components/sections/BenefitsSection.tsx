@@ -11,7 +11,7 @@ const benefits = [
 ];
 
 const BenefitsSection = () => (
-  <AnimatedSection id="beneficios" className="py-24 md:py-32 px-6">
+  <AnimatedSection id="beneficios" className="py-16 md:py-24 px-6">
     <div className="max-w-6xl mx-auto">
       <AnimatedDiv className="grid md:grid-cols-[1fr_1fr] gap-8 items-end mb-16">
         <div className="text-left">

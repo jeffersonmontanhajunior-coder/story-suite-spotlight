@@ -6,7 +6,7 @@ const WHATSAPP_URL =
   "https://wa.me/5511988135910?text=Ol%C3%A1!%20Quero%20um%20site%20r%C3%A1pido%20e%20otimizado%20como%20o%20da%20Salva%20Roupa.";
 
 const RealResultSection = () => (
-  <AnimatedSection className="py-24 md:py-32 px-6">
+  <AnimatedSection className="py-16 md:py-24 px-6">
     <div className="max-w-5xl mx-auto">
       <AnimatedDiv className="grid md:grid-cols-[1.1fr_1fr] gap-10 items-center mb-14">
         <div>
