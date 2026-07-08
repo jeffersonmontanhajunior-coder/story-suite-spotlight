@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Rocket } from "lucide-react";
 import AnimatedSection, { AnimatedDiv } from "@/components/AnimatedSection";
 
 const iconProps = {
@@ -31,15 +32,7 @@ const DevIcon = () => (
     <path d="M13 5l-2 14" />
   </svg>
 );
-const LaunchIcon = () => (
-  <svg {...iconProps}>
-    <path d="M13.5 3c3 0 6 1.5 7.5 4.5-1.5 6-6 10.5-10.5 12L7.5 16.5C9 12 13.5 7.5 19.5 6" />
-    <path d="M7.5 16.5L5 14a2 2 0 0 1 0-2l2-2" />
-    <path d="M10.5 19.5l2 2a2 2 0 0 0 2 0l2-2" />
-    <path d="M5 19c-1 1-1 3-1 3s2 0 3-1" />
-    <circle cx="15" cy="9" r="1.5" />
-  </svg>
-);
+const LaunchIcon = () => <Rocket size={26} strokeWidth={1.25} />;
 
 const steps = [
   { Icon: PlanIcon, title: "Planejamento", desc: "Entendemos seu negócio, público e objetivos para criar a estratégia ideal.", step: "01" },
