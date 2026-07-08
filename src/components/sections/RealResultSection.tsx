@@ -33,7 +33,7 @@ const RealResultSection = () => (
           className="card-modern p-8 text-center"
         >
           <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 block">Antes</span>
-          <div className="font-display text-7xl md:text-8xl font-bold text-muted-foreground/70 mb-2">47</div>
+          <div className="font-display text-5xl sm:text-6xl md:text-8xl font-bold text-muted-foreground/70 mb-2 leading-none">47</div>
           <span className="text-sm text-muted-foreground">PageSpeed mobile</span>
         </motion.div>
 
@@ -47,7 +47,7 @@ const RealResultSection = () => (
           <span className="text-xs uppercase tracking-[0.2em] text-primary mb-4 flex items-center justify-center gap-2">
             <TrendingUp size={14} /> Depois
           </span>
-          <div className="font-display text-7xl md:text-8xl font-bold gradient-text mb-2">100</div>
+          <div className="font-display text-5xl sm:text-6xl md:text-8xl font-bold gradient-text mb-2 leading-none pb-1">100</div>
           <span className="text-sm text-foreground">PageSpeed mobile</span>
         </motion.div>
       </div>
