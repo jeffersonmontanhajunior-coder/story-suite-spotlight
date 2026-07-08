@@ -51,7 +51,7 @@ const ShowcaseSection = () => {
   const current = businessTypes[active];
 
   return (
-    <AnimatedSection className="py-24 md:py-32 px-6">
+    <AnimatedSection className="py-16 md:py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <AnimatedDiv className="text-center mb-16">
           <span className="text-primary text-xs font-medium tracking-[0.2em] uppercase mb-4 block">
