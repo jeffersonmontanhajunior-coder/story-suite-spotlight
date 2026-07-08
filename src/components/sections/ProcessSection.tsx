@@ -33,9 +33,9 @@ const DevIcon = () => (
 );
 const LaunchIcon = () => (
   <svg {...iconProps}>
-    <path d="M5 15l-2 6 6-2" />
-    <path d="M14 4c4 0 6 2 6 6l-9 9-3-3 6-9c0-2 0-3 0-3z" />
-    <circle cx="15" cy="9" r="1.4" />
+    <path d="M12 15l-3-3a11 11 0 0 1 8-9 11 11 0 0 1-9 8l-3-3" />
+    <path d="M9 12l-3 1-1 4 4-1 1-3" />
+    <circle cx="15" cy="9" r="1.5" />
   </svg>
 );
 
