@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Store, Utensils, Briefcase, Scissors, Dumbbell, ImageIcon } from "lucide-react";
 import AnimatedSection, { AnimatedDiv } from "@/components/AnimatedSection";
+import academiaAsset from "@/assets/performance-academia-website.png.asset.json";
 
 const businessTypes = [
   {
@@ -41,8 +42,10 @@ const businessTypes = [
     label: "Academia",
     icon: Dumbbell,
     headline: "Força & Resultado",
-    description: "Planos de treino, horários de aulas e matrícula online.",
-    features: ["Planos e preços", "Horário de aulas", "Matrícula online"],
+    description: "Site moderno e impactante para academias e box de treino. Planos, modalidades e CTA para matrícula.",
+    features: ["Planos e preços", "Modalidades de treino", "CTA para WhatsApp"],
+    image: academiaAsset.url,
+    imageAlt: "Site de academia Performance com layout escuro, verde neon e destaque para planos de treino",
   },
 ];
 
@@ -93,13 +96,29 @@ const ShowcaseSection = () => {
           >
             {/* Área reservada para screenshot real do projeto */}
             <div className="order-2 lg:order-1">
-              <div
-                className="w-full rounded-2xl border border-dashed border-border bg-card/40 flex flex-col items-center justify-center text-muted-foreground text-sm gap-3 p-6 text-center"
-                style={{ aspectRatio: "4 / 3" }}
-              >
-                <ImageIcon size={28} className="opacity-40" />
-                <span>Espaço reservado para screenshot real do projeto ({current.label})</span>
-              </div>
+              {current.image ? (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.98 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4 }}
+                  className="w-full rounded-2xl border border-border bg-card/40 overflow-hidden"
+                  style={{ aspectRatio: "4 / 3" }}
+                >
+                  <img
+                    src={current.image}
+                    alt={current.imageAlt || `Screenshot do projeto ${current.label}`}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </motion.div>
+              ) : (
+                <div
+                  className="w-full rounded-2xl border border-dashed border-border bg-card/40 flex flex-col items-center justify-center text-muted-foreground text-sm gap-3 p-6 text-center"
+                  style={{ aspectRatio: "4 / 3" }}
+                >
+                  <ImageIcon size={28} className="opacity-40" />
+                  <span>Espaço reservado para screenshot real do projeto ({current.label})</span>
+                </div>
+              )}
             </div>
 
             {/* Info */}
