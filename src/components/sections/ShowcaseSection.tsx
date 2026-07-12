@@ -96,13 +96,29 @@ const ShowcaseSection = () => {
           >
             {/* Área reservada para screenshot real do projeto */}
             <div className="order-2 lg:order-1">
-              <div
-                className="w-full rounded-2xl border border-dashed border-border bg-card/40 flex flex-col items-center justify-center text-muted-foreground text-sm gap-3 p-6 text-center"
-                style={{ aspectRatio: "4 / 3" }}
-              >
-                <ImageIcon size={28} className="opacity-40" />
-                <span>Espaço reservado para screenshot real do projeto ({current.label})</span>
-              </div>
+              {current.image ? (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.98 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4 }}
+                  className="w-full rounded-2xl border border-border bg-card/40 overflow-hidden"
+                  style={{ aspectRatio: "4 / 3" }}
+                >
+                  <img
+                    src={current.image}
+                    alt={current.imageAlt || `Screenshot do projeto ${current.label}`}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </motion.div>
+              ) : (
+                <div
+                  className="w-full rounded-2xl border border-dashed border-border bg-card/40 flex flex-col items-center justify-center text-muted-foreground text-sm gap-3 p-6 text-center"
+                  style={{ aspectRatio: "4 / 3" }}
+                >
+                  <ImageIcon size={28} className="opacity-40" />
+                  <span>Espaço reservado para screenshot real do projeto ({current.label})</span>
+                </div>
+              )}
             </div>
 
             {/* Info */}
