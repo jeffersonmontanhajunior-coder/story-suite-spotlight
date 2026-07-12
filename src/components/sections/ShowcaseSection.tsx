@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Store, Utensils, Briefcase, Scissors, Dumbbell, ImageIcon } from "lucide-react";
 import AnimatedSection, { AnimatedDiv } from "@/components/AnimatedSection";
+import academiaAsset from "@/assets/performance-academia-website.png.asset.json";
 
 const businessTypes = [
   {
@@ -41,8 +42,10 @@ const businessTypes = [
     label: "Academia",
     icon: Dumbbell,
     headline: "Força & Resultado",
-    description: "Planos de treino, horários de aulas e matrícula online.",
-    features: ["Planos e preços", "Horário de aulas", "Matrícula online"],
+    description: "Site moderno e impactante para academias e box de treino. Planos, modalidades e CTA para matrícula.",
+    features: ["Planos e preços", "Modalidades de treino", "CTA para WhatsApp"],
+    image: academiaAsset.url,
+    imageAlt: "Site de academia Performance com layout escuro, verde neon e destaque para planos de treino",
   },
 ];
 
