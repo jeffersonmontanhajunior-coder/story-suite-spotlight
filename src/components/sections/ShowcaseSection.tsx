@@ -61,7 +61,7 @@ const businessTypes = [
 ];
 
 const ShowcaseSection = () => {
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(0);
   const current = businessTypes[active];
 
 
