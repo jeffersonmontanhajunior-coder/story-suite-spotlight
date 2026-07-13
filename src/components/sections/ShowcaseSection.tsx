@@ -4,6 +4,7 @@ import { Store, Utensils, Briefcase, Scissors, Dumbbell, ImageIcon } from "lucid
 import AnimatedSection, { AnimatedDiv } from "@/components/AnimatedSection";
 import academiaAsset from "@/assets/performance-academia-website.png.asset.json";
 import salaoAsset from "@/assets/lara-beautiful-salao-estetica.png.asset.json";
+import restauranteAsset from "@/assets/restaurante-sabor-experiencia.png.asset.json";
 
 
 const businessTypes = [
