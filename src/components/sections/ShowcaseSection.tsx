@@ -23,6 +23,8 @@ const businessTypes = [
     headline: "Sabor & Experiência",
     description: "Cardápio digital interativo, reservas online e fotos que abrem o apetite.",
     features: ["Cardápio digital", "Reservas online", "Galeria de pratos"],
+    image: restauranteAsset.url,
+    imageAlt: "Site de restaurante Sabor de Casa com menu elegante, fotos de pratos e cardápio por categorias em tons escuros e dourados",
   },
   {
     id: "advogado",
