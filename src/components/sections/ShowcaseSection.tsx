@@ -16,6 +16,8 @@ const businessTypes = [
     headline: "Moda & Estilo",
     description: "Vitrine elegante com catálogo de produtos, carrinho e integração com pagamentos.",
     features: ["Catálogo de produtos", "Carrinho de compras", "Pagamento integrado"],
+    image: lojaAsset.url,
+    imageAlt: "Site da Salva Roupa com layout de loja online, hero escuro com título Anti-Odor e botão de oferta verde",
   },
   {
     id: "restaurante",
