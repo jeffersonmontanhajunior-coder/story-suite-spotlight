@@ -38,7 +38,10 @@ const businessTypes = [
     headline: "Advocacia & Consultoria",
     description: "Site institucional que transmite autoridade, confiança e profissionalismo.",
     features: ["Áreas de atuação", "Equipe profissional", "Agendamento online"],
+    image: advogadoAsset.url,
+    imageAlt: "Site institucional de escritório de advocacia e consultoria com layout profissional e elegante",
   },
+
   {
     id: "salao",
     label: "Salão / Estética",
@@ -63,8 +66,9 @@ const businessTypes = [
 ];
 
 const ShowcaseSection = () => {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(2);
   const current = businessTypes[active];
+
 
 
   return (
