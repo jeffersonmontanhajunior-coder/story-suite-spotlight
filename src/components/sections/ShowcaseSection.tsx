@@ -6,6 +6,8 @@ import academiaAsset from "@/assets/performance-academia-website.png.asset.json"
 import salaoAsset from "@/assets/lara-beautiful-salao-estetica.png.asset.json";
 import restauranteAsset from "@/assets/restaurante-sabor-experiencia.png.asset.json";
 import lojaAsset from "@/assets/salva-roupa-loja-online.jpg.asset.json";
+import advogadoAsset from "@/assets/advogada-consultoria-website.jpg.asset.json";
+
 
 
 const businessTypes = [
@@ -36,7 +38,10 @@ const businessTypes = [
     headline: "Advocacia & Consultoria",
     description: "Site institucional que transmite autoridade, confiança e profissionalismo.",
     features: ["Áreas de atuação", "Equipe profissional", "Agendamento online"],
+    image: advogadoAsset.url,
+    imageAlt: "Site institucional de escritório de advocacia e consultoria com layout profissional e elegante",
   },
+
   {
     id: "salao",
     label: "Salão / Estética",
@@ -61,8 +66,9 @@ const businessTypes = [
 ];
 
 const ShowcaseSection = () => {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(2);
   const current = businessTypes[active];
+
 
 
   return (
