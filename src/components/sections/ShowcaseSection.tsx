@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Store, Utensils, Briefcase, Scissors, Dumbbell, ImageIcon } from "lucide-react";
 import AnimatedSection, { AnimatedDiv } from "@/components/AnimatedSection";
 import academiaAsset from "@/assets/performance-academia-website.png.asset.json";
+import salaoAsset from "@/assets/lara-beautiful-salao-estetica.png.asset.json";
+
 
 const businessTypes = [
   {
@@ -36,7 +38,10 @@ const businessTypes = [
     headline: "Beleza & Bem-estar",
     description: "Agendamento online, galeria de trabalhos e promoções em destaque.",
     features: ["Agendamento online", "Portfólio visual", "Promoções"],
+    image: salaoAsset.url,
+    imageAlt: "Site de salão de beleza Lara Beautiful com layout elegante em tons de rosa e bege, hero com modelo e seções de serviços",
   },
+
   {
     id: "academia",
     label: "Academia",
@@ -50,8 +55,9 @@ const businessTypes = [
 ];
 
 const ShowcaseSection = () => {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(3);
   const current = businessTypes[active];
+
 
   return (
     <AnimatedSection className="py-16 md:py-24 px-6">
