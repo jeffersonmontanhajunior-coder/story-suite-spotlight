@@ -5,6 +5,7 @@ import AnimatedSection, { AnimatedDiv } from "@/components/AnimatedSection";
 import academiaAsset from "@/assets/performance-academia-website.png.asset.json";
 import salaoAsset from "@/assets/lara-beautiful-salao-estetica.png.asset.json";
 import restauranteAsset from "@/assets/restaurante-sabor-experiencia.png.asset.json";
+import lojaAsset from "@/assets/salva-roupa-loja-online.jpg.asset.json";
 
 
 const businessTypes = [
@@ -15,6 +16,8 @@ const businessTypes = [
     headline: "Moda & Estilo",
     description: "Vitrine elegante com catálogo de produtos, carrinho e integração com pagamentos.",
     features: ["Catálogo de produtos", "Carrinho de compras", "Pagamento integrado"],
+    image: lojaAsset.url,
+    imageAlt: "Site da Salva Roupa com layout de loja online, hero escuro com título Anti-Odor e botão de oferta verde",
   },
   {
     id: "restaurante",
@@ -58,7 +61,7 @@ const businessTypes = [
 ];
 
 const ShowcaseSection = () => {
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(0);
   const current = businessTypes[active];
 
 
