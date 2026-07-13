@@ -4,6 +4,7 @@ import { Store, Utensils, Briefcase, Scissors, Dumbbell, ImageIcon } from "lucid
 import AnimatedSection, { AnimatedDiv } from "@/components/AnimatedSection";
 import academiaAsset from "@/assets/performance-academia-website.png.asset.json";
 import salaoAsset from "@/assets/lara-beautiful-salao-estetica.png.asset.json";
+import restauranteAsset from "@/assets/restaurante-sabor-experiencia.png.asset.json";
 
 
 const businessTypes = [
@@ -22,6 +23,8 @@ const businessTypes = [
     headline: "Sabor & Experiência",
     description: "Cardápio digital interativo, reservas online e fotos que abrem o apetite.",
     features: ["Cardápio digital", "Reservas online", "Galeria de pratos"],
+    image: restauranteAsset.url,
+    imageAlt: "Site de restaurante Sabor de Casa com menu elegante, fotos de pratos e cardápio por categorias em tons escuros e dourados",
   },
   {
     id: "advogado",
@@ -55,7 +58,7 @@ const businessTypes = [
 ];
 
 const ShowcaseSection = () => {
-  const [active, setActive] = useState(3);
+  const [active, setActive] = useState(1);
   const current = businessTypes[active];
 
 
