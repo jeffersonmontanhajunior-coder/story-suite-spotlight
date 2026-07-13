@@ -38,7 +38,10 @@ const businessTypes = [
     headline: "Beleza & Bem-estar",
     description: "Agendamento online, galeria de trabalhos e promoções em destaque.",
     features: ["Agendamento online", "Portfólio visual", "Promoções"],
+    image: salaoAsset.url,
+    imageAlt: "Site de salão de beleza Lara Beautiful com layout elegante em tons de rosa e bege, hero com modelo e seções de serviços",
   },
+
   {
     id: "academia",
     label: "Academia",
