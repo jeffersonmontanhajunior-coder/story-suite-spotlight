@@ -6,6 +6,8 @@ import academiaAsset from "@/assets/performance-academia-website.png.asset.json"
 import salaoAsset from "@/assets/lara-beautiful-salao-estetica.png.asset.json";
 import restauranteAsset from "@/assets/restaurante-sabor-experiencia.png.asset.json";
 import lojaAsset from "@/assets/salva-roupa-loja-online.jpg.asset.json";
+import advogadoAsset from "@/assets/advogada-consultoria-website.jpg.asset.json";
+
 
 
 const businessTypes = [
