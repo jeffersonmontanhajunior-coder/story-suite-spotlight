@@ -55,8 +55,9 @@ const businessTypes = [
 ];
 
 const ShowcaseSection = () => {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(3);
   const current = businessTypes[active];
+
 
   return (
     <AnimatedSection className="py-16 md:py-24 px-6">
