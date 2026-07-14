@@ -74,6 +74,13 @@ const ShowcaseSection = () => {
   return (
     <AnimatedSection className="py-16 md:py-24 px-6">
       <div className="max-w-6xl mx-auto">
+        {/* Preload all showcase images so trocar de aba é instantâneo */}
+        <div aria-hidden className="hidden">
+          {businessTypes.map((t) =>
+            t.image ? <img key={t.id} src={t.image} alt="" /> : null
+          )}
+        </div>
+
         <AnimatedDiv className="text-center mb-16">
           <span className="text-primary text-xs font-medium tracking-[0.2em] uppercase mb-4 block">
             Showcase
@@ -126,6 +133,8 @@ const ShowcaseSection = () => {
                     src={current.image}
                     alt={current.imageAlt || `Screenshot do projeto ${current.label}`}
                     className="w-full h-full object-cover object-top"
+                    loading="eager"
+                    decoding="async"
                   />
                 </motion.div>
               ) : (
