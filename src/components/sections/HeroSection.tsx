@@ -1,7 +1,6 @@
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import logo from "@/assets/logo.webp";
 
 const WHATSAPP_URL =
   "https://wa.me/5511988135910?text=Ol%C3%A1!%20Gostaria%20de%20criar%20um%20site%20profissional%20para%20meu%20neg%C3%B3cio.";
@@ -37,15 +36,6 @@ const HeroSection = ({ onScrollTo }: HeroSectionProps) => {
       />
 
       <motion.div className="relative z-10 max-w-5xl mx-auto text-center" style={{ opacity }}>
-        {/* 3D Logo */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.85 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="w-40 h-40 sm:w-48 sm:h-48 mx-auto mb-8"
-        >
-          <img src={logo} alt="Mountain Dev Logo" className="w-full h-full object-contain" style={{ filter: 'brightness(1.15) contrast(1.1)', mixBlendMode: 'screen' }} />
-        </motion.div>
 
         <motion.span
           initial={{ opacity: 0, y: 20 }}

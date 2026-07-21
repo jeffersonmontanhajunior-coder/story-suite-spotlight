@@ -1,7 +1,6 @@
 import { ArrowRight, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
 import AnimatedSection, { AnimatedDiv } from "@/components/AnimatedSection";
-import pagespeedAsset from "@/assets/pagespeed-salvaroupa.png.asset.json";
 
 const WHATSAPP_URL =
   "https://wa.me/5511988135910?text=Ol%C3%A1!%20Quero%20um%20site%20r%C3%A1pido%20e%20otimizado%20como%20o%20da%20Salva%20Roupa.";
@@ -56,12 +55,6 @@ const RealResultSection = () => (
       <div className="text-center text-sm text-muted-foreground mb-10">
         Performance mobile · SEO · Carregamento
       </div>
-
-      <img
-        src={pagespeedAsset.url}
-        alt="Comparação PageSpeed Insights do site Salva Roupa: de 47 para 100 pontos de performance"
-        className="w-full rounded-2xl border border-border mb-10"
-      />
 
       <AnimatedDiv delay={0.2} className="text-center">
         <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-cta text-sm">
