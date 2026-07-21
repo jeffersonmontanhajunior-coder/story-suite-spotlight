@@ -36,15 +36,6 @@ const HeroSection = ({ onScrollTo }: HeroSectionProps) => {
       />
 
       <motion.div className="relative z-10 max-w-5xl mx-auto text-center" style={{ opacity }}>
-        {/* 3D Logo */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.85 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="w-40 h-40 sm:w-48 sm:h-48 mx-auto mb-8"
-        >
-          <img src={logo} alt="Mountain Dev Logo" className="w-full h-full object-contain" style={{ filter: 'brightness(1.15) contrast(1.1)', mixBlendMode: 'screen' }} />
-        </motion.div>
 
         <motion.span
           initial={{ opacity: 0, y: 20 }}
