@@ -56,12 +56,6 @@ const RealResultSection = () => (
         Performance mobile · SEO · Carregamento
       </div>
 
-      <img
-        src={pagespeedAsset.url}
-        alt="Comparação PageSpeed Insights do site Salva Roupa: de 47 para 100 pontos de performance"
-        className="w-full rounded-2xl border border-border mb-10"
-      />
-
       <AnimatedDiv delay={0.2} className="text-center">
         <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-cta text-sm">
           Quero uma proposta <ArrowRight size={16} />
